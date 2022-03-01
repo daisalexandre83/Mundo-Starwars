@@ -1,2 +1,2 @@
 # Mundo-Starwars
-Projeto utilizando HTML, CSS, Vue e API.
+Projeto utilizando HTML, CSS, Javascript e API.
