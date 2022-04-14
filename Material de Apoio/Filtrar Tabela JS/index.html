@@ -4,46 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://s.cdpn.io/3/bootstrap.min.css"> 
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <section class="container">
-        <h2>Vanilla JS Table filter</h2>
-        <input type="text" class="table-filter" data-table="order-table" placeholder="Item to filter...">
-        <table class="order-table table"></table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Price</th>
-            </tr>
-
-            <tbody>
-                <tr|>
-                    <td>John Doe</td>
-                    <td>john.doe@gmail.com</td>
-                    <td>0123456789</td>
-                    <td>99</td>
-                </tr>
-
-                <tr>
-                    <td>Jane Vanda</td>
-                    <td>jane@vanda.org</td>
-                    <td>9876543210</td>
-                    <td>349</td>
-                </tr>
-
-                <tr>
-                    <td>Alfred Penworth</td>
-                    <td>alfred@batman.com</td>
-                    <td>6754328901</td>
-                    <td>199</td>
-                </tr>
-            </tbody>
-        </thead>
-    </section>
+   <table class="table">
+    <thead>
+        <tr>
+            <th>
+                <input type="text" class="search-input" placeholder="Full Name">
+            </th>
+            <th>
+                <input type="text" class="search-input" placeholder="Occupation">
+            </th>
+            <th>
+                <input type="text" class="search-input" placeholder="Country">
+            </th>
+            <th>
+                <input type="text" class="search-input" placeholder="Favorite Movie">
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Reamon Corkill</td>
+            <td>Pharmacist</td>
+            <td>France</td>
+            <td>Fast and the Furious,The</td>
+        </tr>
+        <tr>
+            <td>Dara Lovell</td>
+            <td>Assistant Professor</td>
+            <td>Russia</td>
+            <td>Villa Rides!</td>
+        </tr>
+        <tr>
+            <td>Zorina Hugli</td>
+            <td>Design Engineer</td>
+            <td>China</td>
+            <td>Oranges and Sunshine</td>
+        </tr>
+        <tr>
+            <td>Jeff Cornier</td>
+            <td>Assistant Media Planner</td>
+            <td>China</td>
+            <td>39 Steps, The</td>
+        </tr>
+        <tr>
+            <td>Waldo Pilmoor</td>
+            <td>Staff Scientist</td>
+            <td>China</td>
+            <td>Son of Rawbow</td>
+        </tr>
+        <tr>
+            <td>Sue Cardenosa</td>
+            <td>Administrative Assistant</td>
+            <td>Mongolia</td>
+            <td>Stay as You Are</td>
+        </tr>
+        <tr>
+            <td>Seward Fursey</td>
+            <td>Nuclear Power Engineer</td>
+            <td>Russia</td>
+            <td>Bird</td>
+        </tr>
+        <tr>
+            <td>Fernanda Well</td>
+            <td>Recruiter</td>
+            <td>France</td>
+            <td>Titus</td>
+        </tr>
+        <tr>
+            <td>Deva Griswaite</td>
+            <td>Nurse</td>
+            <td>Bhutan</td>
+            <td>Cup, The(Phorpa)</td>
+        </tr>
+        <tr>
+            <td>Becka Kohlerman</td>
+            <td> Senior Sales Associate</td>
+            <td>Portugal</td>
+            <td>2-Head Shark Attack</td>
+        </tr>
+        <tr>
+            <td>Dunc Faragher</td>
+            <td>Occupational Therapist</td>
+            <td>Brazil</td>
+            <td>Life is to Whistle(vida es silbar,La)</td>
+        </tr>
+        <tr>
+            <td>Adelbert Zanini</td>
+            <td>Recruiting Manager</td>
+            <td>Indonesia</td>
+            <td> Class Trip, The(La classe de neige)</td>
+        </tr>
+        <tr>
+            <td>Rosamund Spooner</td>
+            <td>Account Coordinator</td>
+            <td>China</td>
+            <td>The Inner Circle</td>
+        </tr>
+        <tr>
+            <td>Eleonore Meaders</td>
+            <td>VP Quality Control</td>
+            <td>Indonesia</td>
+            <td>Take Me Home</td>
+        </tr>
+    </tbody>
+   </table>
     <script src="script.js"></script>
 </body>
 </html>
