@@ -1,37 +1,34 @@
-(function () {
-    'use strict';
-    var TableFilter = (function () {
-        var Arr = Array.prototype;
-        var input;
-    
-        function onInputEvent(e) {
-            input = e.target;
-            var table1 = document.getElementsByClassName(input.getAttribute('data-table'));
-            Arr.forEach.call(table1,
-                function(table){
-                    Arr.forEach.call(table.tBodies,
-                function (tbody) {
-                    Arr.forEach.call(tbody.rows,filter);
-                });
-            });
-        }
-        function filter(row) {
-            var text = row.textContent.toLowerCase();
-            var val = input.value.toLowerCase();
-            row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-now';
-        }
-    
-        return{
-            init: function () {
-                var inputs = document.getElementsByClassName('table-filter');
-                Arr.forEach.call(inputs,
-                function (input) {
-                    input.oninput = onInputEvent;
-                });
-            }
-        };
-    })();
+document.addEventListener("DOMContentLoaded",() =>{
+   document.querySelectorAll(".search-input").forEach((inputField)=>{
+    const tableRows = inputField
+    .closest("table")
+    .querySelectorAll("tbody > tr");
+    const headerCell =
+    inputField.closest("th");
+    const otherHeaderCells = 
+    headerCell.closest("tr").children;
+    const columnIndex = 
+    Array.from(otherHeaderCells).indexOf(headerCell);
+    const searchableCells =
+    Array.from(tableRows).map(
+        (row) => row.querySelectorAll("td")
+        [columnIndex]
+    );
+    inputField.addEventListener("input",() =>{
+        const searchQuery = 
+        inputField.value.toLowerCase();
 
-    TableFilter.init();
-})();
+        for (const tableCell of searchableCells) {
+           const row = tableCell.closest("tr");
+           const value = 
+           tableCell.textContent.toLowerCase().replace(",","");
+           row.style.visibility = null;
+
+           if (value.search(searchQuery) === -1) {
+               row.style.visibility = "collapse";
+           }
+        }
+    });
+   });
+});
 
