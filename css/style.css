@@ -71,3 +71,8 @@ body{
   margin-bottom: 20px;
   border: 1px solid gray;
 }
+
+.table{
+  font-family: "Fira Sans", sans-serif;
+  border-collapse: collapse;
+}
