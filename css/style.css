@@ -74,8 +74,20 @@ body{
 
 .table{
   font-family: "Fira Sans", sans-serif;
-  border-collapse: collapse;
   position: absolute;
-  margin:  0px 300px auto;
+  margin:  0px 200px auto;
 }
+
+.table th{
+  text-align: center;
+}
+
+.table td,
+.search-input{
+  font-size: 1em;
+  text-align: center;
+  font-family: "Fira-Sans", sans-serif;
+}
+
+
 
