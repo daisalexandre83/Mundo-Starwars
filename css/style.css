@@ -34,48 +34,11 @@ body{
   margin: 0 0 15px 75px;
 }
 
-.table-structure{
-  margin-left: 75px;
-  width: 1157px;
-  background-color: gray;
-}
-
-.informations{
-  background-color: black;
-  text-align: left;
-  height: 45px;
-  font-size: 22px;
-  color: #fff;
-}
-
-.informations th{
-  margin-left: 5px;
-}
-
-.data1{
-  height: 45px;
-  background-color: white;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.data2{
-  background-color: #40ff00;
-}
-
-.search input{
-  width: 1150px;
-  margin-left: 75px;
-  height: 35px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  border: 1px solid gray;
-}
-
 .table{
   font-family: "Fira Sans", sans-serif;
   position: absolute;
   margin:  0px 200px auto;
+  border-collapse: collapse;
 }
 
 .table th{
