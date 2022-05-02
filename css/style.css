@@ -1,7 +1,7 @@
 body{
-  background-color:  #81f7f3;
   margin: 0;
   padding: 0;
+  background: #2E2E2E;
 }
 
 .header-content{
@@ -37,7 +37,7 @@ body{
 .table{
   font-family: "Fira Sans", sans-serif;
   position: absolute;
-  margin:  0px 200px auto;
+  margin:  0px 300px auto;
   border-collapse: collapse;
 }
 
@@ -45,11 +45,18 @@ body{
   text-align: center;
 }
 
-.table td,
-.search-input{
+.table td{
   font-size: 1em;
   text-align: center;
   font-family: "Fira-Sans", sans-serif;
+  border: 1px solid black;
+  background: #58fa58;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.table .search-input{
+  background-color: none;
 }
 
 
