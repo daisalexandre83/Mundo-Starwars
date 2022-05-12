@@ -31,5 +31,6 @@ document.addEventListener("DOMContentLoaded",() =>{
 });
 
 function showMe(){
+    document.querySelector(".table").display="none";
     
 }
