@@ -44,14 +44,14 @@ document.addEventListener("DOMContentLoaded",()=>{
     document.body.appendChild(characters)
     const wrap = document.createElement("div")
     let count = 1
-
+    
     async function setCharacters() {
+        console.log('olá');
         const response = await fetch(`${apiURL}people/`)
         if (response.status >= 200 && response.status <= 299) {
             const data = await response.json()
             characters.add(new Option("click",tr))
             // characters.add(new Option("click",showMe))
-            console.log('olá');
             data.results.map(elt =>{
                 const {name} = elt
                 const option = document.createElement('option')
