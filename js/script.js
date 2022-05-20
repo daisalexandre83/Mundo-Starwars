@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded",() =>{
     });
 });
 
- function showMe(){
-    document.querySelector(".table").display="none";
-    document.querySelector(".image-star-wars").display="block";
-}
+//  function showMe(){
+//     document.querySelector(".table").display="none";
+//     document.querySelector(".image-star-wars").display="block";
+// }
 
 var date1 = document.querySelectorAll('date-anakin');
 
@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded",()=>{
         const response = await fetch(`${apiURL}people/`)
         if (response.status >= 200 && response.status <= 299) {
             const data = await response.json()
-            // characters.add(new Option("click",tr))
-            characters.add(new Option("click",showMe))
-            console.log('Daiane');
+            characters.add(new Option("click",tr))
+            // characters.add(new Option("click",showMe))
+            console.log('olá');
             data.results.map(elt =>{
                 const {name} = elt
                 const option = document.createElement('option')
