@@ -61,7 +61,11 @@ body{
 
 .image-star-wars{
   display:none;
+  width: 800px;
+  padding: 0 250px;
+  height: 300px;
 }
+
 
 
 
