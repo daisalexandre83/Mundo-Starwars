@@ -30,10 +30,11 @@ document.addEventListener("DOMContentLoaded",() =>{
     });
 });
 
-//  function showMe(){
-//     document.querySelector(".table").display="none";
-//     document.querySelector(".image-star-wars").display="block";
-// }
+  function showMe(){
+    document.querySelector(".table").style.display="none";
+    document.querySelector(".image-star-wars").style.display="block";
+    console.log('olá');
+}
 
 var date1 = document.querySelectorAll('date-anakin');
 
@@ -46,12 +47,11 @@ document.addEventListener("DOMContentLoaded",()=>{
     let count = 1
     
     async function setCharacters() {
-        console.log('olá');
         const response = await fetch(`${apiURL}people/`)
         if (response.status >= 200 && response.status <= 299) {
             const data = await response.json()
-            characters.add(new Option("click",tr))
-            // characters.add(new Option("click",showMe))
+            // characters.add(new Option("click",tr))
+            characters.add(new Option(showMe()))
             data.results.map(elt =>{
                 const {name} = elt
                 const option = document.createElement('option')
