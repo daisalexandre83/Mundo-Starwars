@@ -33,10 +33,8 @@ document.addEventListener("DOMContentLoaded",() =>{
   function showMe(){
     document.querySelector(".table").style.display="none";
     document.querySelector(".image-star-wars").style.display="block";
-    console.log('olá');
+    
 }
-
-var date1 = document.querySelectorAll('date-anakin');
 
 document.addEventListener("DOMContentLoaded",()=>{
     const apiURL="https://swapi.dev/api/"
@@ -106,4 +104,13 @@ document.addEventListener("DOMContentLoaded",()=>{
         `;
         characters.after(wrap)
     }
+    characters.addEventListener("change",e =>
+    {
+        const id = e.currentTarget.options[e.currentTarget.selectedIndex].value
+        wrap.innerText = ''
+        setDetails(id)
+    })
+    setCharacters()
 })
+
+
