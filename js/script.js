@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         if (response.status >= 200 && response.status <= 299) {
             const data = await response.json()
             // characters.add(new Option("click",tr))
-            characters.add(new Option(showMe()))
+            characters.add(new Option(showMe("click",tr)))
             data.results.map(elt =>{
                 const {name} = elt
                 const option = document.createElement('option')
