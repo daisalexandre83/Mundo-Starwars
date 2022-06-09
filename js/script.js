@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded",() =>{
     document.querySelectorAll(".search-input").forEach((inputField)=>{
-        const tableRows = inputField
-
+        const tableRows = inputField.closest("table")
         .querySelectorAll("tbody > tr");
         const headerCell = inputField.closest("th");
         const otherHeaderCells = 
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded",() =>{
     });
 });
 
-  function showMe(){
+ function showMe(){
     document.querySelector(".table").style.display="none";
     document.querySelector(".image-star-wars").style.display="block";
     
@@ -112,5 +111,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     })
     setCharacters()
 })
+
 
 
