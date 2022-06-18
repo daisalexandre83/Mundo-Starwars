@@ -29,6 +29,13 @@ document.addEventListener("DOMContentLoaded",() =>{
     });
 });
 
+
+/* document.addEventListener("DomContentLoaded",()=>{
+ 
+}) */
+
+element.addEventListener(click,showMe)
+
  function showMe(){
     document.querySelector(".table").style.display="none";
     document.querySelector(".image-star-wars").style.display="block";
