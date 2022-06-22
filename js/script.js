@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 const cells = document.querySelectorAll('td');
 for(let i = 0; i < cells.length;i++){
-    cells[i].addEventListener('click',showMe)
+    cells[i].addEventListener('click',showMe,"DomContentLoaded")
 }
 
  function showMe(){
