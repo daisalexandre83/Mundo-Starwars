@@ -29,12 +29,9 @@ document.addEventListener("DOMContentLoaded",() =>{
     });
 });
 
+document.querySelector('.action1-1').addEventListener("click",showMe);
 
-/* document.addEventListener("DomContentLoaded",()=>{
- 
-}) */
 
-element.addEventListener(click,showMe)
 
  function showMe(){
     document.querySelector(".table").style.display="none";
