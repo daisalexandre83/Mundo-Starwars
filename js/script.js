@@ -29,9 +29,12 @@ document.addEventListener("DOMContentLoaded",() =>{
     });
 });
 
-document.querySelector('.action1-1').addEventListener("click",showMe);
+/* document.querySelector('.action1-1').addEventListener("click",showMe); */
 
-
+const cells = document.querySelectorAll('td');
+for(let i = 0; i < cells.length;i++){
+    cells[i].addEventListener('click',showMe)
+}
 
  function showMe(){
     document.querySelector(".table").style.display="none";
