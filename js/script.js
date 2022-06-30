@@ -33,7 +33,21 @@ document.addEventListener("DOMContentLoaded",() =>{
 
 const cells = document.querySelectorAll('td');
 for(let i = 0; i < cells.length;i++){
-    cells[i].addEventListener('click',showMe,"DomContentLoaded")
+    cells[i].addEventListener('click',showMe)
+    fetch("https://swapi.dev/api/")
+
+    async function showInformations(){
+        const response =  await fetch(`${apiURL}people/`)
+        if (response.status >= 200 && response.status <= 299) {
+            const data = await response.json()
+            data.results.map(elt =>{
+                const{field} = elt
+                const option = document.createElement('option')
+                option.value = count ++
+                option.innerText = field
+            })
+        }
+    }
 }
 
  function showMe(){
