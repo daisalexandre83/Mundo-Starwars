@@ -34,8 +34,16 @@ document.addEventListener("DOMContentLoaded",() =>{
 const cells = document.querySelectorAll('td');
 for(let i = 0; i < cells.length;i++){
     cells[i].addEventListener('click',showMe)
-    fetch("https://swapi.dev/api/")
+    
 
+   
+}
+
+ function showMe(){
+    document.querySelector(".table").style.display="none";
+    document.querySelector(".image-star-wars").style.display="block";
+    
+    fetch("https://swapi.dev/api/")
     async function showInformations(){
         const response =  await fetch(`${apiURL}people/`)
         if (response.status >= 200 && response.status <= 299) {
@@ -48,12 +56,6 @@ for(let i = 0; i < cells.length;i++){
             })
         }
     }
-}
-
- function showMe(){
-    document.querySelector(".table").style.display="none";
-    document.querySelector(".image-star-wars").style.display="block";
-    
 }
 
 document.addEventListener("DOMContentLoaded",()=>{
