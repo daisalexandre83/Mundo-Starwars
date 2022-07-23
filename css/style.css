@@ -50,7 +50,6 @@ body{
   text-align: center;
   font-family: "Fira-Sans", sans-serif;
   border: 1px solid black;
-  background: #58fa58;
   font-weight: bold;
   font-style: italic;
 }
@@ -64,6 +63,14 @@ body{
   width: 800px;
   padding: 0 250px;
   height: 300px;
+}
+
+.data-odd{
+  background-color: #00BFFF;
+}
+
+.data-par{
+  background-color: #8904B1;
 }
 
 
