@@ -65,11 +65,11 @@ body{
   height: 300px;
 }
 
-.data-odd{
+.odd-line{
   background-color: #00BFFF;
 }
 
-.data-par{
+.even-line{
   background-color: #8904B1;
 }
 
