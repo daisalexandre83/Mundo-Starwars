@@ -36,38 +36,25 @@ for(let i = 0; i < cells.length;i++){
     
 }
 
- /*function showMe(){
-    document.querySelector(".table").style.display="none";
-    document.querySelector(".image-star-wars").style.display="block";
-    
-    fetch("https://swapi.dev/api/")
-    async function showInformations(){
-        const response =  await fetch(`${apiURL}people/`)
-        if (response.status >= 200 && response.status <= 299) {
-            const data = await response.json()
-            data.results.map(elt =>{
-                const{field} = elt
-                const option = document.createElement('option')
-                option.value = count ++
-                option.innerText = field
-            })
-        }
-    }
-}*/
 
 function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".image-star-wars").style.display="block";
-
-    let url = `https://swapi.dev/api/`;
-
-    fetch(url).then(function (response) {
-        response.json().then(showInformations)
+    const name = this.parentNode.getAttribute("data-name");
+    let url = `https://swapi.dev/api/people?search=${name}`;
+    fetch(url)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(json) {
+        showInformations(json.results[0]);
     });
 }
 
 function showInformations(dados) {
-    cells.innerHTML = `<p>Name:${dados.name}</p>
+    const info = document.querySelector('.info');
+
+    info.innerHTML = `<p>Name:${dados.name}</p>
                         <p>Heigth:${dados.height}</p>
                         <p>Mass:${dados.mass}</p>
                         <p>Hair Color:${dados.hair_color}</p>
