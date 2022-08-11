@@ -58,11 +58,17 @@ body{
   background-color: none;
 }
 
-.image-star-wars{
-  display:none;
+.content{
+  display: none;
+  border: 2px solid gray;
   width: 800px;
-  padding: 0 250px;
+  margin-left: 250px;
+}
+
+.image-star-wars{
+  width: 800px;
   height: 300px;
+  position: absolute;
 }
 
 .blue-line{
@@ -72,6 +78,15 @@ body{
 .purple-line{
   background-color: #8904B1;
 }
+
+.date-name{
+  font-weight: bold;
+  position: relative;
+  font-size: 30px;
+  margin: 0px 0 200px 250px;
+  color: red;
+}
+
 
 
 
