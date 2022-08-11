@@ -39,7 +39,7 @@ for(let i = 0; i < cells.length;i++){
 
 function showMe() {
     document.querySelector(".table").style.display="none";
-    document.querySelector(".image-star-wars").style.display="block";
+    document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
     let url = `https://swapi.dev/api/people?search=${name}`;
     fetch(url)
@@ -54,13 +54,15 @@ function showMe() {
 function showInformations(dados) {
     const info = document.querySelector('.info');
 
-    info.innerHTML = `<p>Name:${dados.name}</p>
+    info.innerHTML = `<p class="date-name">${dados.name}</p>
+                        <h3>CHARACTERISTICS</h3>
+                        <p>Name:${dados.name}</p>
                         <p>Heigth:${dados.height}</p>
                         <p>Mass:${dados.mass}</p>
                         <p>Hair Color:${dados.hair_color}</p>
                         <p>Skin Color:${dados.skin_color}</p>
                         <p>Eye Color:${dados.eye_color}</p>
-                        <p>Homeworld:${dados.homeworld}</p>`
+                        <p>Homeworld:${dados.planet}</p>`
 }
 
 
