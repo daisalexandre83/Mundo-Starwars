@@ -87,7 +87,13 @@ body{
   color: red;
 }
 
+.character{
+  position: absolute;
+}
 
+.itens-character{
+  font-weight: bold;
+}
 
 
 
