@@ -42,6 +42,7 @@ function showMe() {
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
     let url = `https://swapi.dev/api/people?search=${name}`;
+    // let planet = `https://swapi.dev/api/planets/1/name=${homeworld}`;
     fetch(url)
     .then(function(response) {
         return response.json();
@@ -55,14 +56,14 @@ function showInformations(dados) {
     const info = document.querySelector('.info');
 
     info.innerHTML = `<p class="date-name">${dados.name}</p>
-                        <h3>CHARACTERISTICS</h3>
-                        <p>Name:${dados.name}</p>
-                        <p>Heigth:${dados.height}</p>
-                        <p>Mass:${dados.mass}</p>
-                        <p>Hair Color:${dados.hair_color}</p>
-                        <p>Skin Color:${dados.skin_color}</p>
-                        <p>Eye Color:${dados.eye_color}</p>
-                        <p>Homeworld:${dados.planet}</p>`
+                        <h3 class="character">CHARACTERISTICS</h3>
+                        <p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+                        <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
+                        <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
+                        <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
+                        <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
+                        <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+                        <p class="itens-character">Homeworld:<span class="itens-description">${dados.homeworld}</span></p>`
 }
 
 
