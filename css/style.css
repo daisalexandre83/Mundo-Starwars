@@ -63,6 +63,7 @@ body{
   border: 2px solid gray;
   width: 800px;
   margin-left: 250px;
+  height: 550px;
 }
 
 .image-star-wars{
@@ -89,10 +90,19 @@ body{
 
 .character{
   position: absolute;
+  margin-top: 30px;
 }
 
 .itens-character{
   font-weight: bold;
+  position: relative;
+  top: 70px;
+}
+
+.itens-description{
+  font-weight: normal;
+  position: absolute;
+  color: red;
 }
 
 
