@@ -41,8 +41,7 @@ function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
-    let url = `https://swapi.dev/api/people?search=${name}`;
-    // let planet = `https://swapi.dev/api/planets/1/name=${homeworld}`;
+   
     fetch(url)
     .then(function(response) {
         return response.json();
@@ -50,7 +49,23 @@ function showMe() {
     .then(function(json) {
         showInformations(json.results[0]);
     });
+
+      
 }
+
+// function showPlanets() {
+//     document.querySelector(".table").style.display="none";
+//     document.querySelector(".content").style.display="block";  
+//     const name = this.parentNode.getAttribute("data-name");
+//     let planet = `https://swapi.dev/api/planets/name?search=${name}`;
+//       fetch(planet)
+//       .then(function (response) {
+//         return response.json();
+//       })
+//       .then(function (json) {
+//         showInformations(json.results[0]);
+//       })
+// }
 
 function showInformations(dados) {
     const info = document.querySelector('.info');
@@ -63,7 +78,7 @@ function showInformations(dados) {
                         <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
                         <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
                         <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-                        <p class="itens-character">Homeworld:<span class="itens-description">${dados.homeworld}</span></p>`
+                        <p class="itens-character">Homeworld:<span class="itens-description">${dados.planet.name}</span></p>`
 }
 
 
