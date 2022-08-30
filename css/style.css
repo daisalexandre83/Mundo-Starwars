@@ -90,7 +90,7 @@ body{
 
 .character{
   position: absolute;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .itens-character{
@@ -103,6 +103,17 @@ body{
   font-weight: normal;
   position: absolute;
   color: red;
+}
+
+.line{
+  border-bottom: 3px solid black;
+  position: relative;
+  width: 180px;
+  top: 45px;
+}
+
+.l-first{
+  position: relative;
 }
 
 
