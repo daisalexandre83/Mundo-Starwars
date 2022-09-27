@@ -36,26 +36,35 @@ for(let i = 0; i < cells.length;i++){
     
 }
 
+async function getPlanet(id) {
+    const response  = await fetch(`https://swapi.dev/api/planets/${id}`)
+    const data = await response.json()
+    return data
+}
+
 
 async function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
-    // let url = `https://swapi.dev/api/people?search=${name}`;
-    let url = await fetch(`https://swapi.dev/api/people?search=${name}`) ;
-    let json = await url.json();
-    const planet = await getPlanet(homeworld.slice(-2))
-   
+    let url =  `https://swapi.dev/api/people?search=${name}`;
+
     fetch(url)
     .then(function(response) {
         return response.json();
+    })
+    .then(async function (json) {
+        getPlanet(json.results[0].homeworld.slice(-2))
     })
     .then(function(json) {
         showInformations(json.results[0]);
     });
 
-      
 }
+
+
+
+
 
 // function showPlanets() {
 //     document.querySelector(".table").style.display="none";
@@ -83,7 +92,7 @@ function showInformations(dados) {
                         <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
                         <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
                         <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-                        <p class="itens-character">Homeworld:<span class="itens-description">${dados.homeworld}</span></p>
+                        <p class="itens-character">Eye Color:<span class="itens-description">${dados.homeworld}</span></p>
                          `
 
 }
