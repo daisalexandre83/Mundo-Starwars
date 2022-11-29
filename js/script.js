@@ -64,20 +64,18 @@ function showMe() {
         showInformations(json.results[0]);
     });
 
-    const apiURL = "https://swapi.dev/api/"
+    // const apiURL = "https://swapi.dev/api/"
+    const apiURL =  this.parentNode.getAttribute("data-name");
+    let id = "https://swapi.dev/api/"
     async function getPlanet(id) {
         const response = await fetch(`${apiURL}planets/${id}`)
         // const response = await fetch(`https://swapi.dev/api/planets/${id}`)
         const data = await response.json()
         return data
+
+        const planet = await
+        getPlanet(homeworld.slice(-2))
     }
-     async function setDetails(id) {
-        const response = await fetch(`${apiURL}people/${id}/`)
-        // const response = await fetch(`https://swapi.dev/api/planets/${id}`)
-        const data = await response.json()
-        const{homeworld} = data
-        const planet = await getPlanet(homeworld.slice(-2))        
-     }
 
 }
 
