@@ -64,8 +64,21 @@ function showMe() {
         showInformations(json.results[0]);
     });
 
+    let apiURL = "https://swapi.dev/api/"
+    let planet = document.querySelectorAll('.data-information')
+    async function getPlanet(id){
+        const response = await fetch(`${apiURL}planets/${id}`) 
+        const data = await response.json()
+        return data
+        const planet = await getPlanet(homeworld.slice(-2))   
+    }
+    characters.addEventListener("change",e=>{
+        const id = e.currentTarget.options[e.currentTarget.selectedIndex].value
+        wrap.innerText = ''
+        setDetails(id)
+    })
     // const apiURL = "https://swapi.dev/api/"
-    const apiURL =  this.parentNode.getAttribute("data-name");
+   /*  const apiURL =  this.parentNode.getAttribute("data-name");
     let id = "https://swapi.dev/api/"
     async function getPlanet(id) {
         const response = await fetch(`${apiURL}planets/${id}`)
@@ -75,7 +88,8 @@ function showMe() {
 
         const planet = await
         getPlanet(homeworld.slice(-2))
-    }
+    } */
+
 
 }
 
