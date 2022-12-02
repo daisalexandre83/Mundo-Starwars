@@ -65,17 +65,16 @@ function showMe() {
     });
 
     let apiURL = "https://swapi.dev/api/"
-    let planet = document.querySelectorAll('.data-information')
+    let show = document.querySelectorAll('.data-information')
     async function getPlanet(id){
         const response = await fetch(`${apiURL}planets/${id}`) 
         const data = await response.json()
         return data
         const planet = await getPlanet(homeworld.slice(-2))   
     }
+    
     characters.addEventListener("change",e=>{
         const id = e.currentTarget.options[e.currentTarget.selectedIndex].value
-        wrap.innerText = ''
-        setDetails(id)
     })
     // const apiURL = "https://swapi.dev/api/"
    /*  const apiURL =  this.parentNode.getAttribute("data-name");
@@ -105,7 +104,7 @@ function showInformations(dados) {
                         <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
                         <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
                         <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-                        <p class="itens-character">Homeworld:<span class="itens-description">${dados.planet}</span></p>
+                        <p class="itens-character">Homeworld:<span class="itens-description">${planet.name}</span></p>
                          `
 
 }
