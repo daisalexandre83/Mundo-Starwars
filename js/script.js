@@ -73,7 +73,7 @@ function showMe() {
         const planet = await getPlanet(homeworld.slice(-2))   
     }
     
-    characters.addEventListener("change",e=>{
+    characters.addEventListener("click",e=>{
         const id = e.currentTarget.options[e.currentTarget.selectedIndex].value
     })
     // const apiURL = "https://swapi.dev/api/"
@@ -104,7 +104,7 @@ function showInformations(dados) {
                         <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
                         <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
                         <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-                        <p class="itens-character">Homeworld:<span class="itens-description">${planet.name}</span></p>
+                       
                          `
 
 }
