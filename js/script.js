@@ -64,17 +64,18 @@ function showMe() {
         showInformations(json.results[0]);
     });
 
-    let apiURL = "https://swapi.dev/api/"
-    let show = document.querySelectorAll('.data-information')
+    // let apiURL = "https://swapi.dev/api/"
     async function getPlanet(id){
-        const response = await fetch(`${apiURL}planets/${id}`) 
+        // const response = await fetch(`${apiURL}planets/${id}`) 
+        const response = await fetch(`${url}planets/${id}`) 
         const data = await response.json()
         return data
         const planet = await getPlanet(homeworld.slice(-2))   
     }
     
     characters.addEventListener("click",e=>{
-        const id = e.currentTarget.options[e.currentTarget.selectedIndex].value
+        // const id = e.currentTarget.options[e.currentTarget.selectedIndex].value
+        const id = this.parentNode.getAttribute("data-name");
     })
     // const apiURL = "https://swapi.dev/api/"
    /*  const apiURL =  this.parentNode.getAttribute("data-name");
@@ -104,7 +105,7 @@ function showInformations(dados) {
                         <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
                         <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
                         <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-                       
+                        <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
                          `
 
 }
