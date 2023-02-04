@@ -36,20 +36,6 @@ for(let i = 0; i < cells.length;i++){
     
 }
 
-/* async function getPlanet(id) {
-    const response  = await fetch(`https://swapi.dev/api/planets/${id}`)
-    const data = await response.json()
-    return data
-
-    .then(async function (json) {
-        getPlanet(json.results[0].homeworld.slice(-2))
-    })
-    .then(function (json) {
-        showInformations(json.results[0]);
-    })
-}
- */
-
 function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
@@ -73,10 +59,6 @@ function showMe() {
         const planet = await getPlanet(homeworld.slice(-2))   
     }
     
-    characters.addEventListener("click",e=>{
-        // const id = e.currentTarget.options[e.currentTarget.selectedIndex].value
-        const id = this.parentNode.getAttribute("data-name");
-    })
     // const apiURL = "https://swapi.dev/api/"
    /*  const apiURL =  this.parentNode.getAttribute("data-name");
     let id = "https://swapi.dev/api/"
@@ -89,9 +71,13 @@ function showMe() {
         const planet = await
         getPlanet(homeworld.slice(-2))
     } */
-
-
 }
+
+characters.addEventListener("click",e=>{
+    // const id = e.currentTarget.options[e.currentTarget.selectedIndex].value
+    const name = this.parentNode.getAttribute("data-name");
+    let id =  `https://swapi.dev/api/people?search=${name}`;
+})
 
 function showInformations(dados) {
     const info = document.querySelector('.info');
