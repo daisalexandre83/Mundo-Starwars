@@ -49,38 +49,17 @@ function showMe() {
     .then(function(json) {
         showInformations(json.results[0]);
     });
-
-    // let apiURL = "https://swapi.dev/api/"
-    async function getPlanet(id){
-        // const response = await fetch(`${apiURL}planets/${id}`) 
-        const response = await fetch(`${url}planets/${id}`) 
-        const data = await response.json()
-        return data
-        const planet = await getPlanet(homeworld.slice(-2))   
-    }
-    
-    // const apiURL = "https://swapi.dev/api/"
-   /*  const apiURL =  this.parentNode.getAttribute("data-name");
-    let id = "https://swapi.dev/api/"
-    async function getPlanet(id) {
-        const response = await fetch(`${apiURL}planets/${id}`)
-        // const response = await fetch(`https://swapi.dev/api/planets/${id}`)
-        const data = await response.json()
-        return data
-
-        const planet = await
-        getPlanet(homeworld.slice(-2))
-    } */
 }
 
-characters.addEventListener("click",e=>{
-    // const id = e.currentTarget.options[e.currentTarget.selectedIndex].value
-    const name = this.parentNode.getAttribute("data-name");
-    let id =  `https://swapi.dev/api/people?search=${name}`;
-})
+async function getPlanet(url){
+    const response = await fetch(url) 
+    const data = await response.json()
+    return data;
+}
 
-function showInformations(dados) {
+async function showInformations(dados) {
     const info = document.querySelector('.info');
+    const planet = await getPlanet(dados.homeworld);
 
     info.innerHTML = `<p class="date-name">${dados.name}</p>
                         <div class="line l-first"></div>
