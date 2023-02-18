@@ -73,6 +73,8 @@ async function showInformations(dados) {
                         <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
                          `
 
+     const info2 = document.querySelector('.info');                    
+
 }
 
 
