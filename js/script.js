@@ -61,17 +61,26 @@ async function showInformations(dados) {
     const info = document.querySelector('.info');
     const planet = await getPlanet(dados.homeworld);
 
-    info.innerHTML = `<p class="date-name">${dados.name}</p>
-                        <div class="line l-first"></div>
-                        <h3 class="character">CHARACTERISTICS</h3>
-                        <p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
-                        <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
-                        <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
-                        <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
-                        <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
-                        <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-                        <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
-                         `
+info.innerHTML = `<p class="date-name">${dados.name}</p>
+                   <div class="line">
+                    <h3 class="character-title">CHARACTERISTICS</h3>
+                    <p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+                    <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
+                    <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
+                    <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
+                    <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
+                    <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+                    <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
+                   </div>
+                   <div class="">
+                    <h3></h3>
+                    <p><span>${dados.films}</span></p>
+                   </div>
+                    `
+   
+   
+
+                                
 
      const info2 = document.querySelector('.info');                    
 
