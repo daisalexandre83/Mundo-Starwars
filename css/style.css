@@ -88,15 +88,21 @@ body{
   color: red;
 }
 
-.character{
-  position: absolute;
-  margin-top: 15px;
+/* .character{
+  background-color: yellowgreen;
+  position: relative;
+  margin-top: 10px;
+} */
+
+.character-title{
+  position: relative;
+  top:245px;
 }
 
 .itens-character{
   font-weight: bold;
   position: relative;
-  top: 70px;
+  top: 275px;
 }
 
 .itens-description{
@@ -107,9 +113,9 @@ body{
 
 .line{
   border-bottom: 3px solid black;
-  position: relative;
+  position: absolute;
   width: 180px;
-  top: 40px;
+  bottom: 275px;
 }
 
 
