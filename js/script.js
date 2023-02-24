@@ -71,10 +71,7 @@ info.innerHTML = `<p class="date-name">${dados.name}</p>
                     <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
                     <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
                     <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
-                   </div>
-                   <div class="">
-                    <h3></h3>
-                    <p><span>${dados.films}</span></p>
+                    <p class="itens-character>Films:<span class="itens-description">${dados.name.films}</span></p>
                    </div>
                     `
    
