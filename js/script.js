@@ -58,20 +58,20 @@ async function getPlanet(url){
 }
 
 // async function getFilm(url){
-//     const response1 = await fetch(ul)
-//     const data1 = await response1.json()
-//     return data1;
+//     const response = await fetch(url)
+//     const data = await response.json()
+//     return data;
 // }
 
-function getFilms() {
-    fetch("https://swapi.dev/api/films?search").then(d=> d.json()).then(films =>{
-        films.title.forEach(url =>{
-            fetch(url).then(d => d.json()).then(character =>{
-
-            })
-        })
+function getFilms4() {
+    let urlFilm4 = `https://swapi.dev/api/films/4`;
+    fetch(urlFilm4)
+    .then(function (responseret) {
+        
     })
-}
+ }
+
+
 
 async function showInformations(dados) {
     const info = document.querySelector('.info');
@@ -88,6 +88,7 @@ info.innerHTML = `<p class="date-name">${dados.name}</p>
                     <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
                     <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
                     <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
+                    <p class="itens-character">Films:<span class="itens-description">${dados.films}</span></p>
                    </div>
                     `
    
@@ -97,6 +98,6 @@ info.innerHTML = `<p class="date-name">${dados.name}</p>
 
      const info2 = document.querySelector('.info');                    
 
+
+
 }
-
-
