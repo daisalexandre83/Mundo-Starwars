@@ -63,12 +63,17 @@ async function getPlanet(url){
 //     return data;
 // }
 
-function getFilms4() {
-    let urlFilm4 = `https://swapi.dev/api/films/4`;
-    fetch(urlFilm4)
-    .then(function (responseret) {
-        
-    })
+ async function getFilms4() {
+    const film4 = await fetch(`https://swapi.dev/api/films/4`);
+    const data = await film4.json();
+    // let urlFilm4 = `https://swapi.dev/api/films/4`;
+    // fetch(urlFilm4)
+    // .then(function (response) {
+    //     return response.json();
+    // })
+    // .then(function(json) {
+    //     showInformations(json.results[0]);
+    // })
  }
 
 
@@ -76,7 +81,6 @@ function getFilms4() {
 async function showInformations(dados) {
     const info = document.querySelector('.info');
     const planet = await getPlanet(dados.homeworld);
-    // const film = await getFilm(dados.films);
 
 info.innerHTML = `<p class="date-name">${dados.name}</p>
                    <div class="line">
@@ -88,7 +92,7 @@ info.innerHTML = `<p class="date-name">${dados.name}</p>
                     <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
                     <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
                     <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
-                    <p class="itens-character">Films:<span class="itens-description">${dados.films}</span></p>
+                    <p class="itens-character">Films:<span class="itens-description">${urlFilm4.title}</span></p>
                    </div>
                     `
    
