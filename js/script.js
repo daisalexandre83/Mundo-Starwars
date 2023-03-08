@@ -57,30 +57,36 @@ async function getPlanet(url){
     return data;
 }
 
-// async function getFilm(url){
-//     const response = await fetch(url)
-//     const data = await response.json()
-//     return data;
-// }
+async function getNameFilm4(){
+    const results1 = await fetch("https://swapi.dev/api/films/4/")
+    const data = await results1.json()
+    return data;
+}
 
- async function getFilms4() {
-    const film4 = await fetch(`https://swapi.dev/api/films/4`);
-    const data = await film4.json();
-    // let urlFilm4 = `https://swapi.dev/api/films/4`;
-    // fetch(urlFilm4)
-    // .then(function (response) {
-    //     return response.json();
-    // })
-    // .then(function(json) {
-    //     showInformations(json.results[0]);
-    // })
- }
+async function getNameFilm5(){
+    const results2 = await fetch("https://swapi.dev/api/films/5/")
+    const data = await results2.json()
+    return data;
+}
+
+async function getNameFilm6(){
+    const results3 = await fetch("https://swapi.dev/api/films/6/")
+    const data = await results3.json()
+    return data;
+}
+
+
 
 
 
 async function showInformations(dados) {
     const info = document.querySelector('.info');
     const planet = await getPlanet(dados.homeworld);
+    const getFilms4 = await getNameFilm4(dados);
+    const getFilm5 = await getNameFilm5(dados);
+    const getFilm6 = await getNameFilm6(dados);
+
+
 
 info.innerHTML = `<p class="date-name">${dados.name}</p>
                    <div class="line">
@@ -92,7 +98,9 @@ info.innerHTML = `<p class="date-name">${dados.name}</p>
                     <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
                     <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
                     <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
-                    <p class="itens-character">Films:<span class="itens-description">${urlFilm4.title}</span></p>
+                    <p class="itens-character">Film:<span class="itens-description">${getFilms4.title}</span></p>
+                    <p class="itens-character">Film:<span class="itens-description">${getFilm5.title}</span></p>
+                    <p class="itens-character">Film:<span class="itens-description">${getFilm6.title}</span></p>
                    </div>
                     `
    
