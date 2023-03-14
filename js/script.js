@@ -98,18 +98,18 @@ info.innerHTML = `<p class="date-name">${dados.name}</p>
                     <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
                     <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
                     <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
+                    <div class="skywalker-films">
+                    <h1>FILMS</h1>
                     <p class="itens-character">Film:<span class="itens-description">${getFilms4.title}</span></p>
                     <p class="itens-character">Film:<span class="itens-description">${getFilm5.title}</span></p>
                     <p class="itens-character">Film:<span class="itens-description">${getFilm6.title}</span></p>
+                    </div>
                    </div>
                     `
    
-   
-
-                                
-
      const info2 = document.querySelector('.info');                    
+}
 
-
-
+function showSkywalker() {
+    document.querySelector("#skywalker-person").display="block"
 }
