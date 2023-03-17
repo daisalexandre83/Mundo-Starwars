@@ -1,0 +1,52 @@
+body{
+    font-family: 'Cairo',sans-serif;
+    font-family: 'Merriweather Sans',sans-serif;
+    overflow-x: hidden;
+    background-color: coral;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topText{
+    font-size: 18px;
+    font-weight: bold;
+}
+.selectSection{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+.selectSection button{
+    font-size: 18px;
+    background-color: rgba(209,207,207,0.575 green, blue, alpha);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-left: 10px;
+    border: 0;
+    padding: 3px;
+}
+.selectSection button:hover{
+    cursor: pointer;
+}
+.active{
+    background-color: #87CEEB !important;
+}
+.content:not(:first-child){
+    display: none;
+}
+.contentSection{
+    margin: 40px;
+    display: block;
+    color: #666;
+    display: grid;
+}
+p{
+    font-size: 20px;
+    font-weight: normal;
+    margin: 10px;
+    text-align: center;
+    color: black;
+}
