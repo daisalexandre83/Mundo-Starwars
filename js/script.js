@@ -75,6 +75,7 @@ async function getNameFilm6(){
     return data;
 }
 
+let tables = document.querySelectorAll
 
 
 
@@ -110,6 +111,3 @@ info.innerHTML = `<p class="date-name">${dados.name}</p>
      const info2 = document.querySelector('.info');                    
 }
 
-function showSkywalker() {
-    document.querySelector("#skywalker-person").display="block"
-}
