@@ -118,9 +118,10 @@ body{
   bottom: 275px;
 }
 
-.skywalker-films{
-  display: none;
+active-person{
+  background-color: #00BFFF;
 }
+
 
 
 
