@@ -86,6 +86,9 @@ async function showInformations(dados) {
 
 
 info.innerHTML = `<p class="date-name">${dados.name}</p>
+                    let buttons = document.querySelectorAll(".selectionSection button"); 
+                   <div class="">
+                   </div>
                    <div class="line">
                     <h3 class="character-title">CHARACTERISTICS</h3>
                     <p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
