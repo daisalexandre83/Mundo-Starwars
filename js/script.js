@@ -83,51 +83,58 @@ async function showInformations(dados) {
     const getFilm5 = await getNameFilm5(dados);
     const getFilm6 = await getNameFilm6(dados);
 
-let buttons = document.querySelectorAll(".select-section button");
+// let buttons = document.querySelectorAll(".select-section button");
 
-for (let button of buttons) {
-    button.addEventListener('click',e =>{
-        const et = e.target;
-        const active = document.querySelector(".active");
-        if (active) {
-            active.classList.remove("active");
-        }
-        et.classList.add("active");
-        let allContent = document.querySelectorAll('.content');
-    })
+// for (let button of buttons) {
+//     button.addEventListener('click',e =>{
+//         const et = e.target;
+//         const active = document.querySelector(".active");
+//         if (active) {
+//             active.classList.remove("active");
+//         }
+//         et.classList.add("active");
+//         let allContent = document.querySelectorAll('.content');
+
+//         for (let content of allContent) {
+//             if (content.getAttribute('data-number')=== button.getAttribute('data-number')) {
+//                 content.style.display = 'block';
+//             } else {
+//                 content.style.display = 'none';
+//             }
+            
+//         }
+//     })
     
-}
+// }
 
 info.innerHTML = `<p class="date-name">${dados.name}</p>
                    <div class="container">
-                   <h3 class="character-title">CHARACTERISTICS</h3>
-                   <div class="line">
-                   </div>
-                   <p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
-                   <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
-                   <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
-                   <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
-                   <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
-                   <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-                   <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
-                   <!--h1>FILMS</h1-->
-                   <p class="itens-character">Film:<span class="itens-description">${getFilms4.title}</span></p>
-                   <p class="itens-character">Film:<span class="itens-description">${getFilm5.title}</span></p>
-                   <p class="itens-character">Film:<span class="itens-description">${getFilm6.title}</span></p>
-
-                   <!--div class="container">
                     <div class="select-section">
-                        <button type="button" data-number="1" class="active">CHARACTERISTICS</button>
-                        <button type="button" data-number="2" class="active">FILMS</button>
-                        <button type="button" data-number="3" class="active">STARSHIPS</button>
+                     <button type="button" data-number="1" class="active">CHARACTERISTICS</button>
+                     <button type="button" data-number="2" class="active">FILMS</button>
+                     <button type="button" data-number="3" class="active">STARSHIPS</button>
                     </div>
                     <div class="content-section">
-                        <div class="content" data-number="1"></div>
-                        <div class="content" data-number="2"></div>
-                        <div class="content" data-number="3"></div>
+                     <div class="content" data-number="1">
+                      <p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+                      <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
+                      <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
+                      <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
+                      <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
+                      <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+                      <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
+                     </div>
+                     <div class="content" data-number="2">
+                      <p class="itens-character">Film:<span class="itens-description">${getFilms4.title}</span></p>
+                      <p class="itens-character">Film:<span class="itens-description">${getFilm5.title}</span></p>
+                      <p class="itens-character">Film:<span class="itens-description">${getFilm6.title}</span></p>
+                     </div>
+                     <div class="content" data-number="3"></div>
+                     </div>
+                     <!--div class="line">
+                     </div-->
                     </div>
-                   </div>
-                   </div-->
+                   </div> 
                     `
                     
    
