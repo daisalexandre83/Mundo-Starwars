@@ -88,10 +88,10 @@ body{
   color: red;
 }
 
-/* .character{
-  background-color: yellowgreen;
+
+/* character-title{
   position: relative;
-  margin-top: 10px;
+  top: 0;
 } */
 
 .container-characteristics{
@@ -134,6 +134,46 @@ body{
   height: 220px;
   background-color: white;
 }
+
+.select-section{
+  display: grid;
+  grid-template-columns: repeat(3,1fr) ;
+  justify-content: center;
+  text-align: center;
+  top: 20px;
+}
+
+.select-section button{
+  font-size: 18px;
+  background-color: rgba(209,207,207, 0.575);
+  box-shadow: 0 0  5px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+  border: 0;
+  padding: 3px;
+}
+
+.select-section button:hover{
+  cursor: pointer;
+}
+
+.active{
+  background-color: #87CEEB !important;
+}
+
+.content:not(:first-child){
+  display: none;
+}
+
+.content-section{
+  margin: 40px;
+  display: block;
+  color: #666;
+  display: grid;
+}
+
+
+
+
 
 
 
