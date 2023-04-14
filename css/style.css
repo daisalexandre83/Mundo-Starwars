@@ -130,9 +130,10 @@ body{
 .container{
   position: absolute;
   top: 310px;
-  width: 700px;
+  width: 750px;
   height: 220px;
   background-color: white;
+  margin-left: 25px;
 }
 
 .select-section{
