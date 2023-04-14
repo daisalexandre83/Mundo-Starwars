@@ -83,29 +83,29 @@ async function showInformations(dados) {
     const getFilm5 = await getNameFilm5(dados);
     const getFilm6 = await getNameFilm6(dados);
 
-// let buttons = document.querySelectorAll(".select-section button");
+let buttons = document.querySelectorAll(".select-section button");
 
-// for (let button of buttons) {
-//     button.addEventListener('click',e =>{
-//         const et = e.target;
-//         const active = document.querySelector(".active");
-//         if (active) {
-//             active.classList.remove("active");
-//         }
-//         et.classList.add("active");
-//         let allContent = document.querySelectorAll('.content');
+for (let button of buttons) {
+    button.addEventListener('click',e =>{
+        const et = e.target;
+        const active = document.querySelector(".active");
+        if (active) {
+            active.classList.remove("active");
+        }
+        et.classList.add("active");
+        let allContent = document.querySelectorAll('.content ');
 
-//         for (let content of allContent) {
-//             if (content.getAttribute('data-number')=== button.getAttribute('data-number')) {
-//                 content.style.display = 'block';
-//             } else {
-//                 content.style.display = 'none';
-//             }
+        for (let content of allContent) {
+            if (content.getAttribute('data-number')=== button.getAttribute('data-number')) {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
             
-//         }
-//     })
+        }
+    })
     
-// }
+}
 
 info.innerHTML = `<p class="date-name">${dados.name}</p>
                    <div class="container">
