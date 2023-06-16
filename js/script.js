@@ -110,12 +110,12 @@ for (let button of buttons) {
 info.innerHTML = `<p class="date-name">${dados.name}</p>
                    <div class="container">
                     <div class="select-section">
-                     <button type="button" data-number="1" class="active">CHARACTERISTICS</button>
-                     <button type="button" data-number="2" class="active">FILMS</button>
-                     <button type="button" data-number="3" class="active">STARSHIPS</button>
+                    <button type="button" data-number="2" class="active">FILMS</button>
+                    <button type="button" data-number="3" class="active">STARSHIPS</button>
                     </div>
                     <div class="content-section">
-                     <div class="content" data-number="1">
+                    <div class="content" data-number="1">
+                    <button type="button" data-number="1" class="active">CHARACTERISTICS</button>
                       <p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
                       <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
                       <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
@@ -129,12 +129,9 @@ info.innerHTML = `<p class="date-name">${dados.name}</p>
                       <p class="itens-character">Film:<span class="itens-description">${getFilm5.title}</span></p>
                       <p class="itens-character">Film:<span class="itens-description">${getFilm6.title}</span></p>
                      </div>
-                     <div class="content" data-number="3"></div>
-                     </div>
-                     <!--div class="line">
-                     </div-->
                     </div>
                    </div> 
+                   
                     `
                     
    
