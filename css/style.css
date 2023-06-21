@@ -172,6 +172,18 @@ body{
   display: grid;
 }
 
+.characters-person button{
+  display: none;
+}
+
+.movies-anakin button{
+  display: none;
+}
+
+.starships-anakin button{
+  display: none;
+}
+
 
 
 
