@@ -39,6 +39,7 @@ for(let i = 0; i < cells.length;i++){
 function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
+    document.querySelector(".characters-person button").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
     let url =  `https://swapi.dev/api/people?search=${name}`;
 
@@ -55,14 +56,6 @@ async function getPlanet(url){
     const response = await fetch(url) 
     const data = await response.json()
     return data;
-}
-//Função para mostrar o ícone das características do presonagem
-function showWordCharacter(clicked_element) {
-    // let charactersAnakin = document.getElementsByClassName(el).style.display;
-    let characters = clicked_element.getAttribute("data-name");
-    // if (display == "none") {
-    //    document.getElementById(el).style.display = 'block'; 
-    // }
 }
 
 // async function getNameFilm4(){
