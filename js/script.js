@@ -40,6 +40,7 @@ function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
     document.querySelector(".characters-person button").style.display="block";
+    document.querySelector(".characters-person-line").style.display="block;"
     const name = this.parentNode.getAttribute("data-name");
     let url =  `https://swapi.dev/api/people?search=${name}`;
 
@@ -56,6 +57,12 @@ async function getPlanet(url){
     const response = await fetch(url) 
     const data = await response.json()
     return data;
+}
+
+function showMoviesAnakin() {
+    const moviesAnakin = this.parentNode.getAttribute("data-movies-anakin");
+    let urlMovie = `https://swapi.dev/api/people?search=${moviesAnakin}`;
+    
 }
 
 // async function getNameFilm4(){
