@@ -62,6 +62,14 @@ async function getPlanet(url){
 function showMoviesAnakin() {
     const moviesAnakin = this.parentNode.getAttribute("data-movies-anakin");
     let urlMovie = `https://swapi.dev/api/people?search=${moviesAnakin}`;
+
+    fetch(url)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function (json) {
+        
+    })
     
 }
 
@@ -134,6 +142,17 @@ info.innerHTML = `<p class="date-name">${dados.name}</p>
                     `
                     
    
-     const info2 = document.querySelector('.info');                    
+                    
 }
+
+async function getMoviesAnakin(url) {
+    const responseFilm4Anakin = await getNameFilm4(dados);
+}
+
+async function showInformationsMoviesAnakin(dados) {
+    const infoMoviesAnakin = document.querySelector('.infoMoviesAnakin');
+
+}
+
+
 
