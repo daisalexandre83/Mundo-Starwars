@@ -23,11 +23,6 @@ body{
   height: 120px;
 }
 
-.content{
-  position: absolute;
-  top: 180px;
-}
-
 .title{
   font-size: 45px;
   font-weight: bold;
@@ -63,7 +58,7 @@ body{
   border: 2px solid gray;
   width: 800px;
   margin-left: 250px;
-  height: 550px;
+  height: 800px;
 }
 
 .image-star-wars{
@@ -111,7 +106,6 @@ body{
 .itens-character{
   font-weight: bold;
   position: relative;
-  top: 260px;
 }
 
 .itens-description{
@@ -128,12 +122,11 @@ body{
 }
 
 .container{
-  position: absolute;
-  top: 310px;
   width: 750px;
-  height: 220px;
+  height: 400px;
   background-color: white;
   margin-left: 25px;
+  margin-top: 320px;
 }
 
 .select-section{
@@ -174,10 +167,25 @@ body{
 
 .characters-person button{
   display: none;
+  background-color: yellowgreen;
+  position: absolute;
+  top: 485px;
+  left: 290px;
+  cursor: pointer;
 }
 
-.movies-anakin button{
+.characters-person-line{
+  width: 100px;
   display: none;
+  border: 2px solid gray;
+}
+
+.data-movies-anakin button{
+  display: none;
+  background-color: blue;
+  position: absolute;
+  top: 487px;
+  margin-left: 500px;
 }
 
 .starships-anakin button{
