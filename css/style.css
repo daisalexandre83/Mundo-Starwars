@@ -165,7 +165,7 @@ body{
   display: grid;
 }
 
-.characters-person button{
+.characters-anakin h1{
   display: none;
   background-color: yellowgreen;
   position: absolute;
@@ -174,13 +174,13 @@ body{
   cursor: pointer;
 }
 
-.characters-person-line{
+.characters-anakin-line{
   width: 100px;
   display: none;
   border: 2px solid gray;
 }
 
-.data-movies-anakin button{
+.movies-anakin h1{
   display: none;
   background-color: blue;
   position: absolute;
