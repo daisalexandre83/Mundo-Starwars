@@ -40,7 +40,8 @@ function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
     document.querySelector(".characters-person button").style.display="block";
-    document.querySelector(".characters-person-line").style.display="block;"
+    // document.querySelector(".characters-person-line").style.display="block";
+    document.querySelector(".data-movies-anakin button").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
     let url =  `https://swapi.dev/api/people?search=${name}`;
 
@@ -59,45 +60,46 @@ async function getPlanet(url){
     return data;
 }
 
-function showMoviesAnakin() {
+ async function showMoviesAnakin() {
     const moviesAnakin = this.parentNode.getAttribute("data-movies-anakin");
-    let urlMovie = `https://swapi.dev/api/people?search=${moviesAnakin}`;
+    let urlMoviesAnakin = `https://swapi.dev/api/films/4/`
+    console.log('daiane');
+   
 
-    fetch(url)
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function (json) {
-        
-    })
+     fetch(urlMoviesAnakin)
+     .then(function(response) {
+         return response.json();
+     })
+     .then(function (json) {
+        dataMoviesAnakin(json.results[0]);
+     });
     
 }
 
-// async function getNameFilm4(){
-//     const results1 = await fetch("https://swapi.dev/api/films/4/")
-//     const data = await results1.json()
-//     return data;
-// }
+//async function moviesAnakin4
+ async function getNameFilm4(urlMoviesAnakin){
+    const results1 = await fetch(urlMoviesAnakin)
+    const data = await results1.json()
+    return data;
+ }
 
-// async function getNameFilm5(){
-//     const results2 = await fetch("https://swapi.dev/api/films/5/")
-//     const data = await results2.json()
-//     return data;
-// }
+async function getNameFilm5(urlMoviesAnakin){
+    const results2 = await fetch(urlMoviesAnakin)
+    const data = await results2.json()
+    return data;
+}
 
-// async function getNameFilm6(){
-//     const results3 = await fetch("https://swapi.dev/api/films/6/")
-//     const data = await results3.json()
-//     return data;
-// }
+async function getNameFilm6(urlMoviesAnakin){
+    const results3 = await fetch(urlMoviesAnakin)
+    const data = await results3.json()
+    return data;
+}
 
 
 async function showInformations(dados) {
     const info = document.querySelector('.info');
     const planet = await getPlanet(dados.homeworld);
-    // const getFilms4 = await getNameFilm4(dados);
-    // const getFilm5 = await getNameFilm5(dados);
-    // const getFilm6 = await getNameFilm6(dados);
+    
 
 // let buttons = document.querySelectorAll(".select-section button");
 
@@ -145,14 +147,23 @@ info.innerHTML = `<p class="date-name">${dados.name}</p>
                     
 }
 
-async function getMoviesAnakin(url) {
-    const responseFilm4Anakin = await getNameFilm4(dados);
+
+async function dataMoviesAnakin(dados) {
+    const info2 = document.querySelector('.info2');
+    const getFilms4 = await getNameFilm4(dados);
+    const getFilms5 = await getNameFilm5(dados);
+    const getFilms6 = await getNameFilm6(dados);
+
+    info2.innerHTML = `<p class="itens-character">${getFilms4.title}</p>
+    <p class="itens-character">${getFilms5.title}</p>
+    <p class="itens-character">${getFilms6.title}</p>
+    `
 }
 
-async function showInformationsMoviesAnakin(dados) {
-    const infoMoviesAnakin = document.querySelector('.infoMoviesAnakin');
 
-}
+
+//     infoMoviesAnakin.innerHTML = <p>${getFilms4.name}</p>
+// }
 
 
 
