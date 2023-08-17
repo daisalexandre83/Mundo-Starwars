@@ -1,3 +1,6 @@
+
+let personFilms =[]; 
+
 document.addEventListener("DOMContentLoaded",() =>{
     document.querySelectorAll(".search-input").forEach((inputField)=>{
         const tableRows = inputField.closest("table")
@@ -39,9 +42,9 @@ for(let i = 0; i < cells.length;i++){
 function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
-    document.querySelector(".characters-person button").style.display="block";
+    document.querySelector(".characters-anakin h1").style.display="block";
     // document.querySelector(".characters-person-line").style.display="block";
-    document.querySelector(".data-movies-anakin button").style.display="block";
+    document.querySelector(".movies-anakin h1").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
     let url =  `https://swapi.dev/api/people?search=${name}`;
 
@@ -60,110 +63,67 @@ async function getPlanet(url){
     return data;
 }
 
- async function showMoviesAnakin() {
-    const moviesAnakin = this.parentNode.getAttribute("data-movies-anakin");
-    let urlMoviesAnakin = `https://swapi.dev/api/films/4/`
+ async function showMovies() {
+    for (let index = 0; index < personFilms.length; index++) {
+        const element = personFilms[index];
+        
+        fetch(element)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function (json) {
+            console.log(json)
+           dataMoviesAnakin(json.title);
+        });
+    }
+   
+
+
     console.log('daiane');
    
 
-     fetch(urlMoviesAnakin)
-     .then(function(response) {
-         return response.json();
-     })
-     .then(function (json) {
-        dataMoviesAnakin(json.results[0]);
-     });
-    
-}
-
-//async function moviesAnakin4
- async function getNameFilm4(urlMoviesAnakin){
-    const results1 = await fetch(urlMoviesAnakin)
-    const data = await results1.json()
-    return data;
- }
-
-async function getNameFilm5(urlMoviesAnakin){
-    const results2 = await fetch(urlMoviesAnakin)
-    const data = await results2.json()
-    return data;
-}
-
-async function getNameFilm6(urlMoviesAnakin){
-    const results3 = await fetch(urlMoviesAnakin)
-    const data = await results3.json()
-    return data;
 }
 
 
 async function showInformations(dados) {
     const info = document.querySelector('.info');
+    console.log(dados);
+    personFilms = dados.films
     const planet = await getPlanet(dados.homeworld);
+    showMovies();
     
 
-// let buttons = document.querySelectorAll(".select-section button");
-
-// for (let button of buttons) {
-//     button.addEventListener('click',e =>{
-//         const et = e.target;
-//         const active = document.querySelector(".active");
-//         if (active) {
-//             active.classList.remove("active");
-//         }
-//         et.classList.add("active");
-//         let allContent = document.querySelectorAll('.content ');
-
-//         for (let content of allContent) {
-//             if (content.getAttribute('data-number')=== button.getAttribute('data-number')) {
-//                 content.style.display = 'block';
-//             } else {
-//                 content.style.display = 'none';
-//             }
-            
-//         }
-//     })
-    
-// }
-
-
-
-info.innerHTML = `<p class="date-name">${dados.name}</p>
-                   <div class="container">
-                    <div class="content-section">
-                      <p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
-                      <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
-                      <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
-                      <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
-                      <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
-                      <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-                      <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
-                     </div>
-                    
-                   </div> 
-                   
-                    `
+info.innerHTML = 
+`<div class="container1">
+<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+<p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
+<p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
+<p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
+<p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
+<p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+<p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
+</div>`
                     
    
                     
 }
 
 
-async function dataMoviesAnakin(dados) {
+async function dataMovies(dadosFilms) {
+    personFilms = dados.films
     const info2 = document.querySelector('.info2');
-    const getFilms4 = await getNameFilm4(dados);
-    const getFilms5 = await getNameFilm5(dados);
-    const getFilms6 = await getNameFilm6(dados);
+    showMovies();
+    // document.querySelector('.info').style.display = "none";
 
-    info2.innerHTML = `<p class="itens-character">${getFilms4.title}</p>
-    <p class="itens-character">${getFilms5.title}</p>
-    <p class="itens-character">${getFilms6.title}</p>
+    info2.innerHTML = `<p class="itens-character">${dadosFilms}</p>
     `
 }
 
 
 
-//     infoMoviesAnakin.innerHTML = <p>${getFilms4.name}</p>
-// }
+
+
+
 
 
 
