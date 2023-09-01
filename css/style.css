@@ -89,20 +89,6 @@ body{
   top: 0;
 } */
 
-.container-characteristics{
-  background-color:#fff;
-  position: relative;
-  height: 215px;
-  margin: 320px 20px;
-  width: 760px;
-  
-}
-
-.container-titles{
-  position: relative;
-  top:245px;
-}
-
 .itens-character{
   font-weight: bold;
   position: relative;
@@ -121,13 +107,13 @@ body{
   top: 285px;
 }
 
-.container{
+/* .container{
   width: 750px;
   height: 400px;
   background-color: white;
   margin-left: 25px;
   margin-top: 320px;
-}
+} */
 
 .select-section{
   display: grid;
@@ -180,17 +166,20 @@ body{
   border: 2px solid gray;
 }
 
-.movies-anakin h1{
+.movies-person h1{
   display: none;
   background-color: blue;
   position: absolute;
   top: 487px;
-  margin-left: 500px;
+  margin-left: 550px;
+  cursor: pointer;
 }
 
 .starships-anakin button{
   display: none;
 }
+
+
 
 
 
