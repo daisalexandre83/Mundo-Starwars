@@ -43,8 +43,8 @@ function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
     document.querySelector(".characters-anakin h1").style.display="block";
+    document.querySelector(".movies-person h1").style.display="block";
     // document.querySelector(".characters-person-line").style.display="block";
-    document.querySelector(".movies-anakin h1").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
     let url =  `https://swapi.dev/api/people?search=${name}`;
 
@@ -64,17 +64,30 @@ async function getPlanet(url){
 }
 
  async function showMovies() {
+   console.log('olá');
     for (let index = 0; index < personFilms.length; index++) {
-        const element = personFilms[index];
+        const urlFilms = personFilms[index];
         
-        fetch(element)
+        fetch(urlFilms)
         .then(function(response) {
             return response.json();
         })
         .then(function (json) {
             console.log(json)
-           dataMoviesAnakin(json.title);
+           dataMovies(json.title);
         });
+    // const personFilms = this.parentNode.getAttribute("movies-person");
+    // let urlFilms = `http https://swapi.dev/api/films?search=${personFilms}`
+    //   for (let index = 0; index < json.length; index++) {
+    //       const e = json[index];
+    //       fetch(e)
+    //           .then(function(response) {
+    //               return response.json();
+    //           })
+    //           .then(function (json) {
+    //               console.log(json)
+    //              dataMoviesAnakin(json.title);
+    //   });
     }
    
 
@@ -86,11 +99,12 @@ async function getPlanet(url){
 
 
 async function showInformations(dados) {
+    
     const info = document.querySelector('.info');
     console.log(dados);
     personFilms = dados.films
     const planet = await getPlanet(dados.homeworld);
-    showMovies();
+    // showMovies();
     
 
 info.innerHTML = 
@@ -110,12 +124,12 @@ info.innerHTML =
 
 
 async function dataMovies(dadosFilms) {
-    personFilms = dados.films
     const info2 = document.querySelector('.info2');
-    showMovies();
+    // showMovies();
     // document.querySelector('.info').style.display = "none";
+    console.log(info2)
 
-    info2.innerHTML = `<p class="itens-character">${dadosFilms}</p>
+    info2.innerHTML += `<p class="itens-character">${dadosFilms}</p>
     `
 }
 
