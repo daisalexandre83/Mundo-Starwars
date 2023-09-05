@@ -42,7 +42,7 @@ for(let i = 0; i < cells.length;i++){
 function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
-    document.querySelector(".characters-anakin h1").style.display="block";
+    document.querySelector(".characters-person h1").style.display="block";
     document.querySelector(".movies-person h1").style.display="block";
     // document.querySelector(".characters-person-line").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
@@ -64,6 +64,7 @@ async function getPlanet(url){
 }
 
  async function showMovies() {
+   document.querySelector(".info").style.display="none";
    console.log('olá');
     for (let index = 0; index < personFilms.length; index++) {
         const urlFilms = personFilms[index];
@@ -109,13 +110,13 @@ async function showInformations(dados) {
 
 info.innerHTML = 
 `<div class="container1">
-<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
-<p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
-<p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
-<p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
-<p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
-<p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-<p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
+   <p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+   <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
+   <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
+   <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
+   <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
+   <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+   <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
 </div>`
                     
    
@@ -129,8 +130,10 @@ async function dataMovies(dadosFilms) {
     // document.querySelector('.info').style.display = "none";
     console.log(info2)
 
-    info2.innerHTML += `<p class="itens-character">${dadosFilms}</p>
-    `
+    info2.innerHTML += 
+    `<div class="container2">
+       <p class="itens-character">${dadosFilms}</p>
+    </div>`
 }
 
 
