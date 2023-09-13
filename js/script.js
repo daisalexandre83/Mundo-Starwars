@@ -1,6 +1,8 @@
 
 let personFilms =[]; 
 
+let personStarships = [];
+
 document.addEventListener("DOMContentLoaded",() =>{
     document.querySelectorAll(".search-input").forEach((inputField)=>{
         const tableRows = inputField.closest("table")
@@ -77,30 +79,12 @@ async function getPlanet(url){
             console.log(json)
            dataMovies(json.title);
         });
-    // const personFilms = this.parentNode.getAttribute("movies-person");
-    // let urlFilms = `http https://swapi.dev/api/films?search=${personFilms}`
-    //   for (let index = 0; index < json.length; index++) {
-    //       const e = json[index];
-    //       fetch(e)
-    //           .then(function(response) {
-    //               return response.json();
-    //           })
-    //           .then(function (json) {
-    //               console.log(json)
-    //              dataMoviesAnakin(json.title);
-    //   });
     }
-   
-
-
     console.log('daiane');
-   
-
 }
 
 
 async function showInformations(dados) {
-    
     const info = document.querySelector('.info');
     console.log(dados);
     personFilms = dados.films
@@ -118,11 +102,7 @@ info.innerHTML =
    <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
    <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
 </div>`
-                    
-   
-                    
 }
-
 
 async function dataMovies(dadosFilms) {
     const info2 = document.querySelector('.info2');
@@ -135,6 +115,24 @@ async function dataMovies(dadosFilms) {
        <p class="itens-character">${dadosFilms}</p>
     </div>`
 }
+
+async function showStarships{
+    for (let index = 0; index < personStarships.length; index++) {
+        const urlStarships = personStarships[index];
+
+        fetch(urlStarships)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function (json) {
+            console.log(json)
+           dataMovies(json.title);
+        });
+        
+    }
+}
+
+
 
 
 
