@@ -90,6 +90,7 @@ async function showInformations(dados) {
     personFilms = dados.films
     const planet = await getPlanet(dados.homeworld);
     // showMovies();
+    personStarships = dados.starships
     
 
 info.innerHTML = 
@@ -116,7 +117,7 @@ async function dataMovies(dadosFilms) {
     </div>`
 }
 
-async function showStarships{
+async function showStarships(){
     for (let index = 0; index < personStarships.length; index++) {
         const urlStarships = personStarships[index];
 
@@ -126,10 +127,19 @@ async function showStarships{
         })
         .then(function (json) {
             console.log(json)
-           dataMovies(json.title);
+           dataMovies(json.name);
         });
         
     }
+}
+
+async function  dataStarships(dadosStarships) {
+    const info3 = document.querySelector('.info3');
+    console.log('info3')
+    info3.innerHTML += 
+    `<div class="container2">
+       <p class="itens-character">${dadosStarships}</p>
+    </div>`
 }
 
 
