@@ -46,6 +46,7 @@ function showMe() {
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
     document.querySelector(".characters-person h1").style.display="block";
     document.querySelector(".movies-person h1").style.display="block";
+    document.querySelector(".starships-person h1").style.display="block";
     // document.querySelector(".characters-person-line").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
     let url =  `https://swapi.dev/api/people?search=${name}`;
@@ -108,7 +109,6 @@ info.innerHTML =
 async function dataMovies(dadosFilms) {
     const info2 = document.querySelector('.info2');
     // showMovies();
-    // document.querySelector('.info').style.display = "none";
     console.log(info2)
 
     info2.innerHTML += 
@@ -118,9 +118,10 @@ async function dataMovies(dadosFilms) {
 }
 
 async function showStarships(){
+    document.querySelector(".info3").style.display="none";
     for (let index = 0; index < personStarships.length; index++) {
         const urlStarships = personStarships[index];
-
+        console.log('ok');
         fetch(urlStarships)
         .then(function(response) {
             return response.json();
@@ -129,7 +130,6 @@ async function showStarships(){
             console.log(json)
            dataMovies(json.name);
         });
-        
     }
 }
 
@@ -137,7 +137,7 @@ async function  dataStarships(dadosStarships) {
     const info3 = document.querySelector('.info3');
     console.log('info3')
     info3.innerHTML += 
-    `<div class="container2">
+    `<div class="container3">
        <p class="itens-character">${dadosStarships}</p>
     </div>`
 }
