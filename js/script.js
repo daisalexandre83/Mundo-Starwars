@@ -95,15 +95,13 @@ async function showInformations(dados) {
     
 
 info.innerHTML = 
-`<div class="container1">
-   <p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
-   <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
-   <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
-   <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
-   <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
-   <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-   <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>
-</div>`
+ `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+ <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
+ <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
+ <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
+ <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
+ <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+ <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>`
 }
 
 async function dataMovies(dadosFilms) {
@@ -112,23 +110,23 @@ async function dataMovies(dadosFilms) {
     console.log(info2)
 
     info2.innerHTML += 
-    `<div class="container2">
-       <p class="itens-character">${dadosFilms}</p>
-    </div>`
+    `<p class="itens-character">${dadosFilms}</p>`
 }
 
 async function showStarships(){
-    document.querySelector(".info3").style.display="none";
+    document.querySelector(".info2").style.display="none";
+
     for (let index = 0; index < personStarships.length; index++) {
         const urlStarships = personStarships[index];
         console.log('ok');
+
         fetch(urlStarships)
         .then(function(response) {
             return response.json();
         })
         .then(function (json) {
             console.log(json)
-           dataMovies(json.name);
+           dataStarships(json.name);
         });
     }
 }
@@ -136,10 +134,9 @@ async function showStarships(){
 async function  dataStarships(dadosStarships) {
     const info3 = document.querySelector('.info3');
     console.log('info3')
+
     info3.innerHTML += 
-    `<div class="container3">
-       <p class="itens-character">${dadosStarships}</p>
-    </div>`
+    `<p class="itens-character">${dadosStarships}</p>` 
 }
 
 
