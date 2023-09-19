@@ -47,7 +47,9 @@ function showMe() {
     document.querySelector(".characters-person h1").style.display="block";
     document.querySelector(".movies-person h1").style.display="block";
     document.querySelector(".starships-person h1").style.display="block";
-    // document.querySelector(".characters-person-line").style.display="block";
+    document.querySelector(".person-line").style.display="block";
+    document.querySelector(".movies-line").style.display="none";
+    document.querySelector(".starships-line").style.display="none";
     const name = this.parentNode.getAttribute("data-name");
     let url =  `https://swapi.dev/api/people?search=${name}`;
 
@@ -68,6 +70,9 @@ async function getPlanet(url){
 
  async function showMovies() {
    document.querySelector(".info").style.display="none";
+   document.querySelector(".person-line").style.display="none";
+   document.querySelector(".movies-line").style.display="block";
+   document.querySelector(".starships-line").style.display="none";
    console.log('olá');
     for (let index = 0; index < personFilms.length; index++) {
         const urlFilms = personFilms[index];
@@ -115,6 +120,8 @@ async function dataMovies(dadosFilms) {
 
 async function showStarships(){
     document.querySelector(".info2").style.display="none";
+    document.querySelector(".movies-line").style.display="none";
+    document.querySelector(".starships-line").style.display="block";
 
     for (let index = 0; index < personStarships.length; index++) {
         const urlStarships = personStarships[index];
@@ -137,6 +144,15 @@ async function  dataStarships(dadosStarships) {
 
     info3.innerHTML += 
     `<p class="itens-character">${dadosStarships}</p>` 
+}
+
+function showCharacteristics() {
+    document.querySelector(".info").style.display="block";
+    document.querySelector(".movies-line").style.display="block";
+    document.querySelector(".info2").style.display="none";
+    document.querySelector(".info3").style.display="none";
+   
+    console.log('biel');
 }
 
 
