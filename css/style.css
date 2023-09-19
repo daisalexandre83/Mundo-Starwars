@@ -97,7 +97,6 @@ body{
 .itens-description{
   font-weight: normal;
   position: absolute;
-  color: red;
 }
 
 .line{
@@ -106,14 +105,6 @@ body{
   width: 185px;
   top: 285px;
 }
-
-/* .container{
-  width: 750px;
-  height: 400px;
-  background-color: white;
-  margin-left: 25px;
-  margin-top: 320px;
-} */
 
 .select-section{
   display: grid;
@@ -151,9 +142,8 @@ body{
   display: grid;
 }
 
-.characters-anakin h1{
+.characters-person h1{
   display: none;
-  background-color: yellowgreen;
   position: absolute;
   top: 485px;
   left: 290px;
@@ -168,17 +158,63 @@ body{
 
 .movies-person h1{
   display: none;
-  background-color: blue;
   position: absolute;
-  top: 487px;
-  margin-left: 550px;
+  top: 485px;
+  margin-left: 350px;
   cursor: pointer;
 }
 
-.starships-anakin button{
+/* .starships-person{
+  background-color: #87CEEB;
+} */
+
+.starships-person h1{
   display: none;
+  margin-left: 500px;
+  position: absolute;
+  top: 487px;
+  cursor: pointer;
 }
 
+ .info{
+  position: relative;
+  top: 400px;
+  margin-left: 50px;
+ }
+
+.info2{
+  /* margin: 400px 50px; */
+  position: absolute;
+  top: 550px;
+  margin-left: 50px;
+}
+
+.info3{
+  position: absolute;
+  top: 550px;
+  margin-left: 50px;
+}
+
+.person-line{
+  border: 2px solid black ;
+  width: 240px;
+  position: absolute;
+  margin: 110px 35px;
+}
+
+.movies-line{
+  width: 110px;
+  position: relative;
+  border: 2px solid;
+  margin: 365px 332px;
+}
+
+.starships-line{
+  width: 170px;
+  position: relative;
+  margin: 365px 480px;
+  border: 2px solid;
+}
 
 
 
