@@ -142,12 +142,16 @@ body{
   display: grid;
 }
 
-.characters-person h1{
+.characters-person button{
   display: none;
   position: absolute;
   top: 485px;
   left: 290px;
   cursor: pointer;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .characters-anakin-line{
@@ -156,24 +160,32 @@ body{
   border: 2px solid gray;
 }
 
-.movies-person h1{
+.movies-person button{
   display: none;
   position: absolute;
   top: 485px;
   margin-left: 350px;
   cursor: pointer;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 /* .starships-person{
   background-color: #87CEEB;
 } */
 
-.starships-person h1{
+.starships-person button{
   display: none;
   margin-left: 500px;
   position: absolute;
   top: 487px;
   cursor: pointer;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
 }
 
  .info{
@@ -195,21 +207,21 @@ body{
   margin-left: 50px;
 }
 
-.person-line{
+.characters-person-line{
   border: 2px solid black ;
   width: 240px;
   position: absolute;
   margin: 110px 35px;
 }
 
-.movies-line{
+.movies-person-line{
   width: 110px;
   position: relative;
   border: 2px solid;
   margin: 365px 332px;
 }
 
-.starships-line{
+.starships-person-line{
   width: 170px;
   position: relative;
   margin: 365px 480px;
