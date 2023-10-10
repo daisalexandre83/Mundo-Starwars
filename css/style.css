@@ -188,20 +188,20 @@ body{
   font-size: 14px;
 }
 
- .info{
+ #info{
   position: relative;
   top: 400px;
   margin-left: 50px;
  }
 
-.info2{
+#info2{
   /* margin: 400px 50px; */
   position: absolute;
   top: 550px;
   margin-left: 50px;
 }
 
-.info3{
+#info3{
   position: absolute;
   top: 550px;
   margin-left: 50px;
