@@ -62,6 +62,25 @@ function showMe() {
     });
 }
 
+async function showInformations(dados) {
+    const info = document.getElementById('info');
+    console.log(dados);
+    personFilms = dados.films
+    const planet = await getPlanet(dados.homeworld);
+    // showMovies();
+    personStarships = dados.starships
+    
+info.innerHTML = 
+ `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+ <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
+ <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
+ <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
+ <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
+ <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+ <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>`
+}
+
+
 async function getPlanet(url){
     const response = await fetch(url) 
     const data = await response.json()
@@ -69,7 +88,7 @@ async function getPlanet(url){
 }
 
  async function showMovies() {
-   document.querySelector(".info").style.display="none";
+   document.getElementById("info").style.display="none";
    document.querySelector(".characters-person-line").style.display="none";
    document.querySelector(".movies-person-line").style.display="block";
    document.querySelector(".starships-person-line").style.display="none";
@@ -90,27 +109,9 @@ async function getPlanet(url){
 }
 
 
-async function showInformations(dados) {
-    const info = document.querySelector('.info');
-    console.log(dados);
-    personFilms = dados.films
-    const planet = await getPlanet(dados.homeworld);
-    // showMovies();
-    personStarships = dados.starships
-    
-
-info.innerHTML = 
- `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
- <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
- <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
- <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
- <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
- <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
- <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>`
-}
 
 async function dataMovies(dadosFilms) {
-    const info2 = document.querySelector('.info2');
+    const info2 = document.getElementById('info2');
     // showMovies();
     console.log(info2)
 
@@ -119,7 +120,7 @@ async function dataMovies(dadosFilms) {
 }
 
 async function showStarships(){
-    document.querySelector(".info2").style.display="none";
+    document.getElementById("info2").style.display="none";
     document.querySelector(".movies-person-line").style.display="none";
     document.querySelector(".starships-person-line").style.display="block";
 
@@ -139,21 +140,27 @@ async function showStarships(){
 }
 
 async function  dataStarships(dadosStarships) {
-    const info3 = document.querySelector('.info3');
+    const info3 = document.getElementById('info3');
     console.log('info3')
 
     info3.innerHTML += 
     `<p class="itens-character">${dadosStarships}</p>` 
 }
 
+
+ let btnShowCharacteristics = document.getElementById('characters-person-btn');
+ 
+ btnShowCharacteristics.addEventListener("click",showCharacteristics)
+
 function showCharacteristics() {
-    document.querySelector(".info").style.display="block";
+    document.getElementById("info").style.display="block";
     document.querySelector(".movies-person-line").style.display="block";
-    document.querySelector(".info2").style.display="none";
-    document.querySelector(".info3").style.display="none";
+    document.getElementById("info2").style.display="none";
+    document.getElementById("info3").style.display="none";
    
     console.log('biel');
 }
+
 
 
 
