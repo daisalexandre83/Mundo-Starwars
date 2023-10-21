@@ -3,6 +3,8 @@ let personFilms =[];
 
 let personStarships = [];
 
+let moviesVisible = false;
+
 document.addEventListener("DOMContentLoaded",() =>{
     document.querySelectorAll(".search-input").forEach((inputField)=>{
         const tableRows = inputField.closest("table")
@@ -63,7 +65,7 @@ function showMe() {
 }
 
 async function showInformations(dados) {
-    const info = document.getElementById('info');
+    const info = document.querySelector('.info');
     console.log(dados);
     personFilms = dados.films
     const planet = await getPlanet(dados.homeworld);
@@ -88,11 +90,11 @@ async function getPlanet(url){
 }
 
  async function showMovies() {
-   document.getElementById("info").style.display="none";
+   document.querySelector(".info").style.display="none";
    document.querySelector(".characters-person-line").style.display="none";
    document.querySelector(".movies-person-line").style.display="block";
    document.querySelector(".starships-person-line").style.display="none";
-   console.log('olá');
+  //  console.log('olá');
     for (let index = 0; index < personFilms.length; index++) {
         const urlFilms = personFilms[index];
         
@@ -111,16 +113,16 @@ async function getPlanet(url){
 
 
 async function dataMovies(dadosFilms) {
-    const info2 = document.getElementById('info2');
+    const info2 = document.querySelector('.info2');
     // showMovies();
-    console.log(info2)
+    // console.log(info2)
 
     info2.innerHTML += 
     `<p class="itens-character">${dadosFilms}</p>`
 }
 
 async function showStarships(){
-    document.getElementById("info2").style.display="none";
+    document.querySelector(".info2").style.display="none";
     document.querySelector(".movies-person-line").style.display="none";
     document.querySelector(".starships-person-line").style.display="block";
 
@@ -140,25 +142,22 @@ async function showStarships(){
 }
 
 async function  dataStarships(dadosStarships) {
-    const info3 = document.getElementById('info3');
-    console.log('info3')
+    const info3 = document.querySelector('.info3');
+    // console.log('info3')
 
     info3.innerHTML += 
     `<p class="itens-character">${dadosStarships}</p>` 
 }
 
 
- let btnShowCharacteristics = document.getElementById('characters-person-btn');
- 
- btnShowCharacteristics.addEventListener("click",showCharacteristics)
 
 function showCharacteristics() {
-    document.getElementById("info").style.display="block";
+    document.querySelector(".info").style.display="block";
     document.querySelector(".movies-person-line").style.display="block";
-    document.getElementById("info2").style.display="none";
-    document.getElementById("info3").style.display="none";
+    document.querySelector(".info2").style.display="none";
+    document.querySelector(".info3").style.display="none";
    
-    console.log('biel');
+    // console.log('biel');
 }
 
 
