@@ -3,7 +3,7 @@ let personFilms =[];
 
 let personStarships = [];
 
-let moviesVisible = false;
+let isMoviesVisible = false;
 
 document.addEventListener("DOMContentLoaded",() =>{
     document.querySelectorAll(".search-input").forEach((inputField)=>{
@@ -90,6 +90,8 @@ async function getPlanet(url){
 }
 
  async function showMovies() {
+    //reset da função
+    if (!isMoviesVisible) {
    document.querySelector(".info").style.display="none";
    document.querySelector(".characters-person-line").style.display="none";
    document.querySelector(".movies-person-line").style.display="block";
@@ -108,9 +110,11 @@ async function getPlanet(url){
         });
     }
     console.log('daiane');
-}
+     }
+    isMoviesVisible = !isMoviesVisible;
 
-
+    }
+   
 
 async function dataMovies(dadosFilms) {
     const info2 = document.querySelector('.info2');
