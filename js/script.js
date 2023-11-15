@@ -43,6 +43,50 @@ for(let i = 0; i < cells.length;i++){
     
 }
 
+// function showMe() {
+//     document.querySelector(".table").style.display="none";
+//     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
+//     document.querySelector(".characters-person button").style.display="block";
+//     document.querySelector(".movies-person button").style.display="block";
+//     document.querySelector(".starships-person button").style.display="block";
+//     document.querySelector(".characters-person-line").style.display="block";
+//     document.querySelector(".movies-person-line").style.display="none";
+//     document.querySelector(".starships-person-line").style.display="none";
+//     const name = this.parentNode.getAttribute("data-name");
+//     let url =  `https://swapi.dev/api/people?search=${name}`;
+
+//     fetch(url)
+//     .then(function(response) {
+//         return response.json();
+//     })
+//     .then(function(json) {
+//         showInformations(json.results[0]);
+        
+//     });
+// }
+
+// async function showInformations(dados) {
+//     const info = document.querySelector('.info');
+//     console.log(dados);
+//     personFilms = dados.films
+//     const planet = await getPlanet(dados.homeworld);
+//     // showMovies();
+//     personStarships = dados.starships
+    
+// info.innerHTML = 
+//  `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+//  <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
+//  <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
+//  <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
+//  <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
+//  <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+//  <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>`
+// }
+
+// console.log(dados);
+//             personFilms = dados.films;
+//             personStarships = dados.starships
+
 function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
@@ -53,33 +97,33 @@ function showMe() {
     document.querySelector(".movies-person-line").style.display="none";
     document.querySelector(".starships-person-line").style.display="none";
     const name = this.parentNode.getAttribute("data-name");
-    let url =  `https://swapi.dev/api/people?search=${name}`;
+    let url = "https://swapi.dev/api/people";
+    const info = document.querySelector('.info');
 
     fetch(url)
     .then(function(response) {
         return response.json();
     })
     .then(function(json) {
-        showInformations(json.results[0]);
-    });
-}
+        // showInformations(json.results[0]);
+        const characters = data.results;
+        const character = characters.find(char => char.name === name);
 
-async function showInformations(dados) {
-    const info = document.querySelector('.info');
-    console.log(dados);
-    personFilms = dados.films
-    const planet = await getPlanet(dados.homeworld);
-    // showMovies();
-    personStarships = dados.starships
+        if (character) {
+           
+            
     
 info.innerHTML = 
- `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
- <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
- <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
- <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
- <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
- <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
- <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>`
+`<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+<p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
+<p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
+<p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
+<p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
+<p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+<p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>`
+        }
+        
+    });
 }
 
 
@@ -90,14 +134,11 @@ async function getPlanet(url){
 }
 
  async function showMovies() {
-    //reset da função
-    if (!isMoviesVisible) {
-   document.querySelector(".info").style.display="none";
-   document.querySelector(".characters-person-line").style.display="none";
-   document.querySelector(".movies-person-line").style.display="block";
-   document.querySelector(".starships-person-line").style.display="none";
-  //  console.log('olá');
-    for (let index = 0; index < personFilms.length; index++) {
+     document.querySelector(".info").style.display="none";
+     document.querySelector(".characters-person-line").style.display="none";
+     document.querySelector(".movies-person-line").style.display="block";
+     document.querySelector(".starships-person-line").style.display="none";
+     for (let index = 0; index < personFilms.length; index++) {
         const urlFilms = personFilms[index];
         
         fetch(urlFilms)
@@ -111,9 +152,6 @@ async function getPlanet(url){
     }
     console.log('daiane');
      }
-    isMoviesVisible = !isMoviesVisible;
-
-    }
    
 
 async function dataMovies(dadosFilms) {
