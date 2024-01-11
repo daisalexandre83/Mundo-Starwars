@@ -142,16 +142,17 @@ body{
   display: grid;
 }
 
-.characters-person button{
-  display: none;
+.characters-person button, .movies-person button, .starships-person button{
+  /* display: none;
   position: absolute;
   top: 485px;
-  left: 290px;
+  left: 290px; */
   cursor: pointer;
   background: none;
   border: none;
   font-weight: bold;
   font-size: 14px;
+  padding:  0px;
 }
 
 .characters-anakin-line{
@@ -160,54 +161,32 @@ body{
   border: 2px solid gray;
 }
 
-.movies-person button{
+.info, .info2, .info3{
   display: none;
-  position: absolute;
-  top: 485px;
-  margin-left: 350px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: 14px;
 }
 
-/* .starships-person{
-  background-color: #87CEEB;
-} */
-
-.starships-person button{
-  display: none;
-  margin-left: 500px;
-  position: absolute;
-  top: 487px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: 14px;
+.btn-line::after{
+  content:'';
+  display: block;
+  border: 2px solid transparent;
+  margin-top: 6px;
+  transition: 0.5s;
 }
 
- #info{
-  position: relative;
-  top: 400px;
-  margin-left: 50px;
- }
-
-#info2{
-  /* margin: 400px 50px; */
-  position: absolute;
-  top: 550px;
-  margin-left: 50px;
+.btn-line.btn-active::after{
+  content:'';
+  border: 2px solid black;
+  margin-top: 6px;
+  transition: 0.5s;
 }
 
-#info3{
-  position: absolute;
-  top: 550px;
-  margin-left: 50px;
+.btn-line.btn-active ~ .info,.btn-line.btn-active ~ .info2,.btn-line.btn-active ~ .info3{
+  display: block;
 }
 
-.characters-person-line{
+
+
+/* .characters-person-line{
   border: 2px solid black ;
   width: 240px;
   position: absolute;
@@ -226,7 +205,7 @@ body{
   position: relative;
   margin: 365px 480px;
   border: 2px solid;
-}
+} */
 
 
 
