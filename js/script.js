@@ -43,92 +43,26 @@ function showMe() {
     document.querySelector("#info-people").style.display="block";
     const name = this.parentNode.getAttribute("data-name");
     showCharacteristics(name);
-    // document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
-    // document.querySelector(".characters-person button").style.display="block";
-    // document.querySelector(".movies-person button").style.display="block";
-    // document.querySelector(".starships-person button").style.display="block";
-    // document.querySelector(".characters-person-line").style.display="block";
-    // document.querySelector(".movies-person-line").style.display="none";
-    // document.querySelector(".starships-person-line").style.display="none";
-    
-    
-    // fetch(url)
-    // .then(function(response) {
-    //     return response.json();
-    // })
-    // .then(function(json) {
-    //     showInformations(json.results[0]);
-        
-    // });
 }
 
 async function showCharacteristics(name) {
     let url =  `https://swapi.dev/api/people?search=${name}`;
     let info = document.querySelector('.info');
-    let response = await fetch(url) 
+    let response = await fetch(url);
+    let {results}  = await response.json();
+    let dados = results[0];
+    let planet = await getPlanet(dados.homeworld);
+    info.innerHTML = 
+        `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+        <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
+        <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
+        <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
+        <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
+        <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+        <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>`
+        showMovies(dados.films);
+        showStarships(dados.starships);
 }
-
-async function showInformations(dados) {
-    
-    console.log(dados);
-    personFilms = dados.films
-    const planet = await getPlanet(dados.homeworld);
-    // showMovies();
-    personStarships = dados.starships
-    
-info.innerHTML = 
- `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
- <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
- <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
- <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
- <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
- <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
- <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>`
-}
-
-console.log(dados);
-            personFilms = dados.films;
-            personStarships = dados.starships
-
-// function showMe() {
-//     document.querySelector(".table").style.display="none";
-//     document.querySelector(".content").style.display="block";    // document.querySelector(".image-star-wars").style.display="block";
-//     document.querySelector(".characters-person button").style.display="block";
-//     document.querySelector(".movies-person button").style.display="block";
-//     document.querySelector(".starships-person button").style.display="block";
-//     document.querySelector(".characters-person-line").style.display="block";
-//     document.querySelector(".movies-person-line").style.display="none";
-//     document.querySelector(".starships-person-line").style.display="none";
-//     const name = this.parentNode.getAttribute("data-name");
-//     let url = "https://swapi.dev/api/people";
-//     const info = document.querySelector('.info');
-
-//     fetch(url)
-//     .then(function(response) {
-//         return response.json();
-//     })
-//     .then(function(json) {
-//         // showInformations(json.results[0]);
-//         const characters = data.results;
-//         const character = characters.find(char => char.name === name);
-
-//         if (character) {
-           
-            
-    
-// info.innerHTML = 
-// `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
-// <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
-// <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
-// <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
-// <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
-// <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
-// <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>`
-//         }
-        
-//     });
-// }
-
 
 async function getPlanet(url){
     const response = await fetch(url) 
@@ -136,75 +70,51 @@ async function getPlanet(url){
     return data;
 }
 
- async function showMovies() {
-     document.querySelector(".info").style.display="none";
-     document.querySelector(".characters-person-line").style.display="none";
-     document.querySelector(".movies-person-line").style.display="block";
-     document.querySelector(".starships-person-line").style.display="none";
-     console.log(personFilms);
-     for (let index = 0; index < personFilms.length; index++) {
-        const urlFilms = personFilms[index];
-        
-        fetch(urlFilms)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function (json) {
-            console.log(json)
-           dataMovies(json.title);
-        });
-    }
-    console.log('daiane');
-     }
-   
-
-async function dataMovies(dadosFilms) {
+async function showMovies(personFilms) {
     const info2 = document.querySelector('.info2');
-    // showMovies();
-    // console.log(info2)
-
-    info2.innerHTML += 
-    `<p class="itens-character">${dadosFilms}</p>`
+    for (let index = 0; index < personFilms.length; index++) {
+       const urlFilms = personFilms[index];
+       let response = await fetch(urlFilms);
+       let dados = await response.json();
+       info2.innerHTML += 
+       `<p class="itens-character">${dados.title}</p>`
+    }   
 }
 
-async function showStarships(){
-    document.querySelector(".info2").style.display="none";
-    document.querySelector(".movies-person-line").style.display="none";
-    document.querySelector(".starships-person-line").style.display="block";
-
+async function showStarships(personStarships){
+    const info2 = document.querySelector('.info3');
     for (let index = 0; index < personStarships.length; index++) {
-        const urlStarships = personStarships[index];
-        console.log('ok');
-
-        fetch(urlStarships)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function (json) {
-            console.log(json)
-           dataStarships(json.name);
-        });
-    }
+        const urlFilms = personStarships[index];
+        let response = await fetch(urlFilms);
+        let dados = await response.json();
+        info2.innerHTML += 
+       `<p class="itens-character">${dados.name}</p>`
+    }    
 }
 
-async function  dataStarships(dadosStarships) {
-    const info3 = document.querySelector('.info3');
-    // console.log('info3')
+let button_detail = document.querySelectorAll('.btn-line');
 
-    info3.innerHTML += 
-    `<p class="itens-character">${dadosStarships}</p>` 
+button_detail.forEach(function(button) {
+    button.addEventListener("click",function () {
+        button_detail.forEach(button => button.classList.remove('btn-active'));
+        this.classList.add("btn-active");
+    });
 }
+);
 
 
 
-function showCharacteristics() {
-    document.querySelector(".info").style.display="block";
-    document.querySelector(".movies-person-line").style.display="block";
-    document.querySelector(".info2").style.display="none";
-    document.querySelector(".info3").style.display="none";
+
+
+ 
    
-    // console.log('biel');
-}
+
+
+
+
+
+
+
 
 
 
