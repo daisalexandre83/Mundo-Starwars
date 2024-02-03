@@ -4,9 +4,14 @@ const listItems =paginatedList.querySelectorAll("li");
 // const nextButton = document.getElementById("next-button");
 // const prevButton = document.getElementById("prev-button");
 
-function showItens(){
-   const nextButton = document.getElementById("next-button");
+function showItens1(){
+  
    const prevButton = document.getElementById("prev-button");
+
+   let ul = document.getElementById("paginated-listed");
+   let itens1 = ul.getElementsByTagName("li");
+   // for ( itens1 = 0; itens1 <=9; itens1 ++)
+
 }
 
 // const paginationLimit = 10;
