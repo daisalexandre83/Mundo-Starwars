@@ -4,12 +4,18 @@ const listItems =paginatedList.querySelectorAll("li");
 // const nextButton = document.getElementById("next-button");
 // const prevButton = document.getElementById("prev-button");
 
-function showItens1(){
-  
-   const prevButton = document.getElementById("prev-button");
+// const nextButton = document.getElementById("next-button");
+// nextButton.addEventListener("click,")
+function showPage2(){
+  document.querySelectorAll(".itens-page1").style.display="none";
+  document.querySelectorAll(".itens-page2").style.display="block";
+  console.log('olá');
+  // let ul = document.getElementById("paginated-listed");
+  //  let listItems = document.getElementsByTagName('li');
 
-   let ul = document.getElementById("paginated-listed");
-   let itens1 = ul.getElementsByTagName("li");
+  //  let arrayItems = Array.from(listItems);
+
+  //  let page1 = arrayItems.slice(0,9);
    // for ( itens1 = 0; itens1 <=9; itens1 ++)
 
 }
