@@ -10,26 +10,26 @@
    <main>
     <h1>Pagination with Vanilla Javascript</h1>
     <ul id="paginated-list" data-current-page="1" aria-live="polite">
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-      <li>Item 4</li>
-      <li>Item 5</li>
-      <li>Item 6</li>
-      <li>Item 7</li>
-      <li>Item 8</li>
-      <li>Item 9</li>
-      <li>Item 10</li>
-      <li>Item 11</li>
-      <li>Item 12</li>
-      <li>Item 13</li>
-      <li>Item 14</li>
-      <li>Item 15</li>
-      <li>Item 16</li>
-      <li>Item 17</li>
-      <li>Item 18</li>
-      <li>Item 19</li>
-      <li>Item 20</li>
+      <li class="itens-page1">Item 1</li>
+      <li class="itens-page1">Item 2</li>
+      <li class="itens-page1">Item 3</li>
+      <li class="itens-page1">Item 4</li>
+      <li class="itens-page1">Item 5</li>
+      <li class="itens-page1">Item 6</li>
+      <li class="itens-page1">Item 7</li>
+      <li class="itens-page1">Item 8</li>
+      <li class="itens-page1">Item 9</li>
+      <li class="itens-page1">Item 10</li>
+      <li class="itens-page2">Item 11</li>
+      <li class="itens-page2">Item 12</li>
+      <li class="itens-page2">Item 13</li>
+      <li class="itens-page2">Item 14</li>
+      <li class="itens-page2">Item 15</li>
+      <li class="itens-page2">Item 16</li>
+      <li class="itens-page2">Item 17</li>
+      <li class="itens-page2">Item 18</li>
+      <li class="itens-page2">Item 19</li>
+      <li class="itens-page2">Item 20</li>
       <li>Item 21</li>
       <li>Item 22</li>
       <li>Item 23</li>
@@ -69,15 +69,25 @@
       <!--div id="pagination-numbers"></div-->
       <div>
         <p id="page1">1</p>
-        <p id="page2">2</p>
-        <p id="page3">3</p>
-        <p id="page4">4</p>
-        <p id="page5">5</p>
       </div>
-
-      <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
+      <button onclick="showPage2()" class="pagination-button" id="next-button1" aria-label="Next page" title="Next page">
         &gt;
       </button>
+      <button class="pagination-button" id="prev-button"
+      aria-label="Previous page" title="Previous page">
+        &lt;
+      </button>
+      <!--div id="pagination-numbers"></div-->
+      <div>
+        <p id="page2">2</p>
+      </div>
+      <button onclick="showPage3()" class="pagination-button" id="next-button2" aria-label="Next page" title="Next page">
+        &gt;
+      </button>
+      <!--p id="page2">2</p>
+        <p id="page3">3</p>
+        <p id="page4">4</p>
+        <p id="page5">5</p-->
     </nav>
    </main>
  <script src="script.js"></script>
