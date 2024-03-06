@@ -1,23 +1,43 @@
 // pagination-numberconst paginationNumbers = document.getElementById("pagination-numbers");
-const paginatedList = document.getElementById("paginated-list");
-const listItems =paginatedList.querySelectorAll("li");
+// const paginatedList = document.getElementById("paginated-list");
+// const listItems =paginatedList.querySelectorAll("li");
 // const nextButton = document.getElementById("next-button");
 // const prevButton = document.getElementById("prev-button");
 
 // const nextButton = document.getElementById("next-button");
 // nextButton.addEventListener("click,")
+function showPage1(){
+  document.querySelector('.listed-page2').style.display="none";
+  document.getElementById("prev-button").style.display="block";
+  document.getElementById("next-button1").style.display="block";
+  document.getElementById("prev-button1").style.display="none";
+  document.getElementById("next-button3").style.display="none";
+  document.getElementById("page2").style.display="none";
+  document.getElementById("page1").style.display="block";
+  document.querySelector('.listed-page1').style.display="block";
+}
+
 function showPage2(){
-  document.querySelectorAll(".itens-page1").style.display="none";
-  document.querySelectorAll(".itens-page2").style.display="block";
-  console.log('olá');
-  // let ul = document.getElementById("paginated-listed");
-  //  let listItems = document.getElementsByTagName('li');
+  document.getElementById("prev-button").style.display="none";
+  document.getElementById("next-button1").style.display="none";
+  document.getElementById("prev-button1").style.display="block";
+  document.querySelector(".listed-page1").style.display="none";
+  document.getElementById("next-button3").style.display="block";
+  document.querySelector(".listed-page2").style.display="block";
+  document.getElementById("page2").style.display="block";
+  document.getElementById("page1").style.display="none";
+  document.getElementById("page3").style.display="none";
+}
 
-  //  let arrayItems = Array.from(listItems);
-
-  //  let page1 = arrayItems.slice(0,9);
-   // for ( itens1 = 0; itens1 <=9; itens1 ++)
-
+function showPage3() {
+  document.getElementById("page2").style.display="none";
+  document.getElementById("page3").style.display="block";
+  document.querySelector(".listed-page2").style.display="none";
+  document.querySelector(".listed-page3").style.display="block";
+  document.getElementById("prev-button1").style.display="none";
+  document.getElementById("prev-button2").style.display="block";
+  document.getElementById("next-button3").style.display="none";
+  document.getElementById("next-button4").style.display="block";
 }
 
 // const paginationLimit = 10;
