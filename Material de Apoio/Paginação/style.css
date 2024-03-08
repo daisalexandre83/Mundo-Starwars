@@ -39,6 +39,14 @@ main{
     border-radius: .2rem;
 }
 
+#prev-button1{
+    display: none;
+}
+
+#prev-button2{
+    display: none;
+}
+
 .pagination-number:hover,
 .pagination-button:not(.disable):hover{
     background: #fff;
@@ -64,4 +72,21 @@ main{
 #page5{
     display: none;
 }
+
+.listed-page2{
+    display: none;
+}
+
+.listed-page3{
+    display: none;
+}
+
+#next-button3{
+    display: none;
+}
+
+#next-button4{
+    display: none;
+}
+
 
