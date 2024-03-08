@@ -13,10 +13,6 @@ main{
     min-height: calc(100vh - 4rem);
 }
 
-.hidden{
-    display: none;
-}
-
 .pagination-container{
     width: calc(100% -2rem);
     display: flex;
@@ -27,7 +23,6 @@ main{
     justify-content: center;
 }
 
-.pagination-number,
 .pagination-button{
     font-size: 1.1rem;
     background-color: transparent;
@@ -46,16 +41,6 @@ main{
 #prev-button2{
     display: none;
 }
-
-.pagination-number:hover,
-.pagination-button:not(.disable):hover{
-    background: #fff;
-}
-
-/*.pagination-number.active{
-    color: #fff;
-    background: #0085b6;
-}*/
 
 #page2{
     display: none;
