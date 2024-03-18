@@ -87,12 +87,6 @@ body{
   color: red;
 }
 
-
-/* character-title{
-  position: relative;
-  top: 0;
-} */
-
 .itens-character{
   font-weight: bold;
   position: relative;
@@ -190,26 +184,6 @@ body{
 
 
 
-/* .characters-person-line{
-  border: 2px solid black ;
-  width: 240px;
-  position: absolute;
-  margin: 110px 35px;
-}
-
-.movies-person-line{
-  width: 110px;
-  position: relative;
-  border: 2px solid;
-  margin: 365px 332px;
-}
-
-.starships-person-line{
-  width: 170px;
-  position: relative;
-  margin: 365px 480px;
-  border: 2px solid;
-} */
 
 
 
