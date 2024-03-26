@@ -58,17 +58,22 @@ body{
 }
 
 .content{
-  /* display: none; */
   border: 2px solid gray;
   width: 800px;
   margin-left: 250px;
   height: 800px;
 }
 
+.content-data{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: space-between;
+  padding: 10px;
+}
+
 .image-star-wars{
   width: 800px;
   height: 300px;
-  position: absolute;
 }
 
 .blue-line{
@@ -79,22 +84,12 @@ body{
   background-color: #8904B1;
 }
 
-.date-name{
-  font-weight: bold;
-  position: relative;
-  font-size: 30px;
-  margin: 0px 0 200px 250px;
-  color: red;
-}
-
 .itens-character{
   font-weight: bold;
-  position: relative;
 }
 
 .itens-description{
   font-weight: normal;
-  position: absolute;
 }
 
 .line{
@@ -129,22 +124,7 @@ body{
   background-color: #87CEEB !important;
 }
 
-.content:not(:first-child){
-  display: none;
-}
-
-.content-section{
-  margin: 40px;
-  display: block;
-  color: #666;
-  display: grid;
-}
-
 .characters-person button, .movies-person button, .starships-person button{
-  /* display: none;
-  position: absolute;
-  top: 485px;
-  left: 290px; */
   cursor: pointer;
   background: none;
   border: none;
@@ -155,7 +135,6 @@ body{
 
 .characters-anakin-line{
   width: 100px;
-  display: none;
   border: 2px solid gray;
 }
 
@@ -181,6 +160,7 @@ body{
 .btn-line.btn-active ~ .info,.btn-line.btn-active ~ .info2,.btn-line.btn-active ~ .info3{
   display: block;
 }
+
 
 
 
