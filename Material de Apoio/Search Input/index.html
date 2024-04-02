@@ -2,10 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Search Input</title>
 </head>
 <body>
-    
+    <div style="display: flex; justify-content: center; align-items: center;
+    height: 100vh;">
+     <div class="control-panel bg">
+      <div class="row">
+       <h2 class="head-line" id="title">
+        Control panel
+       </h2>
+      </div>
+      <div class="row">
+        <button id="_moden-btn" class=""styled-link onclick="toggleDark()">
+         <div>
+            <span id="dark-icon" class="material-symbols-rounded">dark_model</span>
+         </div>
+        </button>
+        <button class="styled-link" onclick="setLanguage('ar')">
+          <p>العربية</p>
+        </button>
+        <button class="styled-link" onclick="setLanguage('en')">
+         <p>English</p>
+        </button>
+        <button class="styled-link" onclick="closeMenu()">
+         <div class="material-symbols">
+            <span>
+                close
+            </span>
+         </div>
+         <div class="row search-container">
+           
+         </div>
+        </button>
+      </div>
+     </div>
+    </div> 
 </body>
 </html>
