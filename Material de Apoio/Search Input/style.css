@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap");
+
+
+.material-symbols-rounded{
+    font-family: "Material Symbols Rounded";
+}
+
+*{
+    transition: color 0.2 ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.blackHtml{
+    background-color: black;
+}
+
+:root{
+    font-family: "Oxygen",sans-serif;
+    --color-0:#ffffff !important;
+    --color-1:#c8d5ef !important;
+    --bg-0:#1774bf !important;
+}
+
+.head-line{
+    color:var(--color-0);
+}
+
+.bg{
+    background-color: var(--bg-0);
+}
+
+.dark{
+    --color-0: #a2a2a3 !important;
+    --color-1:#bfc6d2 !important;
+    --bg-:0#050f2a;
+}
+
+.control-panel{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    border-radius: 8px;
+    padding: 0.8em;
+    gap: 0.2em;
+}
+
+.control-panel button{
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+.styled-link{
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center;
+    flex-direction: row-reverse !important;
+    cursor: pointer;
+    position: relative;
+    gap: 0.2em;
+    padding: 0 0.8em;
+    text-decoration: none;
+}
+
+.styled-link:before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: var(--color-1);
+    opacity: 0;
+    content: "";
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
