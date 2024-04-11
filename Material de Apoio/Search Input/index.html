@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
     <title>Search Input</title>
 </head>
 <body>
@@ -16,9 +16,9 @@
        </h2>
       </div>
       <div class="row">
-        <button id="_moden-btn" class=""styled-link onclick="toggleDark()">
+        <button id="_mode-btn" class="styled-link" onclick="toggleDark()">
          <div>
-            <span id="dark-icon" class="material-symbols-rounded">dark_model</span>
+            <span id="dark-icon" class="material-symbols-rounded">dark_mode</span>
          </div>
         </button>
         <button class="styled-link" onclick="setLanguage('ar')">
@@ -28,17 +28,22 @@
          <p>English</p>
         </button>
         <button class="styled-link" onclick="closeMenu()">
-         <div class="material-symbols">
-            <span>
+         <div>
+            <span class="material-symbols">
                 close
             </span>
          </div>
-         <div class="row search-container">
-           
-         </div>
+        </button>
+      </div>
+      <div class="row search-container">
+        <input type="text" name="searchbox"
+        id="searchbox" placeholder="Type something">
+        <button class="styled-link">
+          <div><span class=""material-symbols>search</span></div>
         </button>
       </div>
      </div>
     </div> 
+    <script src="script.js"></script>
 </body>
 </html>
