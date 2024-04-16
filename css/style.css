@@ -49,10 +49,6 @@ body{
   font-style: italic;
 }
 
-.table .search-input{
-  background-color: none;
-}
-
 #info-people{
   display: none;
 }
@@ -159,6 +155,22 @@ body{
 
 .btn-line.btn-active ~ .info,.btn-line.btn-active ~ .info2,.btn-line.btn-active ~ .info3{
   display: block;
+}
+
+.person-name{
+  width: 200px;
+}
+
+.person-information{
+  width: 150px;
+}
+
+#search-input{
+  margin-left: 300px;
+  width: 750px;
+  margin-top: 90px;
+  position: absolute;
+  height: 30px;
 }
 
 
