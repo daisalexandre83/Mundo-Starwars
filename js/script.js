@@ -53,7 +53,7 @@ async function showCharacteristics(name) {
     let dados = results[0];
     let planet = await getPlanet(dados.homeworld);
     info.innerHTML = 
-        `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
+    `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
         <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
         <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
         <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
@@ -77,7 +77,7 @@ async function showMovies(personFilms) {
        let response = await fetch(urlFilms);
        let dados = await response.json();
        info2.innerHTML += 
-       `<p class="itens-character">${dados.title}</p>`
+       `<p>${dados.title}</p>`
     }   
 }
 
@@ -88,7 +88,7 @@ async function showStarships(personStarships){
         let response = await fetch(urlFilms);
         let dados = await response.json();
         info2.innerHTML += 
-       `<p class="itens-character">${dados.name}</p>`
+       `<p>${dados.name}</p>`
     }    
 }
 
