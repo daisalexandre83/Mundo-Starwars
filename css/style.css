@@ -42,7 +42,6 @@ body{
 
 .table td{
   font-size: 1em;
-  text-align: center;
   font-family: "Fira-Sans", sans-serif;
   border: 1px solid black;
   font-weight: bold;
@@ -172,6 +171,7 @@ body{
   position: absolute;
   height: 30px;
 }
+
 
 
 
