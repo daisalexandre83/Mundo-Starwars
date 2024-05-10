@@ -1,7 +1,7 @@
 let isMoviesVisible = false;
 
 document.addEventListener("DOMContentLoaded",() =>{
-    document.querySelectorAll(".search-input").forEach((inputField)=>{
+    document.querySelectorAll("#search-input").forEach((inputField)=>{
         const tableRows = inputField.closest("table")
         .querySelectorAll("tbody > tr");
         const headerCell = inputField.closest("th");
