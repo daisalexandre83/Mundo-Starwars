@@ -43,7 +43,7 @@ body{
 .table td{
   font-size: 1em;
   font-family: "Fira-Sans", sans-serif;
-  border: 1px solid black;
+  border: 1px solid #fff;
   font-weight: bold;
   font-style: italic;
 }
@@ -168,7 +168,7 @@ body{
   /* margin-left: 300px; */
   position: absolute;
   height: 30px;
-  bottom: 465px;
+  bottom: 490px;
   right: 0;
   width: 745px;
   border-radius: 5px;
@@ -181,20 +181,20 @@ body{
 
 .search-container-icon span i{
   position: relative;
-  bottom: 50px;
+  bottom: 54px;
   left: 615px;
 }
 
 #prev-button{
   position:absolute;
-  top: 298px;
-  left: 930px;
+  top: 370px;
+  left: 960px;
 }
 
 #page1{
   position: relative;
   top: 117px;
-  left: 975px;
+  left: 1000px;
 }
 
 #next-button2{
@@ -202,7 +202,18 @@ body{
   top: 81px;
   left: 1025px;
 }
+  .table-title{
+    position: relative;
+    top: 60px;
+    left: 300px;
+    font-size: 35px;
+  }
 
+  .column-title{
+    background-color: black;
+    color: white;
+    font-size: 27px;
+  }
 
 
 
