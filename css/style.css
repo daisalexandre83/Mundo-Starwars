@@ -157,7 +157,7 @@ body{
 }
 
 .person-name{
-  width: 200px;
+  width: 275px;
 }
 
 .person-information{
@@ -165,12 +165,44 @@ body{
 }
 
 #search-input{
-  margin-left: 300px;
-  width: 750px;
-  margin-top: 90px;
+  /* margin-left: 300px; */
   position: absolute;
   height: 30px;
+  bottom: 465px;
+  right: 0;
+  width: 745px;
+  border-radius: 5px;
+  border: 1px solid gray;
 }
+
+.styled-link{
+  border: none;
+}
+
+.search-container-icon span i{
+  position: relative;
+  bottom: 50px;
+  left: 615px;
+}
+
+#prev-button{
+  position:absolute;
+  top: 298px;
+  left: 930px;
+}
+
+#page1{
+  position: relative;
+  top: 117px;
+  left: 975px;
+}
+
+#next-button2{
+  position: relative;
+  top: 81px;
+  left: 1025px;
+}
+
 
 
 
