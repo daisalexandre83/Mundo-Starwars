@@ -29,9 +29,14 @@ body{
   margin: 0 0 15px 75px;
 }
 
+tbody{
+  position: absolute;
+  margin-top: 40px;
+}
+
 .table{
   font-family: "Fira Sans", sans-serif;
-  position: absolute;
+  /* position: absolute; */
   margin:  0px 300px auto;
   border-collapse: collapse;
 }
@@ -157,16 +162,16 @@ body{
 }
 
 .person-name{
-  width: 275px;
+  width: 250px;
 }
 
-.person-information{
-  width: 150px;
-}
+ .person-information{
+  width: 125px;
+} 
 
 #search-input{
   /* margin-left: 300px; */
-  position: absolute;
+  /* position: absolute; */
   height: 30px;
   bottom: 490px;
   right: 0;
@@ -181,30 +186,34 @@ body{
 
 .search-container-icon span i{
   position: relative;
-  bottom: 54px;
-  left: 615px;
+  bottom: 75px;
+  left: 350px;
 }
 
 #prev-button{
   position:absolute;
-  top: 370px;
-  left: 960px;
+  /* top: 395px; */
+  margin-top: 50px;
+  background-color: blue;
+  left: 950px;
 }
 
 #page1{
   position: relative;
-  top: 117px;
-  left: 1000px;
+  /* top: 143px; */
+  left: 990px;
+  background-color: gold;
+  margin-top: 51px;
 }
 
 #next-button2{
-  position: relative;
-  top: 81px;
-  left: 1025px;
+  position: absolute;
+  top: 50px;
+  left: 1030px;
+  background-color: red;
 }
   .table-title{
     position: relative;
-    top: 60px;
     left: 300px;
     font-size: 35px;
   }
@@ -213,6 +222,10 @@ body{
     background-color: black;
     color: white;
     font-size: 27px;
+  }
+
+  .pagination-container{
+    position: absolute;
   }
 
 
