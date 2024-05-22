@@ -180,14 +180,18 @@ tbody{
   border: 1px solid gray;
 }
 
+#search-input::placeholder{
+  font-size: 16px;
+}
+
 .styled-link{
   border: none;
 }
 
 .search-container-icon span i{
-  position: relative;
-  bottom: 75px;
-  left: 350px;
+  position: absolute;
+  top: 266px;
+  left: 1020px;
 }
 
 #prev-button{
@@ -226,6 +230,23 @@ tbody{
 
   .pagination-container{
     position: absolute;
+  }
+
+  #search-input2{
+    display: none;
+    width: 750px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    height: 30px;
+  }
+
+  #search-input2::placeholder{
+    color: purple;
+    position: absolute !important;
+    /* margin-bottom: 70%; */
+    left: 150px;
+    font-size: 13px;
+    /* top:150px !important */
   }
 
 
