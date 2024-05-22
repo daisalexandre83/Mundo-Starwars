@@ -102,6 +102,11 @@ button_detail.forEach(function(button) {
 }
 );
 
+function changedInput() {
+    document.getElementById("search-input").style.display="none";
+    document.getElementById("search-input2").style.display="block";
+}
+
 
 
 
