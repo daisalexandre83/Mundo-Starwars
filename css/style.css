@@ -170,8 +170,6 @@ tbody{
 } 
 
 #search-input{
-  /* margin-left: 300px; */
-  /* position: absolute; */
   height: 30px;
   bottom: 490px;
   right: 0;
@@ -196,7 +194,6 @@ tbody{
 
 #prev-button{
   position:absolute;
-  /* top: 395px; */
   margin-top: 50px;
   background-color: blue;
   left: 950px;
@@ -204,7 +201,6 @@ tbody{
 
 #page1{
   position: relative;
-  /* top: 143px; */
   left: 990px;
   background-color: gold;
   margin-top: 51px;
