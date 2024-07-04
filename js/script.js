@@ -1,6 +1,6 @@
 let isMoviesVisible = false;
 
-addEventListener("keyup",(event) =>{
+function tablePersons(e){
     document.querySelectorAll("#search-input2").forEach((inputField)=>{
                 const tableRows = inputField.closest("table")
                 .querySelectorAll("tbody > tr");
@@ -29,7 +29,8 @@ addEventListener("keyup",(event) =>{
                      }
                  });
             });
-})
+}
+
 
 // document.addEventListener("DOMContentLoaded",() =>{
 //         document.querySelectorAll("#search-input").forEach((inputField)=>{
@@ -61,38 +62,6 @@ addEventListener("keyup",(event) =>{
 //          });
 //     });
 // });
-
-function tablePersons(){
-    document.querySelectorAll("#search-input2").forEach((inputField)=>{
-        const tableRows = inputField.closest("table")
-        .querySelectorAll("tbody > tr");
-        const headerCell = inputField.closest("th");
-        const otherHeaderCells = 
-        headerCell.closest("tr").children;
-        const columnIndex = 
-        Array.from(otherHeaderCells).indexOf(headerCell);
-        const searchableCells = 
-        Array.from(tableRows).map(
-            (row) => row.querySelectorAll("td")
-            [columnIndex]
-         );
-         inputField.addEventListener("input",() =>{
-             const searchQuery = inputField.value.toLowerCase();
-
-             for (const tableCell of searchableCells) {
-                const row = tableCell.closest("tr");
-                const value = 
-                 tableCell.textContent.toLocaleLowerCase().replace(",","");
-                 row.style.visibility = null;
-
-                 if (value.search(searchQuery) === -1) {
-                     row.style.visibility = "collapse";
-                 }
-             }
-         });
-    });
-    
-}
 
 
 const cells = document.querySelectorAll('td');
