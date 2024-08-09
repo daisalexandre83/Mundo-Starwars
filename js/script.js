@@ -1,7 +1,7 @@
 let isMoviesVisible = false;
 
 function tablePersons(e){
-    document.querySelectorAll("#search-input2").forEach((inputField)=>{
+    document.querySelectorAll("#search-input").forEach((inputField)=>{
                 const tableRows = inputField.closest("table")
                 .querySelectorAll("tbody > tr");
                 const headerCell = inputField.closest("th");
@@ -32,36 +32,36 @@ function tablePersons(e){
 }
 
 
-// document.addEventListener("DOMContentLoaded",() =>{
-//         document.querySelectorAll("#search-input").forEach((inputField)=>{
-//         const tableRows = inputField.closest("table")
-//         .querySelectorAll("tbody > tr");
-//         const headerCell = inputField.closest("th");
-//         const otherHeaderCells = 
-//         headerCell.closest("tr").children;
-//         const columnIndex = 
-//         Array.from(otherHeaderCells).indexOf(headerCell);
-//         const searchableCells = 
-//         Array.from(tableRows).map(
-//             (row) => row.querySelectorAll("td")
-//             [columnIndex]
-//          );
-//          inputField.addEventListener("input",() =>{
-//              const searchQuery = inputField.value.toLowerCase();
+document.addEventListener("DOMContentLoaded",() =>{
+        document.querySelectorAll("#search-input").forEach((inputField)=>{
+        const tableRows = inputField.closest("table")
+        .querySelectorAll("tbody > tr");
+        const headerCell = inputField.closest("th");
+        const otherHeaderCells = 
+        headerCell.closest("tr").children;
+        const columnIndex = 
+        Array.from(otherHeaderCells).indexOf(headerCell);
+        const searchableCells = 
+        Array.from(tableRows).map(
+            (row) => row.querySelectorAll("td")
+            [columnIndex]
+         );
+         inputField.addEventListener("input",() =>{
+             const searchQuery = inputField.value.toLowerCase();
 
-//              for (const tableCell of searchableCells) {
-//                 const row = tableCell.closest("tr");
-//                 const value = 
-//                  tableCell.textContent.toLocaleLowerCase().replace(",","");
-//                  row.style.visibility = null;
+             for (const tableCell of searchableCells) {
+                const row = tableCell.closest("tr");
+                const value = 
+                 tableCell.textContent.toLocaleLowerCase().replace(",","");
+                 row.style.visibility = null;
 
-//                  if (value.search(searchQuery) === -1) {
-//                      row.style.visibility = "collapse";
-//                  }
-//              }
-//          });
-//     });
-// });
+                 if (value.search(searchQuery) === -1) {
+                     row.style.visibility = "collapse";
+                 }
+             }
+         });
+    });
+});
 
 
 const cells = document.querySelectorAll('td');
@@ -134,10 +134,7 @@ button_detail.forEach(function(button) {
 }
 );
 
-function changedInput() {
-    document.getElementById("search-input").style.display="none";
-    document.getElementById("search-input2").style.display="block";
-}
+
 
 
 
