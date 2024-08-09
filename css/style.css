@@ -183,10 +183,6 @@ tbody{
   font-size: 16px;
 }
 
-.styled-link{
-  border: none;
-}
-
 .search-container-icon span i{
   position: absolute;
   top: 266px;
@@ -229,22 +225,8 @@ tbody{
     position: absolute;
   }
 
-  #search-input2{
-    display: none;
-    width: 750px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    height: 30px;
-  }
-
-  #search-input2::placeholder{
-    color: purple;
-    position: absolute !important;
-    /* margin-bottom: 70%; */
-    left: 150px;
-    font-size: 13px;
-    /* top:150px !important */
-  }
+  
+  
 
 
 
