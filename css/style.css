@@ -31,7 +31,7 @@ body{
 
 tbody{
   position: absolute;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .table{
@@ -169,24 +169,33 @@ tbody{
   width: 125px;
 } 
 
-#search-input{
+input{
+ color:gray;
+ position: absolute;
+}
+
+input:hover{
+  border:1px solid black;
+}
+
+
+
+/* #search-input{
   height: 30px;
-  position: initial;
+  position: initial; 
   bottom: 490px;
   right: 0;
   width: 745px;
   border-radius: 5px;
   border: 1px solid gray;
-}
-
-#search-input::placeholder{
-  font-size: 16px;
-}
+  font-size: 18px;
+} */
 
 .search-container-icon span i{
   position: absolute;
   top: 266px;
   left: 1020px;
+  cursor:pointer;
 }
 
 #prev-button{
@@ -226,11 +235,20 @@ tbody{
   }
 
   .placeholder{
-    color:gray;
-    position: absolute;
-    top:262px;
-    right: 965px;
+    
+    /* top:262px; */
+    /* right: 965px; */
     font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 745px ;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 18px;
+  }
+
+  input:focus + .placeholder{
+    top:-10px;
+    color:purple;
+    
   }
 
   
