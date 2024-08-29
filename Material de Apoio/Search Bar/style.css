@@ -20,11 +20,12 @@ body{
     max-width: 60px;
     height: 55px;
     margin: 0 50px;
+    background-color: #fff;
     border-radius: 6px;
     transition: all 0.5s ease-in-out;
 }
 
-    input-box-open{
+    input-box.open{
         max-width: 350px;
     }
 
