@@ -170,14 +170,20 @@ tbody{
 } 
 
 input{
- color:gray;
  position: absolute;
+ top:258px; 
+ left: 300px; 
+ width: 745px ;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ border-radius: 5px;
+ height: 25px;
+ font-size: 18px;
+ /* background-color: blue; */
 }
 
 input:hover{
   border:1px solid black;
 }
-
 
 
 /* #search-input{
@@ -235,21 +241,31 @@ input:hover{
   }
 
   .placeholder{
-    
-    /* top:262px; */
-    /* right: 965px; */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 745px ;
-    border-radius: 5px;
-    height: 25px;
-    font-size: 18px;
+    color:gray;
+    position: relative;
+    top:10px;
+    left: 10px;
   }
 
-  input:focus + .placeholder{
+  /* placeholder:focus{
+    background-color: red;
+    position: absolute;
+    top: 5px;
+  } */
+
+  /* input:focus + .placeholder{
     top:-10px;
-    color:purple;
-    
+    outline: none;
+    border: 2px solid purple;
+  } */
+
+  input:focus {
+   outline: none;
+   border: 2px solid purple;
+   
   }
+
+ 
 
   
   
