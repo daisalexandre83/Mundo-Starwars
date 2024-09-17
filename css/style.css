@@ -178,7 +178,7 @@ input{
  border-radius: 5px;
  height: 25px;
  font-size: 18px;
- /* background-color: blue; */
+ 
 }
 
 input:hover{
@@ -245,7 +245,6 @@ input:hover{
     position: relative;
     top:10px;
     left: 10px;
-    display: block;
   }
 
   /* placeholder:focus{
@@ -254,11 +253,13 @@ input:hover{
     top: 5px;
   } */
 
-  /* input:focus + .placeholder{
+  input:focus + .placeholder{
     top:-10px;
     outline: none;
-    border: 2px solid purple;
-  } */
+    /* border: 2px solid purple; */
+    color: purple;
+    width: 100px;
+  }
 
   input:focus {
    outline: none;
