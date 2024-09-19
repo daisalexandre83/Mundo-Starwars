@@ -247,12 +247,6 @@ input:hover{
     left: 10px;
   }
 
-  /* placeholder:focus{
-    background-color: red;
-    position: absolute;
-    top: 5px;
-  } */
-
   input:focus + .placeholder{
     top:-10px;
     outline: none;
