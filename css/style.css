@@ -240,25 +240,19 @@ input:hover{
     position: absolute;
   }
 
-  .placeholder{
-    color:gray;
-    position: relative;
-    top:10px;
-    left: 10px;
-  }
-
-  input:focus + .placeholder{
-    top:-10px;
+  *,
+  *:focus{
     outline: none;
-    /* border: 2px solid purple; */
-    color: purple;
-    width: 100px;
   }
 
-  input:focus {
-   outline: none;
-   border: 2px solid purple;
-   
+  .form{
+    background: #fff;
+    font-family: sans-serif;
+  }
+
+  .form-item{
+    background-color: #8904B1;
+    /* margin-bottom: 15px; */
   }
 
  
