@@ -21,14 +21,18 @@
    <thead>
     <tr>
       <h1 class="table-title">Personagens</h1>
-      <th>
-        <!--input  type="text" name="searchbox" id="search-input" class="placeholder"
-        placeholder="Search..."-->
-        <input  type="text" name="searchbox" class="search-input">
-        <label class="placeholder">Search...</label>
+      <div class="form">
+       <div class="form-item">
+        <input type="text" id="search"
+        autocomplete="off" required>
+        <label for="search">Search...</label>
+       </div>
+      </div>
+      <!--th>
+        <input  type="text" name="searchbox" id="search-input" class="placeholder"
+        placeholder="Search...">
         <div  class="search-container-icon"><span><i class="fa-solid fa-magnifying-glass-chart"></i></span></div>
-        
-      </th>
+      </th-->
     </tr>
    </thead>
    <tbody>
@@ -731,6 +735,8 @@
       </div>
     </div>
   </div>
+   <!--input  type="text" name="searchbox" class="search-input">
+   <label class="placeholder">Search...</label-->
  </section>
   <script src="https://kit.fontawesome.com/8bd6d6f50f.js" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
