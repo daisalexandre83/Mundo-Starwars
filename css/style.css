@@ -169,7 +169,7 @@ tbody{
   width: 125px;
 } 
 
-input{
+/* input{
  position: absolute;
  top:258px; 
  left: 300px; 
@@ -179,12 +179,7 @@ input{
  height: 25px;
  font-size: 18px;
  
-}
-
-input:hover{
-  border:1px solid black;
-}
-
+} */
 
 /* #search-input{
   height: 30px;
@@ -246,13 +241,48 @@ input:hover{
   }
 
   .form{
-    background: #fff;
     font-family: sans-serif;
   }
 
   .form-item{
-    background-color: #8904B1;
-    /* margin-bottom: 15px; */
+    margin-bottom: 15px;
+  }
+
+  .form-item input{
+    display: block;
+    width: 755px;
+    margin-left: 300px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid gray;
+  }
+
+  input:hover{
+  border:1px solid black;
+ }
+
+  .form-item input:focus{
+    border-color: purple;
+  }
+
+  .form-item label{
+    position: absolute;
+    z-index: 2;
+    color:gray;
+    top: 262px;
+    margin-left: 320px;
+    font-size: 14px;
+  }
+
+  .form-item input:focus + label,
+  .form-item input:valid + label{
+    font-size: 10px;
+    top: 246px;
+    background-color: yellow;
+  }
+
+  .form-item input:focus + label{
+    color: purple;
   }
 
  
