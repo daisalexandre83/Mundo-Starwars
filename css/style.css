@@ -277,8 +277,8 @@ tbody{
   .form-item input:focus + label,
   .form-item input:valid + label{
     font-size: 10px;
-    top: 246px;
-    background-color: yellow;
+    top: 249px;
+    background-color: white;
   }
 
   .form-item input:focus + label{
