@@ -240,9 +240,9 @@ tbody{
     outline: none;
   }
 
-  .form{
+  /* .form{
     font-family: sans-serif;
-  }
+  } */
 
   .form-item{
     margin-bottom: 15px;
@@ -251,7 +251,6 @@ tbody{
   .form-item input{
     display: block;
     width: 755px;
-    margin-left: 300px;
     height: 30px;
     border-radius: 4px;
     border: 1px solid gray;
@@ -270,7 +269,7 @@ tbody{
     z-index: 2;
     color:gray;
     top: 262px;
-    margin-left: 320px;
+    left:315px;
     font-size: 14px;
   }
 
