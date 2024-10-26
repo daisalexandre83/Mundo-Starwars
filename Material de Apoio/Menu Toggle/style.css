@@ -8,8 +8,16 @@ body{
     background: #303030;
     color: #303030;
     height: 100%;
+    width: 100%;
     position: absolute;
     font: normal 1em "Arial";
+}
+
+nav{
+    padding: 10px;
+    position: relative;
+    background: #4deb5a;
+    z-index: 1;
 }
 
 nav::after{
@@ -54,7 +62,8 @@ aside a {
     position: relative;
     cursor: pointer;
     float: left;
-
+    
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select:none;
     -moz-user-select:none;
@@ -101,4 +110,20 @@ aside a {
 
 .toggle-bar::after{
     top: 4px;
+}
+
+.toggle-wrap.active .toggle-bar{
+    border-top: 6px solid transparent;
+}
+
+.toggle-wrap.active .toggle-bar::before{
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.toggle-wrap.active .toggle-bar::after{
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
