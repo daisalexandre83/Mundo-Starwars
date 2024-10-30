@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded",() =>{
 
              for (const tableCell of searchableCells) {
                 const row = tableCell.closest("tr");
+                document.querySelector(".close-container-icon span i").style.display="block";
                 const value = 
                  tableCell.textContent.toLocaleLowerCase().replace(",","");
                  row.style.visibility = null;
