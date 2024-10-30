@@ -199,6 +199,13 @@ tbody{
   cursor:pointer;
 }
 
+.close-container-icon span i{
+  position: absolute;
+  top: 265px;
+  right: 333px;
+  display: none;
+}
+
 #prev-button{
   position:absolute;
   margin-top: 50px;
