@@ -169,29 +169,6 @@ tbody{
   width: 125px;
 } 
 
-/* input{
- position: absolute;
- top:258px; 
- left: 300px; 
- width: 745px ;
- font-family: Georgia, 'Times New Roman', Times, serif;
- border-radius: 5px;
- height: 25px;
- font-size: 18px;
- 
-} */
-
-/* #search-input{
-  height: 30px;
-  position: initial; 
-  bottom: 490px;
-  right: 0;
-  width: 745px;
-  border-radius: 5px;
-  border: 1px solid gray;
-  font-size: 18px;
-} */
-
 .search-container-icon span i{
   position: absolute;
   top: 266px;
