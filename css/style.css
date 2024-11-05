@@ -186,14 +186,12 @@ tbody{
 #prev-button{
   position:absolute;
   margin-top: 50px;
-  background-color: blue;
   left: 950px;
 }
 
 #page1{
   position: relative;
   left: 990px;
-  background-color: gold;
   margin-top: 51px;
 }
 
@@ -201,7 +199,6 @@ tbody{
   position: absolute;
   top: 50px;
   left: 1030px;
-  background-color: red;
 }
   .table-title{
     position: relative;
