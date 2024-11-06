@@ -176,6 +176,11 @@ tbody{
   cursor:pointer;
 }
 
+.close-container-icon{
+  border: none;
+  cursor: pointer;
+}
+
 .close-container-icon span i{
   position: absolute;
   top: 265px;
