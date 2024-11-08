@@ -41,6 +41,11 @@ for(let i = 0; i < cells.length;i++){
     cells[i].addEventListener('click',showMe)
 }
 
+function closePerson() {
+     row.style.display="none";
+     document.querySelector(".table").style.display="block";
+}
+
 function showMe() {
     document.querySelector(".table").style.display="none";
     document.querySelector("#info-people").style.display="block";
