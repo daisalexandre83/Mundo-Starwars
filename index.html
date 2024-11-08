@@ -26,7 +26,7 @@
         autocomplete="off" required>
         <label for="search">Search...</label>
         <div  class="search-container-icon"><span><i class="fa-solid fa-magnifying-glass-chart"></i></span></div>
-        <div class="close-container-icon" onclick="closePerson()"><span><i class="fa-solid fa-xmark"></i></span></div>
+        <button class="close-container-icon" onclick="closePerson()"><span><i class="fa-solid fa-xmark"></i></span></button>
        </div>
       </th>
     </tr>
@@ -194,20 +194,6 @@
         <td>200BBY</td>
         <td>228</td>
         <td>112</td>
-        <td>male</td>
-      </tr>
-      <tr class="blue-line" data-name="Han Solo">
-        <td>Han Solo</td>
-        <td>29BBY</td>
-        <td>180</td>
-        <td>80</td>
-        <td>male</td>
-      </tr>
-      <tr class="purple-line" data-name="Greedo">
-        <td>Greedo</td>
-        <td>44BBY</td>
-        <td>173</td>
-        <td>74</td>
         <td>male</td>
       </tr>
       <tr class="blue-line" data-name="Jabba Desilijic Tiure">
@@ -695,18 +681,29 @@
       <div>
         <p id="page1">1</p>
       </div>
-      <button class="pagination-button" id="next-button2"
+      <button onclick="showPage2()" class="pagination-button" id="next-button2"
       aria-label="Next-page" title="Next-page">
         &gt;
       </button> 
-      <button class="pagination-button" id="prev-button1"
+      <button onclick="showPage1()" class="pagination-button" id="prev-button1"
       aria-label="Previous-page" title="Previous-page">
         &lt;
       </button> 
       <div>
         <p id="page2">2</p>
       </div>
-      <button class="pagination-button" id="next-button3"
+      <button  onclick="showPage3"  class="pagination-button" id="next-button3"
+      aria-label="Next-page" title="Next-page">
+        &gt;
+      </button> 
+      <button onclick="showPage2()" class="pagination-button" id="prev-button2"
+      aria-label="Previous-page" title="Previous-page">
+        &lt;
+      </button> 
+      <div>
+        <p id="page2">3</p>
+      </div>
+      <button  onclick="showPage4"  class="pagination-button" id="next-button4"
       aria-label="Next-page" title="Next-page">
         &gt;
       </button> 
