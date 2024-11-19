@@ -294,6 +294,10 @@ tbody{
     display: none;
   }
 
+  #prev-button8{
+    display: none;
+  }
+
   #page2{
     display: none;
   }
@@ -303,6 +307,26 @@ tbody{
   }
   
   #page4{
+    display: none;
+  }
+
+  #page5{
+    display: none;
+  }
+
+  #page6{
+    display: none;
+  }
+
+  #page7{
+    display: none;
+  }
+
+  #page8{
+    display: none;
+  }
+
+  #page9{
     display: none;
   }
 
