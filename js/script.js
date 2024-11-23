@@ -111,7 +111,7 @@ button_detail.forEach(function(button) {
 );
 
 function showPage1() {
-    
+    document.querySelector(".listed-page2").style.display="none"
 }
 
 
