@@ -14,9 +14,7 @@ document.addEventListener("DOMContentLoaded",() =>{
         Array.from(otherHeaderCells).indexOf(headerCell);
         const searchableCells = 
         Array.from(tableRows).map(
-            (row) => row.querySelectorAll("td")
-            [columnIndex]
-         );
+            (row) => row.querySelectorAll("td")[columnIndex]);
          inputField.addEventListener("input",() =>{
              const searchQuery = inputField.value.toLowerCase();
 
@@ -42,8 +40,7 @@ for(let i = 0; i < cells.length;i++){
 }
 
 function closePerson() {
-     row.style.display="none";
-     document.querySelector(".table").style.display="block";
+     document.querySelector('.close-container-icon').style.display="none";
 }
 
 function showMe() {
@@ -110,8 +107,10 @@ button_detail.forEach(function(button) {
 }
 );
 
-function showPage1() {
-    document.querySelector(".listed-page2").style.display="none"
+function showPage2() {
+    document.querySelector(".listed-page2").style.display="block";
+    document.querySelector(".listed-page1").style.display="none";
+    console.log("olá");
 }
 
 
