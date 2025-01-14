@@ -42,7 +42,8 @@ for(let i = 0; i < cells.length;i++){
 function closePerson() {
      // document.querySelector('.close-container-icon').style.display="none";
 
-     let close = this.document.querySelector('.close-container-icon').style.display = "none";
+     let close = document.querySelector('.close-container-icon').style.display = "none";
+     
 
      const infoPersons = document.querySelector('tr');
      for (let index = 0; index < infoPersons.length; index++) {
