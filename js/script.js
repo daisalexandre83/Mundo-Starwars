@@ -43,7 +43,9 @@ function closePerson() {
      // document.querySelector('.close-container-icon').style.display="none";
 
      let close = document.querySelector('.close-container-icon').style.display = "none";
-     
+
+     //let showTable = window.open("table");
+
 
      const infoPersons = document.querySelector('tr');
      for (let index = 0; index < infoPersons.length; index++) {
