@@ -209,6 +209,7 @@ tbody{
     position: relative;
     left: 300px;
     font-size: 35px;
+    background-color: aqua;
   }
 
   .column-title{
