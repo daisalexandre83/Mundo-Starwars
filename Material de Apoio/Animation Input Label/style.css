@@ -49,6 +49,5 @@
 }
 
 .form-item input:focus + label{
-    color: blueviolet;
-    /*color: blue;*/
+    color: blue;
 }
