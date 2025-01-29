@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -764,6 +764,795 @@
       </button> 
     </nav>
    </tbody>
+ </table>
+ <section id="info-people">
+  <div class="content">
+    <img  class="image-star-wars" src="img/StarWars.jpg">
+    <div class="content-data">
+      <div class="characters-person">
+        <button class="btn-line btn-active" data-name="characters-person" >CHARACTERISTICS</button>
+        <div class="info"></div>
+      </div>
+      <div class="movies-person">
+        <button class="btn-line" data-name="movies-person">FILMS</button>
+        <div class="info2"></div>
+      </div>
+      <div class="starships-person">
+        <button class="btn-line" data-name="starships-person" >STARSHIPS</button>
+        <div class="info3"></div>
+      </div>
+    </div>
+  </div>
+ </section>
+  <script src="https://kit.fontawesome.com/8bd6d6f50f.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <head>
+    <div class="header-content">
+      <p class="header-text">Mundo</p>
+      <div class="header-image">
+        <img src="img/starwars2.png">
+      </div>
+    </div>
+  </head>
+ <table class="table">
+   <thead>
+    <tr>
+      <h1 class="table-title">Personagens</h1>
+      <th>
+       <div class="form-item">
+        <input type="text" class="search-input"
+        autocomplete="off" required>
+        <label for="search">Search...</label>
+        <div  class="search-container-icon"><span><i class="fa-solid fa-magnifying-glass-chart"></i></span></div>
+        <button class="close-container-icon" onclick="closePerson()"><span><i class="fa-solid fa-xmark"></i></span></button>
+       </div>
+      </th>
+    </tr>
+   </thead>
+    <tr>
+      <td class="column-title">Character Name</td>
+      <td class="column-title">Birth Year</td>
+      <td class="column-title">Height</td>
+      <td class="column-title">Mass</td>
+      <td class="column-title">Gender</td>
+    </tr>
+    <tbody>
+      <tr class="blue-line" data-name="Luke Skywalker">
+        <td class="person-name">Luke Skywalker</td>
+        <td class="person-information">19BBY</td>
+        <td class="person-information">172</td>
+        <td class="person-information">77</td>
+        <td class="person-information">male</td>
+      </tr>
+      <tr class="purple-line"  data-name="Wilhuff Tarkin">
+        <td>Wilhuff Tarkin</td>
+        <td>64BBY</td>
+        <td>180</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line"  data-name="Chewabacca">
+        <td>Chewabacca</td>
+        <td>200BBY</td>
+        <td>228</td>
+        <td>112</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line"  data-name="Han Solo">
+        <td>Han Solo</td>
+        <td>29BBY</td>
+        <td>180</td>
+        <td>80</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Greedo">
+        <td>Greedo</td>
+        <td>44BBY</td>
+        <td>173</td>
+        <td>74</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Jabba Desilijic Tiure">
+        <td>Jabba Desilijic Tiure</td>
+        <td>600BBY</td>
+        <td>175</td>
+        <td>1,358</td>
+        <td>hermaphrodite</td>
+      </tr>
+      <tr class="blue-line" data-name="Wedge Antilles">
+        <td>Wedge Antilles</td>
+        <td>21BBY</td>
+        <td>170</td>
+        <td>77</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Jek Tono Porkins">
+        <td>Jek Tono Porkins</td>
+        <td>unknown</td>
+        <td>180</td>
+        <td>110</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Yoda">
+        <td>Yoda</td>
+        <td>896BBY</td>
+        <td>66</td>
+        <td>17</td>
+        <td>male</td>
+      </tr>
+    
+    <div class="listed-page2">
+      <tr class="purple-line" data-name="Palpatine">
+        <td>Palpatine</td>
+        <td>82BBY</td>
+        <td>170</td>
+        <td>75</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="C-3PO">
+        <td>C-3PO</td>
+        <td>112BBY</td>
+        <td>167</td>
+        <td>75</td>
+        <td>n/a</td>
+      </tr>
+      <tr class="purple-line" data-name="R2-D2">
+        <td>R2-D2</td>
+        <td>33BBY</td>
+        <td>96</td>
+        <td>32</td>
+        <td>n/a</td>
+      </tr>
+      <tr class="blue-line" data-name="Darth Vader">
+        <td>Darth Vader</td>
+        <td>41.9BBY</td>
+        <td>202</td>
+        <td>136</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Leia Organa">
+        <td>Leia Organa</td>
+        <td>19BBY</td>
+        <td>150</td>
+        <td>49</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="Owen Lars">
+        <td>Owen Lars</td>
+        <td>52BBY</td>
+        <td>178</td>
+        <td>120</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Beru Whitesun Lars">
+        <td>Beru Whitesun Lars</td>
+        <td>47BBY</td>
+        <td>165</td>
+        <td>75</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="R5-D4">
+        <td>R5-D4</td>
+        <td>unknown</td>
+        <td>97</td>
+        <td>32</td>
+        <td>n/a</td>  
+      </tr>
+      <tr class="purple-line" data-name="Biggs Darklighter">
+        <td>Biggs Darklighter</td>
+        <td>24BBY</td>
+        <td>183</td>
+        <td>84</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Obi-Wan Kenobi">
+        <td>Obi-Wan Kenobi</td>
+        <td>57BBY</td>
+        <td>182</td>
+        <td>77</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Anakin Skywalker">
+        <td>Anakin Skywalker</td>
+        <td>41.9BBY</td>
+        <td>188</td>
+        <td>84</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Wilhuff Tarkin">
+        <td>Wilhuff Tarkin</td>
+        <td>64BBY</td>
+        <td>180</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Chewabacca">
+        <td>Chewabacca</td>
+        <td>200BBY</td>
+        <td>228</td>
+        <td>112</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Jabba Desilijic Tiure">
+        <td>Jabba Desilijic Tiure</td>
+        <td>600BBY</td>
+        <td>175</td>
+        <td>1,358</td>
+        <td>hermaphrodite</td>
+      </tr>
+      <tr class="purple-line" data-name="Wedge Antilles">
+        <td>Wedge Antilles</td>
+        <td>21BBY</td>
+        <td>170</td>
+        <td>77</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Jek Tono Porkins">
+        <td>Jek Tono Porkins</td>
+        <td>unknown</td>
+        <td>180</td>
+        <td>110</td>
+        <td>hermaphrodite</td>
+      </tr>
+      <tr class="purple-line" data-name="Yoda">
+        <td>Yoda</td>
+        <td>896BBY</td>
+        <td>66</td>
+        <td>17</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Palpatine">
+        <td>Palpatine</td>
+        <td>82</td>
+        <td>170</td>
+        <td>175</td>
+        <td>hermaphrodite</td>
+      </tr>
+      <tr class="purple-line" data-name="Boba Fett">
+        <td>Boba Fett</td>
+        <td>31.5BBY</td>
+        <td>183</td>
+        <td>78.2</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="IG-88">
+        <td>IG-88</td>
+        <td>15</td>
+        <td>200</td>
+        <td>140</td>
+        <td>none</td>
+      </tr>
+      <tr class="purple-line" data-name="Bossk">
+        <td>Bossk</td>
+        <td>53BBY</td>
+        <td>190</td>
+        <td>113</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Lando Calrrissian">
+        <td>Lando Calrrissian</td>
+        <td>31</td>
+        <td>177</td>
+        <td>79</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Lobot">
+        <td>Lobot</td>
+        <td>37BBY</td>
+        <td>175</td>
+        <td>79</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Acbar">
+        <td>Acbar</td>
+        <td>41</td>
+        <td>180</td>
+        <td>83</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Mon Mothama">
+        <td>Mon Mothama</td>
+        <td>48BBY</td>
+        <td>150</td>
+        <td>unknown</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="Arvel Crynyd">
+        <td>Arvel Crynyd</td>
+        <td>unknown</td>
+        <td>unknown</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Wicket Systri Warrick">
+        <td>Mon Mothama</td>
+        <td>8BBY</td>
+        <td>88</td>
+        <td>20</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Nien Nunb">
+        <td>Arvel Crynyd</td>
+        <td>unknown</td>
+        <td>160</td>
+        <td>68</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Bobba Fett">
+        <td>Bobba Fett</td>
+        <td>31.5BY</td>
+        <td>183</td>
+        <td>78.2</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Qui-Gon Jinn">
+        <td>Qui-Gon Jinn</td>
+        <td>92</td>
+        <td>193</td>
+        <td>89</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Nute Gunray">
+        <td>Nute Gunray</td>
+        <td>unknown</td>
+        <td>191</td>
+        <td>90</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Finis Valorum">
+        <td>Finis Valorum</td>
+        <td>91</td>
+        <td>170</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Padmé Amidala">
+        <td>Padmé Amidala</td>
+        <td>46</td>
+        <td>185</td>
+        <td>45</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="Jar Jar Binks">
+        <td>Jar Jar Binks</td>
+        <td>52</td>
+        <td>196</td>
+        <td>66</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Roos Tarpals">
+        <td>Roos Tarpals</td>
+        <td>unknown</td>
+        <td>224</td>
+        <td>82</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="Rugor Nass">
+        <td>Rugor Nass</td>
+        <td>unknown</td>
+        <td>206</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Ric Olié">
+        <td>Ric Olié</td>
+        <td>unknown</td>
+        <td>183</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Watto">
+        <td>Watto</td>
+        <td>unknown</td>
+        <td>137</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Sedulba">
+        <td>Sedulba</td>
+        <td>unknown</td>
+        <td>183</td>
+        <td>40</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Quarsh Panaka">
+        <td>Quarsh Panaka</td>
+        <td>62BBY</td>
+        <td>183</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Shmi Skywalker">
+        <td>Shmi Skywalker</td>
+        <td>72BBY</td>
+        <td>163</td>
+        <td>40</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="Darth Maul">
+        <td>Darth Maul</td>
+        <td>54BBY</td>
+        <td>175</td>
+        <td>80</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Bibi Fortuna">
+        <td>Bibi Fortuna</td>
+        <td>unknown</td>
+        <td>180</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Ayla Secura">
+        <td>Ayla Secura</td>
+        <td>48BBY</td>
+        <td>178</td>
+        <td>55</td>
+        <td>female</td>
+      </tr>
+      <tr class="purple-line" data-name="Ratts Tyerel">
+        <td>Ratts Tyerel</td>
+        <td>unknown</td>
+        <td>79</td>
+        <td>15</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Dud Bolt">
+        <td>Dud Bolt</td>
+        <td>unknown</td>
+        <td>94</td>
+        <td>45</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Gasgano">
+        <td>Gasgano</td>
+        <td>unknown</td>
+        <td>122</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Ben Quadinaros">
+        <td>Ben Quadinaros</td>
+        <td>unknown</td>
+        <td>163</td>
+        <td>65</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Mace Windu">
+        <td>Mace Windu</td>
+        <td>72BBY</td>
+        <td>188</td>
+        <td>84</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Ki-Adi-Mundi">
+        <td>Ki-Adi-Mundi</td>
+        <td>92BBY</td>
+        <td>198</td>
+        <td>82</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Kit Fisto">
+        <td>Kit Fisto</td>
+        <td>unknown</td>
+        <td>196</td>
+        <td>87</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Eeth-Koth">
+        <td>Eeth-Koth</td>
+        <td>unknown</td>
+        <td>171</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Adi Gallia">
+        <td>Adi Gallia</td>
+        <td>unknown</td>
+        <td>184</td>
+        <td>50</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="Saesee Tiin">
+        <td>Saesee Tiin</td>
+        <td>unknown</td>
+        <td>188</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Yarael Poof">
+        <td>Adi Gallia</td>
+        <td>unknown</td>
+        <td>264</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Plo Koon">
+        <td>Plo Koon</td>
+        <td>22BBY</td>
+        <td>180</td>
+        <td>80</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Mas Amedda">
+        <td>Mas Amedda</td>
+        <td>unknown</td>
+        <td>196</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Gregar Typho">
+        <td>Gregar Typho</td>
+        <td>unknown</td>
+        <td>185</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Cordé">
+        <td>Cordé</td>
+        <td>unknown</td>
+        <td>157</td>
+        <td>unknown</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="Cliegg Lars">
+        <td>Cliegg Lars</td>
+        <td>82BBY</td>
+        <td>183</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Poggle the Lesser">
+        <td>Poggle the Lesser</td>
+        <td>unknown</td>
+        <td>183</td>
+        <td>80</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Luminara Unduli">
+        <td>Luminara Unduli</td>
+        <td>58BBY</td>
+        <td>170</td>
+        <td>56.2</td>
+        <td>female</td>
+      </tr>
+      <tr class="purple-line" data-name="Barriss Offee">
+        <td>Barriss Offee</td>
+        <td>40BBY</td>
+        <td>166</td>
+        <td>50</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="Dormé">
+        <td>Dormé</td>
+        <td>unknown</td>
+        <td>165</td>
+        <td>unknown</td>
+        <td>female</td>
+      </tr>
+      <tr class="purple-line" data-name="Dooku">
+        <td>Dooku</td>
+        <td>102BBY</td>
+        <td>193</td>
+        <td>80</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Bail Prestor Organa">
+        <td>Bail Prestor Organa</td>
+        <td>67BBY</td>
+        <td>191</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Jango Fett">
+        <td>Jango Fett</td>
+        <td>66BBY</td>
+        <td>183</td>
+        <td>79</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Zam Wesell">
+        <td>Zam Wesell</td>
+        <td>unknown</td>
+        <td>168</td>
+        <td>55</td>
+        <td>female</td>
+      </tr>
+      <tr class="purple-line" data-name="Dexter Jettster">
+        <td>Dexter Jettster</td>
+        <td>unknown</td>
+        <td>198</td>
+        <td>102</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Lama Su">
+        <td>Lama Su</td>
+        <td>unknown</td>
+        <td>229</td>
+        <td>88</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Taun We">
+        <td>Taun We</td>
+        <td>unknown</td>
+        <td>213</td>
+        <td>unknown</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="Jocasta Nu">
+        <td>Jocasta Nu</td>
+        <td>unknown</td>
+        <td>164</td>
+        <td>unknown</td>
+        <td>female</td>
+      </tr>
+      <tr class="purple-line" data-name="R4-P17">
+        <td>R4-P17</td>
+        <td>unknown</td>
+        <td>167</td>
+        <td>unknown</td>
+        <td>female</td>
+      </tr>
+      <tr class="blue-line" data-name="Wat Tambor">
+        <td>Wat Tambor</td>
+        <td>unknown</td>
+        <td>193</td>
+        <td>48</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="San Hill">
+        <td>San Hill</td>
+        <td>unknown</td>
+        <td>191</td>
+        <td>unknown</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Shaak Ti">
+        <td>Shaak Ti</td>
+        <td>unknown</td>
+        <td>178</td>
+        <td>58</td>
+        <td>female</td>
+      </tr>
+      <tr class="purple-line" data-name="Grievous">
+        <td>Grievous</td>
+        <td>unknown</td>
+        <td>216</td>
+        <td>159</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Tarfful">
+        <td>Tarfful</td>
+        <td>unknown</td>
+        <td>234</td>
+        <td>136</td>
+        <td>male</td>
+      </tr>
+      <tr class="purple-line" data-name="Raymus Antilles">
+        <td>Grievous</td>
+        <td>unknown</td>
+        <td>188</td>
+        <td>79</td>
+        <td>male</td>
+      </tr>
+      <tr class="blue-line" data-name="Sly Moore">
+        <td>Sly Moore</td>
+        <td>unknown</td>
+        <td>178</td>
+        <td>48</td>
+        <td>female</td>
+      </tr>
+      <tr class="purple-line" data-name="Tion Medon">
+        <td>Tion Medon</td>
+        <td>unknown</td>
+        <td>206</td>
+        <td>80</td>
+        <td>male</td>
+      </tr>
+    </div>
+    <nav class="pagination-container">
+      <button class="pagination-button" id="prev-button"
+      aria-label="Previous-page" title="Previous-page">
+        &lt;
+      </button> 
+      <div>
+        <p id="page1">1</p>
+      </div>
+      <button onclick="showPage2()" class="pagination-button" id="next-button2"
+      aria-label="Next-page" title="Next-page">
+        &gt;
+      </button> 
+      <button onclick="showPage1()" class="pagination-button" id="prev-button1"
+      aria-label="Previous-page" title="Previous-page">
+        &lt;
+      </button> 
+      <div>
+        <p id="page2">2</p>
+      </div>
+      <button  onclick="showPage3()"  class="pagination-button" id="next-button3"
+      aria-label="Next-page" title="Next-page">
+        &gt;
+      </button> 
+      <button onclick="showPage2()" class="pagination-button" id="prev-button2"
+      aria-label="Previous-page" title="Previous-page">
+        &lt;
+      </button> 
+      <div>
+        <p id="page3">3</p>
+      </div>
+      <button  onclick="showPage4()"  class="pagination-button" id="next-button4"
+      aria-label="Next-page" title="Next-page">
+        &gt;
+      </button> 
+      <button onclick="showPage3()" class="pagination-button" id="prev-button3"
+      aria-label="Previous-page" title="Previous-page">
+        &lt;
+      </button> 
+      <div>
+        <p id="page4">4</p>
+      </div>
+      <button  onclick="showPage5()"  class="pagination-button" id="next-button5"
+      aria-label="Next-page" title="Next-page">
+        &gt;
+      </button> 
+      <button onclick="showPage4()" class="pagination-button" id="prev-button4"
+      aria-label="Previous-page" title="Previous-page">
+        &lt;
+      </button> 
+      <div>
+        <p id="page5">5</p>
+      </div>
+      <button  onclick="showPage6()"  class="pagination-button" id="next-button6"
+      aria-label="Next-page" title="Next-page">
+        &gt;
+      </button> 
+      <button onclick="showPage5()" class="pagination-button" id="prev-button5"
+      aria-label="Previous-page" title="Previous-page">
+        &lt;
+      </button> 
+      <div>
+        <p id="page6">6</p>
+      </div>
+      <button  onclick="showPage7()"  class="pagination-button" id="next-button7"
+      aria-label="Next-page" title="Next-page">
+        &gt;
+      </button> 
+      <button onclick="showPage6()" class="pagination-button" id="prev-button6"
+      aria-label="Previous-page" title="Previous-page">
+        &lt;
+      </button> 
+      <div>
+        <p id="page7">7</p>
+      </div>
+      <button  onclick="showPage8()"  class="pagination-button" id="next-button8"
+      aria-label="Next-page" title="Next-page">
+        &gt;
+      </button> 
+      <button onclick="showPage7()" class="pagination-button" id="prev-button7"
+      aria-label="Previous-page" title="Previous-page">
+        &lt;
+      </button> 
+      <div>
+        <p id="page8">8</p>
+      </div>
+      <button  onclick="showPage9()"  class="pagination-button" id="next-button9"
+      aria-label="Next-page" title="Next-page">
+        &gt;
+      </button> 
+    </nav>
+  
  </table>
  <section id="info-people">
   <div class="content">
