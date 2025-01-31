@@ -211,11 +211,30 @@ tbody{
     font-size: 35px;
   }
 
-  .column-title{
+  .grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    position: absolute;
+    left: 300px;
+    width: 766px;
+    top:387px;
+
+    /* grid-gap: 10px;
+    padding: 10px; */
+  }
+
+  .grid-container div{
     background-color: black;
     color: white;
-    font-size: 27px;
+    font-size: 18px;
+    border-right: 1px solid white;
   }
+
+  /* .column-title{
+    background-color: black;
+    color: white;
+    font-size: 18px;
+  } */
 
   .pagination-container{
     position: absolute;
