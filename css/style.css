@@ -213,14 +213,12 @@ tbody{
 
   .grid-container{
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 253px 128px 128px 128px 128px;
     position: absolute;
-    left: 300px;
-    width: 766px;
-    top:387px;
-
-    /* grid-gap: 10px;
-    padding: 10px; */
+    left: 291px;
+    width: 765px;
+    top:373px;
+    padding: 10px;
   }
 
   .grid-container div{
@@ -285,12 +283,12 @@ tbody{
     color: purple;
   }
 
-  /* .listed-page2{
+  /* .page2-person{
     display: none;
   }
 
-  .listed-page1{
-   background-color: red;
+  .page1-person{
+  display: block;
   } */
 
   #prev-button1{
