@@ -119,9 +119,14 @@ button_detail.forEach(function(button) {
 );
 
 function showPage2() {
-    document.querySelector(".listed-page2").style.display="block";
-    document.querySelector(".listed-page1").style.display="none";
+    document.querySelector(".page2-person").style.display="block";
+    document.querySelector(".page1-person").style.display="none";
     console.log("olá");
+}
+
+function showPage3(){
+    document.querySelector(".page3-person").style.display="block";
+    document.querySelector(".page2-person").style.display="none";
 }
 
 
