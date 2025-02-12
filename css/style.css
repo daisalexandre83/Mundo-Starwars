@@ -243,11 +243,11 @@ tbody{
     outline: none;
   }
 
-  .form-item{
+  .search-person{
     margin-bottom: 15px;
   }
 
-  .form-item input{
+  .search-person input{
     display: block;
     width: 755px;
     height: 30px;
@@ -259,11 +259,11 @@ tbody{
   border:1px solid black;
  }
 
-  .form-item input:focus{
+  .search-person input:focus{
     border-color: purple;
   }
 
-  .form-item label{
+  .search-person label{
     position: absolute;
     z-index: 2;
     color:gray;
@@ -272,24 +272,55 @@ tbody{
     font-size: 14px;
   }
 
-  .form-item input:focus + label,
-  .form-item input:valid + label{
+  .search-person input:focus + label,
+  .search-person input:valid + label{
     font-size: 10px;
     top: 249px;
     background-color: white;
   }
 
-  .form-item input:focus + label{
+  .search-person input:focus + label{
     color: purple;
   }
 
-  /* .page2-person{
-    display: none;
-  }
 
   .page1-person{
   display: block;
-  } */
+  }
+
+  .page2-person{
+    display: none;
+  }
+
+  .page3-person{
+    display: none;
+  }
+
+  .page4-person{
+    display: none;
+  }
+
+  .page5-person{
+    display: none;
+  }
+
+  .page6-person{
+    display: none;
+  }
+
+  .page7-person{
+    display: none;
+  }
+
+  .page8-person{
+    display: none;
+  }
+
+  .page9-person{
+    display: none;
+  }
+
+
 
   #prev-button1{
     display: none;
