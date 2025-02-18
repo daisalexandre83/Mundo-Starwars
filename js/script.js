@@ -121,6 +121,10 @@ button_detail.forEach(function(button) {
 function showPage2() {
     document.querySelector(".page2-person").style.display="block";
     document.querySelector(".page1-person").style.display="none";
+    document.querySelector("#page1").style.display="none";
+    // document.querySelector("#page2").style.display="block";
+    // document.querySelector("#prev-button").style.display="none";
+    // document.querySelector("#next-button2").style.display="block";
     console.log("olá");
 }
 
