@@ -192,18 +192,28 @@ tbody{
   position:absolute;
   margin-top: 50px;
   left: 950px;
+  display: block;
 }
 
 #page1{
   position: relative;
-  left: 990px;
-  margin-top: 51px;
+  left: 995px;
+  margin-top: 53px;
+  display: block;
 }
 
 #next-button2{
   position: absolute;
   top: 50px;
   left: 1030px;
+  display: none;
+}
+
+#next-button3{
+  position: absolute;
+  top: 50px;
+  left: 1030px;
+  display: block;
 }
   .table-title{
     position: relative;
@@ -356,6 +366,10 @@ tbody{
 
   #page2{
     display: none;
+    position: absolute;
+    top: 37px;
+    left: 1000px;
+    color: red;
   }
 
   #page3{
