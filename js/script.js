@@ -151,6 +151,17 @@ function showPage3(){
     document.querySelector("#next-button4").style.display="block";
 }
 
+function showPage4(){
+    document.querySelector(".page4-person").style.display="block";
+    document.querySelector(".page3-person").style.display="none";
+    document.querySelector("#page3").style.display="none";
+    document.querySelector("#page4").style.display="block";
+    document.querySelector("#prev-button1").style.display="none";
+    document.querySelector("#next-button3").style.display="none";
+    document.querySelector("#prev-button3").style.display="block";
+    document.querySelector("#next-button5").style.display="block";
+}
+
 
 
 
