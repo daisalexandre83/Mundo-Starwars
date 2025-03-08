@@ -21,7 +21,7 @@
     <tr>
       <h1 class="table-title">Personagens</h1>
       <th>
-       <div class="form-item">
+       <div class="search-person">
         <input type="text" class="search-input"
         autocomplete="off" required>
         <label for="search">Search...</label>
@@ -811,7 +811,7 @@
     <tr>
       <h1 class="table-title">Personagens</h1>
       <th>
-       <div class="form-item">
+       <div class="search-person">
         <input type="text" class="search-input"
         autocomplete="off" required>
         <label for="search">Search...</label>
@@ -902,11 +902,11 @@
    </tbody>
    <tbody class="page2-person">
     <tr class="blue-line" data-name="C-3PO">
-      <td>C-3PO</td>
-      <td>112BBY</td>
-      <td>167</td>
-      <td>75</td>
-      <td>n/a</td>
+      <td class="person-name">C-3PO</td>
+      <td class="person-information">112BBY</td>
+      <td class="person-information">167</td>
+      <td class="person-information">75</td>
+      <td class="person-information">n/a</td>
     </tr>
     <tr class="purple-line" data-name="R2-D2">
       <td>R2-D2</td>
@@ -974,11 +974,11 @@
    </tbody>
    <tbody class="page3-person">
     <tr class="blue-line" data-name="Wilhuff Tarkin">
-      <td>Wilhuff Tarkin</td>
-      <td>64BBY</td>
-      <td>180</td>
-      <td>unknown</td>
-      <td>male</td>
+      <td class="person-name">Wilhuff Tarkin</td>
+      <td class="person-information">64BBY</td>
+      <td class="person-information">180</td>
+      <td class="person-information">unknown</td>
+      <td class="person-information">male</td>
     </tr>
     <tr class="purple-line" data-name="Chewabacca">
       <td>Chewabacca</td>
@@ -1046,11 +1046,11 @@
    </tbody>
    <tbody class="page4-person">
     <tr class="blue-line" data-name="Lando Calrrissian">
-      <td>Lando Calrrissian</td>
-      <td>31</td>
-      <td>177</td>
-      <td>79</td>
-      <td>male</td>
+      <td class="person-name">Lando Calrrissian</td>
+      <td class="person-information">31</td>
+      <td class="person-information">177</td>
+      <td class="person-information">79</td>
+      <td class="person-information">male</td>
     </tr>
     <tr class="purple-line" data-name="Lobot">
       <td>Lobot</td>
@@ -1478,8 +1478,6 @@
   </tbody>
       
      
-      
-     
     <nav class="pagination-container">
       <button class="pagination-button" id="prev-button"
       aria-label="Previous-page" title="Previous-page">
@@ -1489,8 +1487,7 @@
         <p id="page1">1</p>
       </div>
       <button onclick="showPage2()" class="pagination-button" id="next-button2"
-      aria-label="Next-page" title="Next-page">
-        &gt;
+      aria-label="Next-page" title="Next-page">&gt;
       </button> 
       <button onclick="showPage1()" class="pagination-button" id="prev-button1"
       aria-label="Previous-page" title="Previous-page">
@@ -1499,7 +1496,7 @@
       <div>
         <p id="page2">2</p>
       </div>
-      <button  onclick="showPage3()"  class="pagination-button" id="next-button3"
+      <button  onclick="showPage3()" class="pagination-button" id="next-button3"
       aria-label="Next-page" title="Next-page">
         &gt;
       </button> 
