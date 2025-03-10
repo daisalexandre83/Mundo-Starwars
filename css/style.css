@@ -206,15 +206,58 @@ tbody{
   position: absolute;
   top: 50px;
   left: 1030px;
-  display: none;
+  display: block;
 }
 
 #next-button3{
   position: absolute;
   top: 50px;
   left: 1030px;
-  display: block;
+  display: none;
 }
+
+#next-button4{
+  position: absolute;
+  top: 50px;
+  left: 1030px;
+  display: none;
+}
+
+#next-button5{
+  position: absolute;
+  top: 50px;
+  left: 1030px;
+  display: none;
+}
+
+#next-button6{
+  position: absolute;
+  top: 50px;
+  left: 1030px;
+  display: none;
+}
+
+#next-button7{
+  position: absolute;
+  top: 50px;
+  left: 1030px;
+  display: none;
+}
+
+#next-button8{
+  position: absolute;
+  top: 50px;
+  left: 1030px;
+  display: none;
+}
+
+#next-button9{
+  position: absolute;
+  top: 50px;
+  left: 1030px;
+  display: none;
+}
+
   .table-title{
     position: relative;
     left: 300px;
@@ -333,23 +376,39 @@ tbody{
 
 
   #prev-button1{
+    position:absolute;
+    margin-top: 50px;
+    left: 950px;
     display: none;
   }
 
   #prev-button2{
+    position:absolute;
     display: none;
+    margin-top: 50px;
+    left: 950px;
   }
 
   #prev-button3{
+    position:absolute;
     display: none;
+    margin-top: 50px;
+    left: 950px;
   }
 
   #prev-button4{
+    position:absolute;
     display: none;
+    margin-top: 50px;
+    left: 950px;
+    
   }
 
   #prev-button5{
+    position:absolute;
     display: none;
+    margin-top: 50px;
+    left: 950px;
   }
 
   #prev-button6{
@@ -369,19 +428,27 @@ tbody{
     position: absolute;
     top: 37px;
     left: 1000px;
-    color: red;
   }
 
   #page3{
     display: none;
+    position: absolute;
+    top: 37px;
+    left: 1000px;
   }
   
   #page4{
     display: none;
+    position: absolute;
+    top: 37px;
+    left: 1000px;
   }
 
   #page5{
     display: none;
+    position: absolute;
+    top: 37px;
+    left: 1000px;
   }
 
   #page6{
