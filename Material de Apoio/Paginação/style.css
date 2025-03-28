@@ -28,7 +28,6 @@ header {
     display: flex;
     justify-content: center;
     background-color: hsl(32,89%,8%);
-
     box-shadow: 0 1px 4px 0px rgba(0,0,0,0.2);
     padding: 16px;
     margin: 0 5px 0 5px;
