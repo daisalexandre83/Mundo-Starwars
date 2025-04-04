@@ -57,11 +57,9 @@ header {
 #paginate .controls div{
     cursor: pointer;
     /* border: 1px solid #eee; */
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 14;
 }
 
@@ -69,8 +67,11 @@ header {
 #paginate .controls div.numbers div{
     width: 40px;
     height: 40px;
+
+    border: solid 1px white
 }
 
+#paginate .controls div:not(.numbers):hover,
 #paginate .controls div.numbers div:hover,
 #paginate .controls div.numbers div.active
 {
