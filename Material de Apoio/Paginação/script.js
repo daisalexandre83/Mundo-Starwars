@@ -28,7 +28,7 @@ let perPage = 5
 const state = {
    page:1,
    perPage,
-   totalPage:Math.ceil(data.length /perPage)
+   totalPage: Math.ceil(data.length / perPage)
 }
 
 const html = {
@@ -94,6 +94,13 @@ const list = {
    update() {
       console.log("entrei");
       html.get(".list").innerHTML = "";
+
+      let page = state.page - 1;
+      let start = page  * state.perPage;
+      let end  = start +  state.perPage
+
+
+      console.log(data.slice(0,5))
    }
 }
 
