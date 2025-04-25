@@ -90,26 +90,38 @@ const controls = {
 }
 
 const list = {
-   create(item) {},
+   create(item) {
+      const div = document.createElement('div')
+      div.classList.add('item')
+      div.innerHTML = item
+
+      html.get('.list').appendChild(div)
+   },
    update() {
-      console.log("entrei");
       html.get(".list").innerHTML = "";
 
       let page = state.page - 1;
       let start = page  * state.perPage;
       let end  = start +  state.perPage
 
+      const paginatedItems = data.slice(start,end)
 
-      console.log(data.slice(0,5))
+      paginatedItems.forEach(list.create)
    }
 }
 
+const buttons = {
+   create() {},
+   update() {}
+}
+
 function update() {
-   console.log(state.page)
+   list.update()
+   buttons.update
 }
 
 function init() {
-   list.update()
+  update() 
    controls.createListeners()
 }
 
@@ -117,9 +129,9 @@ init()
 
 controls.createListeners()
 
-function update() {
-   console.log(state.page)
-}
+// function update() {
+//    console.log(state.page)
+// }
 // console.log(state.page)
 // controls.goTo(90)
 // console.log(state.page)
