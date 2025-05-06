@@ -30,7 +30,7 @@ header {
     background-color: hsl(32,89%,8%);
     box-shadow: 0 1px 4px 0px rgba(0,0,0,0.2);
     padding: 16px;
-    margin: 0 5px 0 5px;
+    /* margin: 0 5px 0 5px; */
 }
 
 #paginate{
@@ -40,12 +40,12 @@ header {
 
 #paginate .item{
     border-bottom: 1px solid hsl(32,98%,12%);
-    padding: 16px 32px;
+    /* padding: 16px 32px; */
 }
 
-#paginate .item:hover{
+/* #paginate .item:hover{
     background-color: rgba(255,255,255,0.04);
-}
+} */
 
 #paginate .controls{
     display: flex;
@@ -67,8 +67,7 @@ header {
 #paginate .controls div.numbers div{
     width: 40px;
     height: 40px;
-
-    border: solid 1px white
+    /* border: solid 1px white */
 }
 
 #paginate .controls div:not(.numbers):hover,
