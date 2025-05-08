@@ -1,9 +1,10 @@
 const data = Array.from({length:100})
-   .map((_, i) => `Item ${[i +1]} `)
-
+   // .map((_, i) => `Item ${[i +1]} `)
+   .map((_, i) => `Item ${(i +1)} `)
 
 // function populateList() {
-
+//   const data = Array.from({length:100})
+//   .map((_,i) =>`<div class="item">Item ${(i + 1)}</div>`)
 
 //    const list = document.querySelector('#paginate .list')
 //    list.innerHTML = data.join("")
@@ -21,7 +22,7 @@ const data = Array.from({length:100})
 // const state = {
 //    page:1,
 //    perPage,
-//    totalPage:Math.ceil(data.length /perPage)
+//    totalPage:data.length / perPage
 // }
 
 let perPage = 5;
@@ -89,6 +90,9 @@ const controls = {
       })
    }
 }
+
+// const list = document.querySelector('#paginate .list');
+// list.innerHTML = data.join("");
 
 const list = {
    create(item) {
