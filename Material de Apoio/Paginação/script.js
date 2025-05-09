@@ -62,7 +62,7 @@ const controls = {
          page = 1
       }
       
-      state.page = +page
+      state.page = page
 
       if (page > state.totalPage) {
          state.page = state.totalPage
@@ -137,6 +137,7 @@ const buttons = {
 
    },
    update() {
+      //html.get('.pagination .numbers').innerHTML="";
       buttons.element.innerHTML = "";
       const {maxLeft,maxRight} = buttons.calculateMaxVisible()
 
