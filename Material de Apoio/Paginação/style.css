@@ -60,7 +60,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14;
+    /* font-size: 14; */
+    font-size: 16;
 }
 
 #paginate .controls div:not(.numbers),
