@@ -277,8 +277,7 @@ tbody{
   .grid-container div{
     background-color: black;
     color: white;
-    /* font-size: 18px;  Fazer a alteração */
-    font-size: 16px;
+    font-size: 18px;  
     border-right: 1px solid white;
   }
 
