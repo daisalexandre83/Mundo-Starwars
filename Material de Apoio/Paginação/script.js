@@ -62,7 +62,7 @@ const controls = {
          page = 1
       }
       
-      state.page = page
+      state.page = +page
 
       if (page > state.totalPage) {
          state.page = state.totalPage
@@ -143,7 +143,7 @@ const buttons = {
 
       // console.log(maxLeft,maxRight)
       for (let page = maxLeft; page <= maxRight; page ++) {
-         console.log('button')
+        // console.log('button')
          buttons.create(page)
       }
    },
