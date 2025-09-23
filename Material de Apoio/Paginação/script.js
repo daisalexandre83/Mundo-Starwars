@@ -1,195 +1,77 @@
-const data = Array.from({length:100})
-   // .map((_, i) => `Item ${[i +1]} `)
-   .map((_, i) => `Item ${(i +1)} `)
+// pagination-numberconst paginationNumbers = document.getElementById("pagination-numbers");
+// const paginatedList = document.getElementById("paginated-list");
+// const listItems =paginatedList.querySelectorAll("li");
+// const nextButton = document.getElementById("next-button");
+// const prevButton = document.getElementById("prev-button");
 
-// function populateList() {
-//   const data = Array.from({length:100})
-//   .map((_,i) =>`<div class="item">Item ${(i + 1)}</div>`)
-
-//    const list = document.querySelector('#paginate .list')
-//    list.innerHTML = data.join("")
-
-//    // console.log(data)
-
-//    return data
+// const nextButton = document.getElementById("next-button");
+// nextButton.addEventListener("click,")
+// function showPage1(){
+//   document.querySelector('.listed-page2').style.display="none";
+//   document.getElementById("prev-button").style.display="block";
+//   document.getElementById("next-button1").style.display="block";
+//   document.getElementById("prev-button1").style.display="none";
+//   document.getElementById("next-button3").style.display="none";
+//   document.getElementById("page2").style.display="none";
+//   document.getElementById("page1").style.display="block";
+//   document.querySelector('.listed-page1').style.display="block";
 // }
 
-//  const data = populateList()
-//**********************
-
-//Exemplo
-// let perPage = 3
-// const state = {
-//    page:1,
-//    perPage,
-//    totalPage:data.length / perPage
+// function showPage2(){
+//   document.getElementById("prev-button").style.display="none";
+//   document.getElementById("next-button1").style.display="none";
+//   document.getElementById("prev-button1").style.display="block";
+//   document.getElementById("prev-button2").style.display="none";
+//   document.getElementById("next-button4").style.display="none";
+//   document.querySelector(".listed-page1").style.display="none";
+//   document.getElementById("next-button3").style.display="block";
+//   document.querySelector(".listed-page2").style.display="block";
+//   document.querySelector(".listed-page3").style.display="none";
+//   document.getElementById("page2").style.display="block";
+//   document.getElementById("page1").style.display="none";
+//   document.getElementById("page3").style.display="none";
 // }
 
-let perPage = 5;
-const state = {
-   page:1,
-   perPage,
-   totalPage: Math.ceil(data.length / perPage),
-   maxVisibleButtons:5
-}
-
-const html = {
-   get(element){
-    return document.querySelector(element)
-   }
-}
-
-console.log(state.totalPage)
-
-const controls = {
-   next() {
-      state.page++;
-
-      const lastPage = state.page > state.totalPage
-      if (lastPage) {
-         state.page--;
-      }
-   },
-   prev() {
-      state.page--
-
-      if (state.page < 1) {
-         state.page++
-      }
-   },
-   goTo(page) {
-      if (page < 1) {
-         page = 1
-      }
-      
-      state.page = page
-
-      if (page > state.totalPage) {
-         state.page = state.totalPage
-      }
-   },
-   createListeners(){
-      html.get('.first').addEventListener('click',() =>{
-         controls.goTo(1)
-         update()
-      })
-
-      html.get('.last').addEventListener('click',() =>{
-         controls.goTo(state.totalPage)
-         update()
-      })
-
-      html.get('.next').addEventListener('click',() =>{
-         controls.next()
-         update()
-      })
-
-      html.get('.prev').addEventListener('click',() =>{
-         controls.prev()
-         update()
-      })
-   }
-}
-
-// const list = document.querySelector('#paginate .list');
-// list.innerHTML = data.join("");
-
-const list = {
-   create(item) {
-      const div = document.createElement('div')
-      div.classList.add('item')
-      div.innerHTML = item
-
-      html.get('.list').appendChild(div)
-   },
-   update() {
-      html.get(".list").innerHTML = "";
-
-      let page = state.page - 1;
-      let start = page  * state.perPage;
-      let end  = start + state.perPage;
-
-      const paginatedItems = data.slice(start,end)
-
-      paginatedItems.forEach(list.create)
-   }
-}
-
-const buttons = {
-   element: html.get('.pagination .numbers'),
-   create(number) {
-      const button = document.createElement('div')
-
-      button.innerHTML = number;
-
-      if (state.page == number) {
-         button.classList.add('active')
-      }
-
-      button.addEventListener('click', (event) => {
-         const page = event.target.innerText
-         
-         controls.goTo(page)
-         update()
-      })
-
-      buttons.element.appendChild(button)
-
-   },
-   update() {
-      //html.get('.pagination .numbers').innerHTML="";
-      buttons.element.innerHTML = "";
-      const {maxLeft,maxRight} = buttons.calculateMaxVisible()
-
-      // console.log(maxLeft,maxRight)
-      for (let page = maxLeft; page <= maxRight; page ++) {
-         console.log('button')
-         buttons.create(page)
-      }
-   },
-   calculateMaxVisible(){
-      const {maxVisibleButtons} = state
-      let maxLeft = (state.page - Math.floor(maxVisibleButtons/2))
-      let maxRight = (state.page + Math.floor(maxVisibleButtons/2))
-
-      if (maxLeft < 1) {
-         maxLeft = 1
-         maxRight = maxVisibleButtons
-      }
-
-      if (maxRight > state.totalPage) {
-         maxLeft = state.totalPage - (maxVisibleButtons -1)
-         maxRight = state.totalPage
-
-         if (maxLeft < 1) maxLeft =1
-      }
-
-      return (maxLeft,maxRight)
-   }
-}
-
-function update() {
-   list.update()
-   buttons.update
-}
-
-function init() {
-  update() 
-  controls.createListeners()
-}
-
-init()
-
-controls.createListeners()
-
-// function update() {
-//    console.log(state.page)
+// function showPage3() {
+//   document.getElementById("page2").style.display="none";
+//   document.getElementById("page3").style.display="block";
+//   document.querySelector(".listed-page2").style.display="none";
+//   document.querySelector(".listed-page3").style.display="block";
+//   document.getElementById("prev-button1").style.display="none";
+//   document.getElementById("prev-button2").style.display="block";
+//   document.getElementById("next-button3").style.display="none";
+//   document.getElementById("next-button4").style.display="block";
 // }
-// console.log(state.page)
-// controls.goTo(90)
-// console.log(state.page)
-// controls.next()
-// console.log(state.page)
-// controls.prev()
-// console.log(state.page)
 
+const linhas = document.querySelectorAll("#tabela tr");
+  const porPagina = 10;
+  let paginaAtual = 1;
+  const totalPaginas = Math.ceil(linhas.length / porPagina);
+
+  function mostrarPagina(pagina) {
+    // Esconde tudo
+    linhas.forEach(l => l.style.display = "none");
+
+    // Calcula início e fim
+    let inicio = (pagina - 1) * porPagina;
+    let fim = inicio + porPagina;
+
+    // Mostra apenas as linhas daquela "página"
+    for (let i = inicio; i < fim && i < linhas.length; i++) {
+      linhas[i].style.display = "table-row";
+    }
+  }
+
+  function proximo() {
+    if (paginaAtual < totalPaginas) {
+      paginaAtual++;
+      mostrarPagina(paginaAtual);
+    }
+  }
+
+  function anterior() {
+    if (paginaAtual > 1) {
+      paginaAtual--;
+      mostrarPagina(paginaAtual);
+    }
+  }
