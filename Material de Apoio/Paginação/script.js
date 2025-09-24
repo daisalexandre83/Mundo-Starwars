@@ -43,35 +43,13 @@
 //   document.getElementById("next-button4").style.display="block";
 // }
 
-const linhas = document.querySelectorAll("#tabela tr");
-  const porPagina = 10;
-  let paginaAtual = 1;
-  const totalPaginas = Math.ceil(linhas.length / porPagina);
+const linhas = Document.querySelectorAll("#tabela tr");
+const porPagina = 10;
+let paginaAtual = 1;
 
-  function mostrarPagina(pagina) {
-    // Esconde tudo
-    linhas.forEach(l => l.style.display = "none");
+const totalPaginas = Math.ceil(linhas.length/porPagina);
 
-    // Calcula início e fim
-    let inicio = (pagina - 1) * porPagina;
-    let fim = inicio + porPagina;
+function mostrarPagina(pagina) {
+  
+}
 
-    // Mostra apenas as linhas daquela "página"
-    for (let i = inicio; i < fim && i < linhas.length; i++) {
-      linhas[i].style.display = "table-row";
-    }
-  }
-
-  function proximo() {
-    if (paginaAtual < totalPaginas) {
-      paginaAtual++;
-      mostrarPagina(paginaAtual);
-    }
-  }
-
-  function anterior() {
-    if (paginaAtual > 1) {
-      paginaAtual--;
-      mostrarPagina(paginaAtual);
-    }
-  }
