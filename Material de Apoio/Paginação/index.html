@@ -9,69 +9,50 @@
 <body>
    <main>
     <h1>Pagination with Vanilla Javascript</h1>
-    <ul id="paginated-list" data-current-page="1" aria-live="polite">
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-      <li>Item 4</li>
-      <li>Item 5</li>
-      <li>Item 6</li>
-      <li>Item 7</li>
-      <li>Item 8</li>
-      <li>Item 9</li>
-      <li>Item 10</li>
-      <li>Item 11</li>
-      <li>Item 12</li>
-      <li>Item 13</li>
-      <li>Item 14</li>
-      <li>Item 15</li>
-      <li>Item 16</li>
-      <li>Item 17</li>
-      <li>Item 18</li>
-      <li>Item 19</li>
-      <li>Item 20</li>
-      <li>Item 21</li>
-      <li>Item 22</li>
-      <li>Item 23</li>
-      <li>Item 24</li>
-      <li>Item 25</li>
-      <li>Item 26</li>
-      <li>Item 27</li>
-      <li>Item 28</li>
-      <li>Item 29</li>
-      <li>Item 30</li>
-      <li>Item 31</li>
-      <li>Item 32</li>
-      <li>Item 33</li>
-      <li>Item 34</li>
-      <li>Item 35</li>
-      <li>Item 36</li>
-      <li>Item 37</li>
-      <li>Item 38</li>
-      <li>Item 39</li>
-      <li>Item 40</li>
-      <li>Item 41</li>
-      <li>Item 42</li>
-      <li>Item 43</li>
-      <li>Item 44</li>
-      <li>Item 45</li>
-      <li>Item 46</li>
-      <li>Item 47</li>
-      <li>Item 48</li>
-      <li>Item 49</li>
-      <li>Item 50</li>
-    </ul>
-    <nav class="pagination-container">
-      <button class="pagination-button" id="prev-button"
-      aria-label="Previous page" title="Previous page">
-        &lt;
-      </button>
-      <div id="pagination-numbers"></div>
-
-      <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
-        &gt;
-      </button>
-    </nav>
+    
+      <table border="1">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody id="tabela">
+           <tr><td>1</td><td>Melissa</td></tr>
+           <tr><td>2</td><td>Monique</td></tr>
+           <tr><td>3</td><td>Maite</td></tr>
+           <tr><td>4</td><td>Lucas</td></tr>
+           <tr><td>5</td><td>Matheus</td></tr>
+           <tr><td>6</td><td>Dimitrius</td></tr>
+           <tr><td>7</td><td>Sophia</td></tr>
+           <tr><td>8</td><td>Lorena</td></tr>
+           <tr><td>9</td><td>Sara</td></tr>
+           <tr><td>10</td><td>Pedro</td></tr>
+           <tr><td>11</td><td>Gabriel</td></tr>
+           <tr><td>12</td><td>Vitor</td></tr>
+           <tr><td>13</td><td>Beatriz</td></tr>
+           <tr><td>14</td><td>Thayna</td></tr>
+           <tr><td>15</td><td>Jullia</td></tr>
+           <tr><td>16</td><td>Pablo</td></tr>
+           <tr><td>17</td><td>Ruan</td></tr>
+           <tr><td>18</td><td>Joseph</td></tr>
+           <tr><td>19</td><td>Gabriela</td></tr>
+           <tr><td>20</td><td>Isadora</td></tr>
+           <tr><td>21</td><td>Leticia</td></tr>
+           <tr><td>22</td><td>Cristhian</td></tr>
+           <tr><td>23</td><td>Phelipe</td></tr>
+           <tr><td>24</td><td>Arthur</td></tr>
+           <tr><td>25</td><td>Dandara</td></tr>
+           <tr><td>26</td><td>Monica</td></tr>
+           <tr><td>27</td><td>Vitoria</td></tr>
+           <tr><td>28</td><td>Rafael</td></tr>
+           <tr><td>29</td><td>Michel</td></tr>
+           <tr><td>30</td><td>Socrates</td></tr>
+        </tbody>
+      </table>
+      <button onClick="anterior()"><</button>
+      <button onClick="proximo()">></button>
+      <div id="page-info"></div>
    </main>
  <script src="script.js"></script>
 </body>
