@@ -133,10 +133,10 @@ tbody{
   padding:  0px;
 }
 
-.characters-anakin-line{
+/* .characters-anakin-line{
   width: 100px;
   border: 2px solid gray;
-}
+} */
 
 .info, .info2, .info3{
   display: none;
@@ -188,76 +188,6 @@ tbody{
   display: none;
 }
 
-#prev-button{
-  position:absolute;
-  margin-top: 50px;
-  left: 950px;
-  display: block;
-}
-
-#page1{
-  position: relative;
-  left: 995px;
-  margin-top: 53px;
-  display: block;
-}
-
-#next-button2{
-  position: absolute;
-  top: 50px;
-  left: 1030px;
-  display: block;
-}
-
-#next-button3{
-  position: absolute;
-  top: 50px;
-  left: 1030px;
-  display: none;
-}
-
-#next-button4{
-  position: absolute;
-  top: 50px;
-  left: 1030px;
-  display: none;
-}
-
-#next-button5{
-  position: absolute;
-  top: 50px;
-  left: 1030px;
-  display: none;
-}
-
-#next-button6{
-  position: absolute;
-  top: 50px;
-  left: 1030px;
-  display: none;
-}
-
-#next-button7{
-  position: absolute;
-  top: 50px;
-  left: 1030px;
-  display: none;
-}
-
-#next-button8{
-  position: absolute;
-  top: 50px;
-  left: 1030px;
-  display: none;
-}
-
-#next-button9{
-  position: absolute;
-  top: 50px;
-  left: 1030px;
-  display: none;
-}
-
   .table-title{
     position: relative;
     left: 300px;
@@ -287,9 +217,9 @@ tbody{
     font-size: 18px;
   } */
 
-  .pagination-container{
+  /* .pagination-container{
     position: absolute;
-  }
+  } */
 
   *,
   *:focus{
