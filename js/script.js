@@ -241,58 +241,40 @@ button_detail.forEach(function (button) {
 }
 );
 
-// function showPage1() {
-//     document.querySelector(".page1-person").style.display = "block";
-//     document.querySelector(".page2-person").style.display = "none";
-//     document.querySelector("#page2").style.display = "none";
-//     document.querySelector("#page1").style.display = "block";
-//     document.querySelector("#prev-button1").style.display = "none";
-//     document.querySelector("#next-button3").style.display = "none";
-//     document.querySelector("#prev-button").style.display = "block";
-//     document.querySelector("#next-button2").style.display = "block";
-// }
+const linhas = document.querySelectorAll("3tabela tr");
+const porPagina = 10;
+let paginaAtual = 1;
 
-// function showPage2() {
-//     document.querySelector(".page2-person").style.display = "block";
-//     document.querySelector(".page1-person").style.display = "none";
-//     document.querySelector("#page1").style.display = "none";
-//     document.querySelector("#page2").style.display = "block";
-//     document.querySelector("#page3").style.display = "none";
-//     document.querySelector("#prev-button").style.display = "none";
-//     document.querySelector("#next-button2").style.display = "none";
-//     document.querySelector("#prev-button1").style.display = "block";
-//     document.querySelector("#next-button3").style.display = "block";
-// }
+const totalPaginas = Math.ceil(linhas.length / porPagina);
 
-// function showPage3() {
-//     document.querySelector(".page3-person").style.display = "block";
-//     document.querySelector(".page2-person").style.display = "none";
-//     document.querySelector("#page2").style.display = "none";
-//     document.querySelector("#page3").style.display = "block";
-//     document.querySelector("#page4").style.display = "none";
-//     document.querySelector("#prev-button1").style.display = "none";
-//     document.querySelector("#next-button3").style.display = "none";
-//     document.querySelector("#prev-button2").style.display = "block";
-//     document.querySelector("#next-button4").style.display = "block";
-// }
+function mostrarPagina(pagina) {
+    linhas.forEach( l => l.style.display="none");
 
-// function showPage4() {
-//     document.querySelector(".page4-person").style.display = "block";
-//     document.querySelector(".page3-person").style.display = "none";
-//     document.querySelector("#page3").style.display = "none";
-//     document.querySelector("#page4").style.display = "block";
-//     document.querySelector("#prev-button1").style.display = "none";
-//     document.querySelector("#next-button3").style.display = "none";
-//     document.querySelector("#prev-button3").style.display = "block";
-//     document.querySelector("#next-button5").style.display = "block";
-// }
+    let inicio = (pagina -1) * porPagina;
+    let fim = inicio + porPagina;
 
+    for (let i = inicio; i < fim && i < linhas.length; i++) {
+        linhas[i].style.display="table-row";
+    }
+    document.getElementById("page-info").innerHTML=`${paginaAtual}`;
 
+}
 
+function next() {
+    if (paginaAtual < totalPaginas) {
+        paginaAtual++;
+        mostrarPagina(paginaAtual);
+    }
+}
 
+function prev() {
+    if (paginaAtual > 1) {
+        paginaAtual--;
+        mostrarPagina(paginaAtual);
+    }
+}
 
-
-
+mostrarPagina(paginaAtual);
 
 
 
