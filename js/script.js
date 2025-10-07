@@ -241,7 +241,7 @@ button_detail.forEach(function (button) {
 }
 );
 
-const linhas = document.querySelectorAll("3tabela tr");
+const linhas = document.querySelectorAll("#tabela tr");
 const porPagina = 10;
 let paginaAtual = 1;
 
