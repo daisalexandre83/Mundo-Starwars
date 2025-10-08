@@ -1,9 +1,9 @@
 # Mundo-Starwars
 Projeto utilizando HTML, CSS, Javascript e API Swap
 
-# Objetivo do projeto:
+# Objetivos do projeto:
 
-O objetivo do projeto é a utilização da API Pública SWAP para buscar informações dos personagens ao ser requisitado.
+ A utilização da API Pública SWAP para buscar informações dos personagens ao ser requisitado.
 
 Trazer dados de uma tabela ao digitar algo que se encontra nela.
 
