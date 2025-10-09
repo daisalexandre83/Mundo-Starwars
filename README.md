@@ -3,14 +3,14 @@ Projeto utilizando HTML, CSS, Javascript e API Swap
 
 # Objetivos do projeto:
 
- A utilização da API Pública SWAP para buscar informações dos personagens ao ser requisitado.
+ A utilização da API Pública SWAP para trazer informações dos personagens ao ser requisitado.
 
-Trazer dados de uma tabela ao digitar algo que se encontra nela.
+Funcionalidade de busca em uma tabela,onde ao digitar um número, o sistema retorna todas as linhas que contêm esse valor, facilitando a    filtragem de informações dos personagens.
 
-Mostrar a paginação de uma tabela
-
-
+Paginação de uma tabela utilizando os botões Next e Prev para navegar entre as páginas.
 
 
 
-.Ao digitar a inicial do nome do personagem no campo de pesquisa, ele retorna todos os dados do mesmo.Ao clicar em qualquer campo,ele retorna os dados.Está sendo consumido a API:SWAP neste projeto.
+
+
+
