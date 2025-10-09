@@ -34,6 +34,13 @@ tbody{
   margin-top: 80px;
 }
 
+.data-person{
+  position: absolute;
+  top: 303px;
+  background-color: #000000;
+  color: #fff;
+}
+
 .table{
   font-family: "Fira Sans", sans-serif;
   /* position: absolute; */
@@ -165,14 +172,30 @@ tbody{
   width: 250px;
 }
 
- .person-information{
+.person-birth{
+  width: 175px;
+}
+
+.person-heigth{
+  width: 150px;
+}
+
+.person-mass{
+  width: 120px;
+}
+
+.person-gender{
+  width: 130px;
+}
+
+ /* .person-information{
   width: 125px;
-} 
+}  */
 
 .search-container-icon span i{
   position: absolute;
   top: 266px;
-  left: 1020px;
+  left: 1100px;
   cursor:pointer;
 }
 
@@ -232,7 +255,7 @@ tbody{
 
   .search-person input{
     display: block;
-    width: 755px;
+    width: 830px;
     height: 30px;
     border-radius: 4px;
     border: 1px solid gray;
@@ -264,6 +287,21 @@ tbody{
 
   .search-person input:focus + label{
     color: purple;
+  }
+
+  .prev-button{
+    background-color: blue;
+    position: absolute;
+    margin-left: 1010px;
+
+  }
+
+  .next-button{
+    background-color: red;
+  }
+
+  #page-info{
+    margin-left: 1060px;
   }
 
 
