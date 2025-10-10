@@ -18,7 +18,9 @@ Javascript para a lógica de programação ou seja criar dinamismo e interativid
 O projeto está organizado da seguinte forma:
 
 **.index.html:** arquivo onde se encontra o HTML.
+
 **.style.css:** arquivo onde se encontra o CSS.
+
 **.script.js:** arquivo onde se encontra a parte da lógica do Javascript.
 
 # Como rodar o projeto:
