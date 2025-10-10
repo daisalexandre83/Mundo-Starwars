@@ -9,20 +9,26 @@ Funcionalidade de busca em uma tabela,onde ao digitar um dado, o sistema retorna
 
 Paginação de uma tabela utilizando os botões Next e Prev para navegar entre as páginas.
 
-#Tecnologias que foram uasadas:
+# Tecnologias que foram usadas:
 
 HTML para estruturar a página, no caso foi criado uma tabela com dados dos personagens.
 CSS para estilizar a página HTML,adicionando cores,fontes e etc.
 Javascript para a lógica de programação ou seja criar dinamismo e interatividade entre as páginas web,como ex:criar eventos de clique,criar animações e etc.
 
 O projeto está organizado da seguinte forma:
-.index.html: arquivo onde se encontra o HTML.
-.style.css: arquivo onde se encontra o CSS.
-.script.js: arquivo onde se encontra a parte da lógica do Javascript.
 
-#Como rodar o projeto:
+**.index.html:** arquivo onde se encontra o HTML.
+**.style.css:** arquivo onde se encontra o CSS.
+**.script.js:** arquivo onde se encontra a parte da lógica do Javascript.
+
+# Como rodar o projeto:
 .Um navegador da web (Chrome, Firefox, etc.)
 .Conexão com a internet para fazer as requisições à API.
+
+# Rodando localmente o projeto:
+
+Clonar este repositório no seu computador:
+git clone https://github.com/daisalexandre83/Mundo-Starwars.git
 
 
 
