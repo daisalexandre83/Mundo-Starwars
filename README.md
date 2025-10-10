@@ -15,7 +15,7 @@ HTML para estruturar a página, no caso foi criado uma tabela com dados dos pers
 CSS para estilizar a página HTML,adicionando cores,fontes e etc.
 Javascript para a lógica de programação ou seja criar dinamismo e interatividade entre as páginas web,como ex:criar eventos de clique,criar animações e etc.
 
-O projeto está organizado da seguinte forma:
+# O projeto está organizado da seguinte forma:
 
 **.index.html:** arquivo onde se encontra o HTML.
 
