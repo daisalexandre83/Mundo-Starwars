@@ -17,6 +17,10 @@ CSS para estilizar a página HTML,adicionando cores,fontes e etc.
 
 Javascript para a lógica de programação ou seja criar dinamismo e interatividade entre as páginas web,como ex:criar eventos de clique,criar animações e etc.
 
+# API utilizada:
+
+https://swapi.py4e.com/api/
+
 # O projeto está organizado da seguinte forma:
 
 **.index.html:** arquivo onde se encontra o HTML.
@@ -27,12 +31,22 @@ Javascript para a lógica de programação ou seja criar dinamismo e interativid
 
 # Como rodar o projeto:
 .Um navegador da web (Chrome, Firefox, etc.)
+
 .Conexão com a internet para fazer as requisições à API.
 
 # Rodando localmente o projeto:
 
 Clonar este repositório no seu computador:
+
 git clone https://github.com/daisalexandre83/Mundo-Starwars.git
+
+# Funcionamento do projeto
+
+.O usuário ao digitar no campo de pesquisa, um dado do personagem ,o sistema buscará na tabela e mostrará ele.
+
+.Ao clicar em algum dado da tabela, o sistema traz informações do personagem utilizando uma API. 
+
+.A  tabela foi dividida em algumas páginas,onde você pode visualizá-las através dos botões Prev e Next. 
 
 
 
