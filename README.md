@@ -37,6 +37,7 @@ https://swapi.py4e.com/api/
 # Rodando localmente o projeto:
 
 Clonar este repositório no seu computador:
+
 git clone https://github.com/daisalexandre83/Mundo-Starwars.git
 
 # Funcionamento do projeto
