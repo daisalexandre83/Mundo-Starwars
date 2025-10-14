@@ -22,12 +22,13 @@ searchInput.addEventListener('input', (e) => {
         }
         rowObj.row.style.display = found ? "" : "none";
     }
-
-
 });
 
-function initializeTableData() {
+searchInput.addEventListener('input',function () {
+    const filtro = searchInput.value.toLowerCase();
+})
 
+function initializeTableData() {
     for (let i = 0; i < infoPersons.length; i++) {
         const rowData = {
             character: infoPersons[i].cells[0].textContent || infoPersons[i].cells[0].innerText,
