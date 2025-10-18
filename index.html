@@ -16,22 +16,16 @@
       </div>
     </div>
   </head>
- <table class="table">
-   <thead>
-    <tr>
-      <h1 class="table-title">Personagens</h1>
-      <th>
-       <div class="search-person">
+   <div class="search-person">
+     <h1 class="table-title">Personagens</h1>
         <input type="text" class="search-input"
         autocomplete="off" required>
         <label for="search">Search...</label>
         <div  class="search-container-icon"><span><i class="fa-solid fa-magnifying-glass-chart"></i></span></div>
         <button class="close-container-icon" onclick="closePerson()"><span><i class="fa-solid fa-xmark"></i></span></button>
-       </div>
-      </th>
-    </tr>
-   </thead>
-   <tbody class="data-person">
+    </div>
+ <table class="table" id="tabela">
+   <thead class="data-person">
      <tr>
        <td class="person-name">Character Name</td>
        <td class="person-birth">Birth Year</td>
@@ -39,7 +33,7 @@
        <td class="person-mass">Mass</td>
        <td class="person-gender">Gender</td>
      </tr>
-   </tbody>
+   </thead>
    <tbody id="tabela">
     <tr class="blue-line" data-name="Luke Skywalker">
       <td class="person-name">Luke Skywalker</td>
