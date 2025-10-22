@@ -36,7 +36,7 @@ tbody{
 
 .data-person{
   position: absolute;
-  top: 303px;
+  top: 346px;
   background-color: #000000;
   color: #fff;
 }
@@ -188,10 +188,6 @@ tbody{
   width: 130px;
 }
 
- /* .person-information{
-  width: 125px;
-}  */
-
 .search-container-icon span i{
   position: absolute;
   top: 266px;
@@ -207,7 +203,7 @@ tbody{
 .close-container-icon span i{
   position: absolute;
   top: 265px;
-  right: 333px;
+  right: 270px;
   display: none;
 }
 
@@ -250,6 +246,8 @@ tbody{
     height: 30px;
     border-radius: 4px;
     border: 1px solid gray;
+    position: absolute;
+    left: 300px;
   }
 
   input:hover{
@@ -281,22 +279,21 @@ tbody{
   }
 
   .prev-button{
-    /* background-color: blue; */
     position: absolute;
     margin-left: 1010px;
-
+    margin-top:20px;
   }
 
   .next-button{
     margin-left: 1100px;
-    
+    margin-top:20px;
   }
 
 
   #page-info{
     margin-left: 1060px;
     position: absolute;
-    margin-top:3px;
+    margin-top:23px;
   }
 
 
