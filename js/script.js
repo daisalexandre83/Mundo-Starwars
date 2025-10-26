@@ -3,79 +3,30 @@ let tableData = [];
 const searchInput = document.querySelector(".search-input");
 const infoPersons = document.querySelectorAll('.table tbody tr');
 
-// searchInput.addEventListener('input', (e) => {
-//     document.querySelector(".close-container-icon span i").style.display="block";
-    
-//     const filter = e.target.value.toUpperCase();
-
-//     if (tableData.length === 0) {
-//         initializeTableData();
-//     }
-
-//     for (const rowObj of tableData) {
-//         let found = false;
-//         if (rowObj.data.character.toUpperCase().indexOf(filter) > -1 || rowObj.data.birth.toUpperCase().indexOf(filter) > -1
-//             || rowObj.data.height.toUpperCase().indexOf(filter) > -1 || rowObj.data.mass.toUpperCase().indexOf(filter) > -1
-//             || rowObj.data.gender.toUpperCase().indexOf(filter) > -1
-//         ) {
-//             found = true;
-//         }
-//         rowObj.row.style.display = found ? "" : "none";
-//     }
-// });
-
 searchInput.addEventListener('input', (e) => {
-    document.querySelector(".close-container-icon i").style.display="block";
+    document.querySelector(".close-container-icon span i").style.display="block";
+    
     const filter = e.target.value.toUpperCase();
 
     if (tableData.length === 0) {
         initializeTableData();
     }
 
-    const cabecalho = document.querySelector('.data-person');
-    if(cabecalho) cabecalho.style.display='table-row-group';
-
-    let found = false;
-
     for (const rowObj of tableData) {
-        //let found = false;
-        const d = rowObj.data;
-        const linhaTemFiltro = 
-        d.character.toUpperCase().includes(filter)
-
-        // if (rowObj.data.character.toUpperCase().indexOf(filter) > -1 || rowObj.data.birth.toUpperCase().indexOf(filter) > -1
-        //     || rowObj.data.height.toUpperCase().indexOf(filter) > -1 || rowObj.data.mass.toUpperCase().indexOf(filter) > -1
-        //     || rowObj.data.gender.toUpperCase().indexOf(filter) > -1
-        // ) {
-        //     found = true;
-        // }
-        // rowObj.row.style.display = found ? "" : "none";
+        let found = false;
+        if (rowObj.data.character.toUpperCase().indexOf(filter) > -1 || rowObj.data.birth.toUpperCase().indexOf(filter) > -1
+            || rowObj.data.height.toUpperCase().indexOf(filter) > -1 || rowObj.data.mass.toUpperCase().indexOf(filter) > -1
+            || rowObj.data.gender.toUpperCase().indexOf(filter) > -1
+        ) {
+            found = true;
+        }
+        rowObj.row.style.display = found ? "" : "none";
     }
-
-
-    // const filtro = searchInput.value.toLowerCase();
-    // const tabela = document.getElementById('tabela');
-    // const linhas = tabela.getElementsByTagName('tr');
-
-    // cabecalho.style.display = 'table-row-group';
-
-    // for (let i = 0; i < linhas.length; i++) {
-    //     const linha = linhas[i];
-    //     const textoLinha = linha.textContent.toLowerCase();
-
-    //     if (textoLinha.includes(filtro)) {
-    //         linha.style.display='';
-    //     }else{
-    //         linha.style.display='none';
-    //     }
-    // }
-
-    // if (filtro.trim()==='') {
-    //     for (let i = 0; i < linhas.length; i++) {
-    //         linhas[i].style.display='';
-    //     }
-    // }
 });
+
+searchInput.addEventListener('input',function () {
+    const filtro = searchInput.value.toLowerCase();
+})
 
 function initializeTableData() {
     for (let i = 0; i < infoPersons.length; i++) {
@@ -96,11 +47,17 @@ for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener('click', showMe)
 }
 
-function closePerson() {
-    document.querySelector('.close-container-icon').style.display = "none";
+function closePerson(){
+    searchInput.value="";
+    document.querySelector('.close-container-icon span i').style.display = "none";
+
+    document.querySelector('.data-person').style.display = "table-header-group";
+
     for (const rowObj of infoPersons) {
         rowObj.style.display = "table-row";
     }
+    paginaAtual = 1;
+    mostrarPagina(paginaAtual);
 }
 
 function showMe() {
@@ -204,33 +161,3 @@ function prev() {
 }
 
 mostrarPagina(paginaAtual);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
