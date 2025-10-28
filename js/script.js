@@ -139,14 +139,21 @@ function mostrarPagina(pagina) {
     let inicio = (pagina -1) * porPagina;
     let fim = inicio + porPagina;
 
+    
+
     for (let i = inicio; i < fim && i < linhas.length; i++) {
         linhas[i].style.display="table-row";
+        
     }
     document.getElementById("page-info").innerHTML=`${paginaAtual}`;
 
 }
 
 function next() {
+    if (searchInput.value.trim() !== "") {
+        return;
+    }
+
     if (paginaAtual < totalPaginas) {
         paginaAtual++;
         mostrarPagina(paginaAtual);
@@ -154,10 +161,28 @@ function next() {
 }
 
 function prev() {
+    if (searchInput.value.trim() !== "") {
+        return;
+    }
+
     if (paginaAtual > 1) {
         paginaAtual--;
         mostrarPagina(paginaAtual);
     }
 }
+
+// function next() {
+//     if (paginaAtual < totalPaginas) {
+//         paginaAtual++;
+//         mostrarPagina(paginaAtual);
+//     }
+// }
+
+// function prev() {
+//     if (paginaAtual > 1) {
+//         paginaAtual--;
+//         mostrarPagina(paginaAtual);
+//     }
+// }
 
 mostrarPagina(paginaAtual);
