@@ -66,9 +66,11 @@ tbody{
 
 .content{
   border: 2px solid gray;
-  width: 800px;
-  margin-left: 250px;
+  width: 830px;
+  margin-left: 300px;
   height: 800px;
+  position:absolute;
+  top: 350px;
 }
 
 .content-data{
@@ -79,7 +81,7 @@ tbody{
 }
 
 .image-star-wars{
-  width: 800px;
+  width: 830px;
   height: 300px;
 }
 
