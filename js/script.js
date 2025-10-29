@@ -51,7 +51,7 @@ function closePerson(){
     searchInput.value="";
     document.querySelector('.close-container-icon span i').style.display = "none";
 
-    document.querySelector('.data-person').style.display = "table-header-group";
+    // document.querySelector('.data-person').style.display = "table-header-group";
 
     for (const rowObj of infoPersons) {
         rowObj.style.display = "table-row";
@@ -62,7 +62,11 @@ function closePerson(){
 
 function showMe() {
     document.querySelector(".table").style.display = "none";
+    document.querySelector(".search-person").style.display="none";
     document.querySelector("#info-people").style.display = "block";
+    document.getElementById("page-info").style.display="none";
+    document.querySelector(".prev-button").style.display="none";
+    document.querySelector(".next-button").style.display="none";
     const name = this.parentNode.getAttribute("data-name");
     showCharacteristics(name);
 }
@@ -127,27 +131,53 @@ button_detail.forEach(function (button) {
 }
 );
 
-const linhas = document.querySelectorAll("#tabela tr");
+const linhas = document.querySelectorAll("#tabela tbody tr");
 const porPagina = 10;
 let paginaAtual = 1;
 
 const totalPaginas = Math.ceil(linhas.length / porPagina);
 
+function adicionarTheadSeNaoExistir() {
+    const tabela = document.getElementById("tabela");
+
+    if (tabela.querySelector('thead')) {
+        return;
+    }
+
+    const theadHTML=`
+    <thead class="data-person">
+     <tr>
+       <td class="person-name">Character Name</td>
+       <td class="person-birth">Birth Year</td>
+       <td class="person-heigth">Height</td>
+       <td class="person-mass">Mass</td>
+       <td class="person-gender">Gender</td>
+     </tr>
+   </thead>`;
+
+   tabela.insertAdjacentHTML('afterbegin',theadHTML);
+
+}
+
+adicionarTheadSeNaoExistir();
+
 function mostrarPagina(pagina) {
+    
     linhas.forEach( l => l.style.display="none");
 
     let inicio = (pagina -1) * porPagina;
     let fim = inicio + porPagina;
 
     
-
     for (let i = inicio; i < fim && i < linhas.length; i++) {
         linhas[i].style.display="table-row";
-        
     }
+    
     document.getElementById("page-info").innerHTML=`${paginaAtual}`;
 
 }
+
+mostrarPagina(paginaAtual);
 
 function next() {
     if (searchInput.value.trim() !== "") {
@@ -160,6 +190,8 @@ function next() {
     }
 }
 
+next();
+
 function prev() {
     if (searchInput.value.trim() !== "") {
         return;
@@ -171,18 +203,6 @@ function prev() {
     }
 }
 
-// function next() {
-//     if (paginaAtual < totalPaginas) {
-//         paginaAtual++;
-//         mostrarPagina(paginaAtual);
-//     }
-// }
+prev();
 
-// function prev() {
-//     if (paginaAtual > 1) {
-//         paginaAtual--;
-//         mostrarPagina(paginaAtual);
-//     }
-// }
 
-mostrarPagina(paginaAtual);
