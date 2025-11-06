@@ -56,8 +56,8 @@ function closePerson(){
     for (const rowObj of infoPersons) {
         rowObj.style.display = "table-row";
     }
-    paginaAtual = 1;
-    mostrarPagina(paginaAtual);
+    currentPage = 1;
+    showPage(currentPage);
 }
 
 function showMe() {
@@ -132,10 +132,10 @@ button_detail.forEach(function (button) {
 );
 
 const linhas = document.querySelectorAll("#tabela tbody tr");
-const porPagina = 10;
-let paginaAtual = 1;
+const perPage = 10;
+let currentPage = 1;
 
-const totalPaginas = Math.ceil(linhas.length / porPagina);
+const totalPages = Math.ceil(linhas.length / perPage);
 
 function adicionarTheadSeNaoExistir() {
     const tabela = document.getElementById("tabela");
@@ -161,48 +161,63 @@ function adicionarTheadSeNaoExistir() {
 
 adicionarTheadSeNaoExistir();
 
-function mostrarPagina(pagina) {
+function showPage(page) {
     
     linhas.forEach( l => l.style.display="none");
 
-    let inicio = (pagina -1) * porPagina;
-    let fim = inicio + porPagina;
+    let inicio = (page -1) * perPage;
+    let fim = inicio + perPage;
 
     
     for (let i = inicio; i < fim && i < linhas.length; i++) {
         linhas[i].style.display="table-row";
     }
     
-    document.getElementById("page-info").innerHTML=`${paginaAtual}`;
+    document.getElementById("page-info").innerHTML=`${currentPage}`;
+
+    const botaoPrev = document.querySelector(".prev-button");
+    const botaoNext = document.querySelector(".next-button");
+
+    if (page === 1) {
+        botaoPrev.disabled = true;
+    }else{
+        botaoPrev.disabled = false;
+    }
+
+    if (page === totalPages) {
+        botaoNext.disabled = true;
+    }else{
+        botaoNext.disabled = false;
+    }
 
 }
 
-mostrarPagina(paginaAtual);
+showPage(currentPage);
 
 function next() {
     if (searchInput.value.trim() !== "") {
         return;
     }
 
-    if (paginaAtual < totalPaginas) {
-        paginaAtual++;
-        mostrarPagina(paginaAtual);
+    if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
     }
 }
 
-next();
+// next();
 
 function prev() {
     if (searchInput.value.trim() !== "") {
         return;
     }
 
-    if (paginaAtual > 1) {
-        paginaAtual--;
-        mostrarPagina(paginaAtual);
+    if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
     }
 }
 
-prev();
+// prev();
 
 
