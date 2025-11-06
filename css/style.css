@@ -264,6 +264,10 @@ tbody{
     background-color: #8904B1;
   }
 
+  .prev-button:disabled{
+    background-color: gray;
+  }
+
   .next-button{
     margin-left: 1100px;
     margin-top:20px;
