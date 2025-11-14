@@ -79,18 +79,18 @@ async function showCharacteristics(name) {
     let info = document.querySelector('.info');
     let response = await fetch(url);
     let { results } = await response.json();
-    let dados = results[0];
-    let planet = await getPlanet(dados.homeworld);
+    let data = results[0];
+    let planet = await getPlanet(data.homeworld);
     info.innerHTML =
-        `<p class="itens-character">Name:<span class="itens-description">${dados.name}</span></p>
-        <p class="itens-character">Heigth:<span class="itens-description">${dados.height}</span></p>
-        <p class="itens-character">Mass:<span class="itens-description">${dados.mass}</span></p>
-        <p class="itens-character">Hair Color:<span class="itens-description">${dados.hair_color}</span></p>
-        <p class="itens-character">Skin Color:<span class="itens-description">${dados.skin_color}</span></p>
-        <p class="itens-character">Eye Color:<span class="itens-description">${dados.eye_color}</span></p>
+        `<p class="itens-character">Name:<span class="itens-description">${data.name}</span></p>
+        <p class="itens-character">Heigth:<span class="itens-description">${data.height}</span></p>
+        <p class="itens-character">Mass:<span class="itens-description">${data.mass}</span></p>
+        <p class="itens-character">Hair Color:<span class="itens-description">${data.hair_color}</span></p>
+        <p class="itens-character">Skin Color:<span class="itens-description">${data.skin_color}</span></p>
+        <p class="itens-character">Eye Color:<span class="itens-description">${data.eye_color}</span></p>
         <p class="itens-character">Planet:<span class="itens-description">${planet.name}</span></p>`
-    showMovies(dados.films);
-    showStarships(dados.starships);
+    showMovies(data.films);
+    showStarships(data.starships);
 }
 
 async function getPlanet(url) {
@@ -104,9 +104,9 @@ async function showMovies(personFilms) {
     for (let index = 0; index < personFilms.length; index++) {
         const urlFilms = personFilms[index];
         let response = await fetch(urlFilms);
-        let dados = await response.json();
+        let data = await response.json();
         info2.innerHTML +=
-            `<p>${dados.title}</p>`
+            `<p>${data.title}</p>`
     }
 }
 
@@ -115,9 +115,9 @@ async function showStarships(personStarships) {
     for (let index = 0; index < personStarships.length; index++) {
         const urlFilms = personStarships[index];
         let response = await fetch(urlFilms);
-        let dados = await response.json();
+        let data = await response.json();
         info2.innerHTML +=
-            `<p>${dados.name}</p>`
+            `<p>${data.name}</p>`
     }
 }
 
@@ -131,16 +131,16 @@ button_detail.forEach(function (button) {
 }
 );
 
-const linhas = document.querySelectorAll("#tabela tbody tr");
+const line = document.querySelectorAll("#tabela tbody tr");
 const perPage = 10;
 let currentPage = 1;
 
-const totalPages = Math.ceil(linhas.length / perPage);
+const totalPages = Math.ceil(line.length / perPage);
 
-function adicionarTheadSeNaoExistir() {
-    const tabela = document.getElementById("tabela");
+function AddTheadIfItDoesNotExist() {
+    const table = document.getElementById("tabela");
 
-    if (tabela.querySelector('thead')) {
+    if (table.querySelector('thead')) {
         return;
     }
 
@@ -155,39 +155,40 @@ function adicionarTheadSeNaoExistir() {
      </tr>
    </thead>`;
 
-   tabela.insertAdjacentHTML('afterbegin',theadHTML);
+   table.insertAdjacentHTML('afterbegin',theadHTML);
+   //tabela.insertAdjacentHTML('afterbegin',theadHTML);
 
 }
 
-adicionarTheadSeNaoExistir();
+AddTheadIfItDoesNotExist();
 
 function showPage(page) {
     
-    linhas.forEach( l => l.style.display="none");
+    line.forEach( l => l.style.display="none");
 
-    let inicio = (page -1) * perPage;
-    let fim = inicio + perPage;
+    let start = (page -1) * perPage;
+    let end = start + perPage;
 
     
-    for (let i = inicio; i < fim && i < linhas.length; i++) {
-        linhas[i].style.display="table-row";
+    for (let i = start; i < end && i < line.length; i++) {
+        line[i].style.display="table-row";
     }
     
     document.getElementById("page-info").innerHTML=`${currentPage}`;
 
-    const botaoPrev = document.querySelector(".prev-button");
-    const botaoNext = document.querySelector(".next-button");
+    const buttonPrev = document.querySelector(".prev-button");
+    const buttonNext = document.querySelector(".next-button");
 
     if (page === 1) {
-        botaoPrev.disabled = true;
+        buttonPrev.disabled = true;
     }else{
-        botaoPrev.disabled = false;
+        buttonPrev.disabled = false;
     }
 
     if (page === totalPages) {
-        botaoNext.disabled = true;
+        buttonNext.disabled = true;
     }else{
-        botaoNext.disabled = false;
+        buttonNext.disabled = false;
     }
 
 }
